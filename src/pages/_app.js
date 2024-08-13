@@ -1,0 +1,29 @@
+import Head from "next/head";
+import RootLayout from "./main_layout";
+import ThemeProvider from "@/context/ThemeContext";
+import './global.css';
+
+export default function App({ Component, pageProps }) {
+  return (
+    <>
+      <Head>
+        <title>Codekart</title>
+        <meta name="description" content="Codekart Solutions PVT LTD" />
+        <link rel="icon" href="/favicon.ico" />
+
+        {/* font family */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+      <ThemeProvider>
+        <RootLayout>
+          <Component {...pageProps} />
+        </RootLayout>
+      </ThemeProvider>
+    </>
+  );
+}

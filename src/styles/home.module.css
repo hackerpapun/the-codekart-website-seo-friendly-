@@ -1,0 +1,60 @@
+.heroContainer {
+  width: 55%;
+}
+.homeContainer {
+  background-image: url("../assets/images/home/hero.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.heroText {
+  color: #191919;
+  font-weight: 700;
+  font-size: 72px;
+  font-family: "Montserrat";
+}
+.socialMediaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.socialMediaLogo {
+  width: 20px;
+  height: 20px;
+}
+
+.heroSubText {
+  color: #191919;
+  font-weight: 400;
+  font-size: 20px;
+  /* font-family: 'Montserrat'; */
+}
+.homeButton {
+  background: #e2e2e2 !important;
+  border-radius: 12px !important;
+  color: #16121e !important;
+  font-weight: 400 !important;
+  font-size: 20px;
+}
+.buttonLogo {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+.heroSubTextLogo {
+  width: 100px;
+  height: 100px;
+}
+.scrollContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}

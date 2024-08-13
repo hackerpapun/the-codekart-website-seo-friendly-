@@ -1,0 +1,177 @@
+.NavBarTopComponent {
+  display: flex;
+  justify-content: start;
+  gap: 5%;
+}
+
+.arrowContainer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  border-radius: 23px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  height: 20%;
+  position: relative;
+  overflow: hidden;
+  font-family: "Noto Sans";
+  font-weight: 500;
+  background-color: #f4f4f4;
+}
+
+.arrowContainer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.buttonContainer:hover .arrowContainer {
+  transform: translateX(10px);
+}
+
+.NavRightContainer {
+  display: flex;
+  justify-content: space-around;
+  gap: 3px;
+}
+.wrapper {
+  padding-top: 0px !important;
+  text-align: center;
+}
+
+.languageButtonContainer {
+  border: 2px solid;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1%;
+  padding-right: 1%;
+  border-radius: 18px;
+  background-color: #f4f4f4;
+}
+
+.MainContainer {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1.5px solid;
+  width: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
+  background-color: white;
+}
+.NavbarLogo {
+  width: 18%;
+}
+
+.navBarparagraphContainer {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  font-family: "Noto Sans";
+  font-weight: 500;
+}
+
+.arrow_icon {
+  transition: transform 0.3s ease;
+  font-size: 20px;
+}
+
+.arrow_up .arrow_icon {
+  transform: rotate(180deg);
+}
+
+button.LighDarkMood {
+  width: 14%;
+  display: flex;
+  border-radius: 31px;
+  align-items: center;
+}
+
+.LightDarkMood {
+  width: 68px;
+  height: 36px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid;
+  transition: background-color 0.3s ease;
+}
+
+.icon_container {
+  display: flex;
+  width: 200%;
+  transition: transform 0.3s ease;
+}
+
+.sun_icon,
+.moon_icon {
+  width: 50%;
+  /* height: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px; /* Adjust as needed */
+}
+
+.light_mode {
+  background-color: #f0f0f0; /* Light background */
+}
+
+.light_mode .icon_container {
+  transform: translateX(0);
+}
+
+.dark_mode {
+  background-color: #333; /* Dark background */
+}
+
+.dark_mode .icon_container {
+  transform: translateX(-50%);
+}
+
+.dark_mode .moon_icon {
+  color: #ffffff; /* Moon color */
+}
+
+.languageLogo {
+  height: 77%;
+}
+
+.dropdown_container {
+  overflow: hidden;
+}
+
+.dropdown {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.dropdown.active {
+  max-height: 1000px; /* Adjust this value based on your content's maximum height */
+  opacity: 1;
+}
