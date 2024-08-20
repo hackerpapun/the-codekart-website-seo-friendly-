@@ -2,12 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid;
+  border: 0.5px solid;
+  margin-top: 1% !important;
+  z-index: 999;
+  /* position: absolute; */
 }
 
 .whatweDoContainer {
   padding-left: 17%;
   padding-right: 4%;
+  padding-top: 1% !important;
 }
 .whatWeDoContaint {
   padding-left: 6%;
