@@ -1,5 +1,4 @@
 "use client";
-
 import * as React from "react";
 import Grid from "@mui/material/Grid";
 import Switch from "@mui/material/Switch";
@@ -10,9 +9,11 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { IoIosSunny } from "react-icons/io";
 import { MdOutlineNightsStay } from "react-icons/md";
 import WhatWeDo from "@/pages/WhatWeDo";
+import WhatAreWe from "@/pages/WhatAreWe";
 import { ThemeContext } from "@/context/ThemeContext";
 import CodekartLogo from "../assets/images/navbar/codekartlogo.png";
 import LanguageImage from "../assets/images/navbar/language.png";
+import Insight from "@/pages/InsightNavBar";
 import Image from "next/image";
 
 const Navbar = () => {
@@ -40,7 +41,7 @@ const Navbar = () => {
     setIsArrowUp(false);
   };
   return (
-    <>
+    <div className="Responsi">
       <Grid container className={styles.MainContainer}>
         <Grid item xs={12} md={8} className={styles.NavBarTopComponent}>
           <Image
@@ -51,19 +52,19 @@ const Navbar = () => {
 
           <p className={styles.navBarparagraphContainer}>Home</p>
 
-          <p
-            className={`navBarparagraphContainer ${
-              isArrowUp && styles.arrow_up
+          <div
+            className={`${styles.navBarparagraphContainer} ${
+              isArrowUp ? styles.arrow_up : ""
             }`}
             onClick={toggleArrow}
           >
             What We do
             <MdKeyboardArrowDown className={styles.arrow_icon} />
-          </p>
+          </div>
 
           <p
-            className={`navBarparagraphContainer ${
-              whatAreWe && styles.arrow_up
+            className={`${styles.navBarparagraphContainer} ${
+              whatAreWe ? styles.arrow_up : ""
             }`}
             onClick={whatAreWeFun}
           >
@@ -72,8 +73,8 @@ const Navbar = () => {
           </p>
 
           <p
-            className={`navBarparagraphContainer ${
-              InsightArrow && styles.arrow_up
+            className={`${styles.navBarparagraphContainer} ${
+              InsightArrow ? styles.arrow_up : ""
             }`}
             onClick={InsightFunction}
           >
@@ -98,7 +99,7 @@ const Navbar = () => {
             </div>
 
             <button
-              className={`LightDarkMood ${
+              className={`${styles.LightDarkMood} ${
                 theme === "dark" ? styles.dark_mode : styles.light_mode
               }`}
               onClick={() => {
@@ -118,11 +119,26 @@ const Navbar = () => {
         </Grid>
       </Grid>
       <Grid container className={styles.dropdown_container} item sm={12}>
-        <Grid container className={`dropdown ${isArrowUp && styles.active}`}>
-          {isArrowUp ? <WhatWeDo /> : ""}
+        <Grid
+          container
+          className={`${styles.dropdown} ${isArrowUp ? styles.active : ""}`}
+        >
+          {isArrowUp && <WhatWeDo />}
+        </Grid>
+        <Grid
+          container
+          className={`${styles.dropdown} ${whatAreWe ? styles.active : ""}`}
+        >
+          {whatAreWe && <WhatAreWe />}
+        </Grid>
+        <Grid
+          container
+          className={`${styles.dropdown} ${InsightArrow ? styles.active : ""}`}
+        >
+          {InsightArrow && <Insight />}
         </Grid>
       </Grid>
-    </>
+    </div>
   );
 };
 
