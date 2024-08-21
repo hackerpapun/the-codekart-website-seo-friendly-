@@ -56,9 +56,10 @@ const Navbar = () => {
               src={CodekartLogo}
               alt="CodeKart Logo"
               className={styles.NavbarLogo}
+              onClick={() => router.push(navconstants.home)}
             />
 
-            <p className={styles.navBarparagraphContainer}>Home</p>
+            <p className={styles.navBarparagraphContainer} onClick={() => router.push(navconstants.home)}>Home</p>
 
             <div
               className={`${styles.navBarparagraphContainer} ${
@@ -145,7 +146,7 @@ const Navbar = () => {
               InsightArrow ? styles.active : ""
             }`}
           >
-            {InsightArrow && <Insight />}
+            {InsightArrow && <Insight onclickInsightFunction={InsightFunction} />}
           </Grid>
         </Grid>
       </div>

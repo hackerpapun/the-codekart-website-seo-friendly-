@@ -8,7 +8,7 @@ export default function InsightsComp1() {
   return (
     <Grid container className={`${styles.insightsComp11} ${montserrat.variable}`}>
       <Grid item md={1}></Grid>
-      <Grid item md={4} className={styles.insightTextContainer}>
+      <Grid item md={4} className={styles.insightsTextContainer} style={{padding: '0px 1rem'}}>
         <div className={styles.insightsComp12}>Join Our Team</div>
         <div className={styles.insightsCompOrangeline} />
         <div className={`${styles.insightsComp13} ${notosans.variable}`}>
@@ -22,11 +22,11 @@ export default function InsightsComp1() {
         </div>
         <ButtonComp
           title="Open Positions"
-          buttonStyles={styles.insightButton}
+          buttonStyles={styles.insightsButton}
         />
       </Grid>
       <Grid item md={1}></Grid>
-      <Grid item md={5}>
+      <Grid item md={5} style={{padding: '0px 1rem'}}>
         <video
           src="/videos/demoVideoJoinTeam.mp4"
           className={styles.insightsComp15}

@@ -1,4 +1,4 @@
-.insightTextContainer {
+.insightsTextContainer {
   min-height: 400px;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
   background-color: #fa6400;
   margin-bottom: 1rem;
 }
-.insightButton {
+.insightsButton {
   width: 200px;
   margin-bottom: 1rem;
 }
@@ -60,7 +60,7 @@
 }
 
 /* insights comp 2 */
-.insightComp2Container {
+.insightsComp2Container {
   background-color: #e9ebf2;
   padding: 3rem 0px;
   display: flex;
@@ -111,7 +111,7 @@
 }
 
 /* insights comp 3 */
-.insightComp3Container {
+.insightsComp3Container {
   padding: 3rem 0px;
   display: flex;
   flex-direction: column;
@@ -156,6 +156,92 @@
 }
 
 .insightsComp3CardTitle {
+  font-family: var(--font-notosans);
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: left;
+  color: #0c172b;
+}
+
+/* insights comp 4 */
+.insightsComp4Container {
+  background-color: #0c172b;
+  padding: 4rem 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.insightsComp4Text {
+  font-family: var(--font-notosans);
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 0.6rem;
+}
+.insightsComp4CardContainer {
+  margin: 3rem 0rem;  overflow: hidden;
+}
+.insightsComp4Img {
+  transition: all 0.25s ease-in-out;
+}
+.insightsComp4Img:hover {
+  transform: scale(1.015);
+  cursor: pointer;
+  filter: brightness(0.5);
+}
+
+/* insights comp 5 */
+.insightsComp5Container {
+  padding: 3rem 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.insightsComp5Text1 {
+  font-family: var(--font-montserrat);
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: #0c172b;
+  margin-bottom: 0.6rem;
+}
+
+.insightsComp5Text2 {
+  font-family: var(--font-notosans);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #434343;
+  text-align: center;
+  letter-spacing: 0.2em;
+  margin: 1rem 0px;
+}
+
+.insightsComp5CardContainer {
+  margin: 2rem 0px;
+}
+
+.insightsComp5Card {
+  background: #e2e2e2;
+  padding: 1rem;
+  margin: 0px 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 12px;
+  height: 50px;
+  transition: all ease-in-out 0.5s;
+}
+.insightsComp5Card:hover {
+  transform: scale(1.1);
+  filter:drop-shadow(1);
+  cursor: pointer;
+}
+.insightsComp5CardTitle {
   font-family: var(--font-notosans);
   font-size: 0.9rem;
   font-weight: 400;
