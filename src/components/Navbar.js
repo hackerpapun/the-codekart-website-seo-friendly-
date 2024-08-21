@@ -17,8 +17,12 @@ import Insight from "@/pages/InsightNavBar";
 import Image from "next/image";
 import { RxCross2 } from "react-icons/rx";
 import MobileViewNavBar from "./MobileViewNavBar";
+import { useRouter } from "next/router";
+import { navconstants } from "@/constants/navconstants";
 
 const Navbar = () => {
+  const router = useRouter();
+
   const { theme, switchLightTheme, switchDarkTheme } =
     React.useContext(ThemeContext);
 
@@ -42,6 +46,7 @@ const Navbar = () => {
     setWharareWe(false);
     setIsArrowUp(false);
   };
+
   return (
     <>
       <div className={styles.ResponsiveContainer}>
