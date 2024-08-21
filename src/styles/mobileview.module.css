@@ -1,0 +1,114 @@
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  z-index: 1000;
+}
+
+.logoContainer {
+  width: 100px;
+}
+
+.menuContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.iconWrapper {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hamburgerIcon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.crossIcon {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+
+.iconWrapper.open .hamburgerIcon {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+.iconWrapper.open .crossIcon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.NavbarLogo {
+  width: 18%;
+  height: 9vh;
+}
+
+.SideBarScreen {
+  /* background-color: red !important; */
+  position: fixed;
+  /* top: 0; */
+  right: 0;
+  width: 70%;
+  height: 100%;
+  background-color: white;
+  transform: translateX(100%);
+  transition: transform 0.7s ease-out;
+  z-index: 999;
+}
+
+.SideBarScreen.open {
+  transform: translateX(0);
+}
+
+.sideContaint {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  padding: 3%;
+  padding-bottom: 0;
+  font-family: "Noto Sans";
+}
+.arrowContainer {
+  display: flex;
+  justify-content: end;
+  padding-right: 3%;
+}
+.arrowContainer .rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.arrowContainer .noRotate {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .logoContainer {
+    width: 80px;
+  }
+  .SideBarScreen {
+    width: 100%;
+  }
+
+  .iconWrapper {
+    width: 20px;
+    height: 20px;
+  }
+}

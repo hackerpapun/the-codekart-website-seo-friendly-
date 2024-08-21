@@ -15,6 +15,8 @@ import CodekartLogo from "../assets/images/navbar/codekartlogo.png";
 import LanguageImage from "../assets/images/navbar/language.png";
 import Insight from "@/pages/InsightNavBar";
 import Image from "next/image";
+import { RxCross2 } from "react-icons/rx";
+import MobileViewNavBar from "./MobileViewNavBar";
 import { useRouter } from "next/router";
 import { navconstants } from "@/constants/navconstants";
 
@@ -46,110 +48,114 @@ const Navbar = () => {
   };
 
   return (
-    <div className="Responsi">
-      <Grid container className={styles.MainContainer}>
-        <Grid item xs={12} md={8} className={styles.NavBarTopComponent}>
-          <Image
-            src={CodekartLogo}
-            alt="CodeKart Logo"
-            className={styles.NavbarLogo}
-            onClick={() => router.push(navconstants.home)}
-          />
+    <>
+      <div className={styles.ResponsiveContainer}>
+        <Grid container className={styles.MainContainer}>
+          <Grid item xs={12} md={8} className={styles.NavBarTopComponent}>
+            <Image
+              src={CodekartLogo}
+              alt="CodeKart Logo"
+              className={styles.NavbarLogo}
+              onClick={() => router.push(navconstants.home)}
+            />
 
-          <p
-            className={styles.navBarparagraphContainer}
-            onClick={() => router.push(navconstants.home)}
-          >
-            Home
-          </p>
+            <p className={styles.navBarparagraphContainer} onClick={() => router.push(navconstants.home)}>Home</p>
 
-          <div
-            className={`${styles.navBarparagraphContainer} ${
-              isArrowUp ? styles.arrow_up : ""
-            }`}
-            onClick={toggleArrow}
-          >
-            What We do
-            <MdKeyboardArrowDown className={styles.arrow_icon} />
-          </div>
-
-          <p
-            className={`${styles.navBarparagraphContainer} ${
-              whatAreWe ? styles.arrow_up : ""
-            }`}
-            onClick={whatAreWeFun}
-          >
-            What are We
-            <MdKeyboardArrowDown className={styles.arrow_icon} />
-          </p>
-
-          <p
-            className={`${styles.navBarparagraphContainer} ${
-              InsightArrow ? styles.arrow_up : ""
-            }`}
-            onClick={InsightFunction}
-          >
-            Insight
-            <MdKeyboardArrowDown className={styles.arrow_icon} />
-          </p>
-        </Grid>
-        <Grid item xs={12} md={4}>
-          <div className={styles.NavRightContainer}>
-            <button className={styles.buttonContainer}>
-              Contact with us
-              <div className={styles.arrowContainer}>
-                <FaArrowRight className={styles.arrowIcon} />
-              </div>
-            </button>
-            <div className={styles.languageButtonContainer}>
-              <Image
-                src={LanguageImage}
-                alt="Language logo"
-                className={styles.languageLogo}
-              />
+            <div
+              className={`${styles.navBarparagraphContainer} ${
+                isArrowUp ? styles.arrow_up : ""
+              }`}
+              onClick={toggleArrow}
+            >
+              What We do
+              <MdKeyboardArrowDown className={styles.arrow_icon} />
             </div>
 
-            <button
-              className={`${styles.LightDarkMood} ${
-                theme === "dark" ? styles.dark_mode : styles.light_mode
+            <p
+              className={`${styles.navBarparagraphContainer} ${
+                whatAreWe ? styles.arrow_up : ""
               }`}
-              onClick={() => {
-                if (theme === "dark") {
-                  switchLightTheme();
-                } else {
-                  switchDarkTheme();
-                }
-              }}
+              onClick={whatAreWeFun}
             >
-              <div className={styles.icon_container}>
-                <IoIosSunny className={styles.sun_icon} />
-                <MdOutlineNightsStay className={styles.moon_icon} />
+              What are We
+              <MdKeyboardArrowDown className={styles.arrow_icon} />
+            </p>
+
+            <p
+              className={`${styles.navBarparagraphContainer} ${
+                InsightArrow ? styles.arrow_up : ""
+              }`}
+              onClick={InsightFunction}
+            >
+              Insight
+              <MdKeyboardArrowDown className={styles.arrow_icon} />
+            </p>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <div className={styles.NavRightContainer}>
+              <button className={styles.buttonContainer}>
+                Contact with us
+                <div className={styles.arrowContainer}>
+                  <FaArrowRight className={styles.arrowIcon} />
+                </div>
+              </button>
+              <div className={styles.languageButtonContainer}>
+                <Image
+                  src={LanguageImage}
+                  alt="Language logo"
+                  className={styles.languageLogo}
+                />
               </div>
-            </button>
-          </div>
+
+              <button
+                className={`${styles.LightDarkMood} ${
+                  theme === "dark" ? styles.dark_mode : styles.light_mode
+                }`}
+                onClick={() => {
+                  if (theme === "dark") {
+                    switchLightTheme();
+                  } else {
+                    switchDarkTheme();
+                  }
+                }}
+              >
+                <div className={styles.icon_container}>
+                  <IoIosSunny className={styles.sun_icon} />
+                  <MdOutlineNightsStay className={styles.moon_icon} />
+                </div>
+              </button>
+            </div>
+          </Grid>
         </Grid>
-      </Grid>
-      <Grid container className={styles.dropdown_container} item sm={12}>
-        <Grid
-          container
-          className={`${styles.dropdown} ${isArrowUp ? styles.active : ""}`}
-        >
-          {isArrowUp && <WhatWeDo />}
+        <Grid container className={styles.dropdown_container} item sm={12}>
+          <Grid
+            container
+            className={`${styles.dropdown} ${isArrowUp ? styles.active : ""}`}
+          >
+            {isArrowUp && <WhatWeDo />}
+          </Grid>
+          <Grid
+            container
+            className={`${styles.dropdown} ${whatAreWe ? styles.active : ""}`}
+          >
+            {whatAreWe && <WhatAreWe />}
+          </Grid>
+          <Grid
+            container
+            className={`${styles.dropdown} ${
+              InsightArrow ? styles.active : ""
+            }`}
+          >
+            {InsightArrow && <Insight onclickInsightFunction={InsightFunction} />}
+          </Grid>
         </Grid>
-        <Grid
-          container
-          className={`${styles.dropdown} ${whatAreWe ? styles.active : ""}`}
-        >
-          {whatAreWe && <WhatAreWe />}
-        </Grid>
-        <Grid
-          container
-          className={`${styles.dropdown} ${InsightArrow ? styles.active : ""}`}
-        >
-          {InsightArrow && <Insight onclickInsightFunction={InsightFunction} />}
-        </Grid>
-      </Grid>
-    </div>
+      </div>
+
+      {/* Mobile View */}
+      <div className={styles.MobileViewContainer}>
+        <MobileViewNavBar />
+      </div>
+    </>
   );
 };
 

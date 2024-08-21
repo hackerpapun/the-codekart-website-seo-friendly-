@@ -181,6 +181,18 @@ button.LighDarkMood {
   opacity: 1;
   z-index: 999;
 }
+.MobileViewContainer {
+  display: none !important;
+}
+@media (max-width: 1000px) {
+  .ResponsiveContainer {
+    display: none !important;
+  }
+  .MobileViewContainer {
+    display: block !important;
+    /* margin-bottom: 80%; */
+  }
+}
 
 /* .dropdown_container {
   position: relative;
@@ -205,3 +217,5 @@ button.LighDarkMood {
   opacity: 1;
   z-index: 1000;
 } */
+
+/* mobile view  */
