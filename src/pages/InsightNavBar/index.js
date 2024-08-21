@@ -1,9 +1,13 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
-import styles from "../../styles/Insight.module.css";
+import styles from "../../styles/InsightNavbar.module.css";
 import { FaChevronRight } from "react-icons/fa6";
+import { useRouter } from "next/router";
+import { navconstants } from "@/constants/navconstants";
 
-const Insight = () => {
+const InsightNavbar = ({ onclickInsightFunction }) => {
+  const router = useRouter();
+
   const [activeSection, setActiveSection] = useState("overview");
 
   const handleSectionHover = (section) => {
@@ -62,7 +66,13 @@ const Insight = () => {
                 We share news, insights, analysis, and research tailored to your
                 unique interests to help you deepen your knowledge and impact.
               </p>
-              <button className={styles.discoberAllSolution}>
+              <button
+                className={styles.discoberAllSolution}
+                onClick={() => {
+                  onclickInsightFunction();
+                  router.push(navconstants.insights);
+                }}
+              >
                 Discover Expert Insights
               </button>
             </>
@@ -96,4 +106,4 @@ const Insight = () => {
   );
 };
 
-export default Insight;
+export default InsightNavbar;

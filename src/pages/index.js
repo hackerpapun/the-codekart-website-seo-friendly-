@@ -11,6 +11,7 @@ import Twitter from "../assets/images/home/twiter.png";
 import UiArrow from "../assets/images/home/uil_arrow-up.png";
 import ScrollButton from "../assets/images/home/scrollBtn.png";
 import Oracle from "../assets/images/home/oracle1.png";
+import ButtonComp from "@/components/ButtonComp";
 
 function Home() {
   return (
@@ -48,10 +49,7 @@ function Home() {
             good CEO, and Clean design
           </div>
 
-          <Button variant="contained" className={styles.homeButton}>
-            Get Started
-            <Image src={UiArrow} alt="" className={styles.homeButtonImg} />
-          </Button>
+          <ButtonComp title="Get Started" />
           <div className={styles.scrollContainer}>
             <Image src={ScrollButton} className={styles.heroSubTextLogo} />
           </div>

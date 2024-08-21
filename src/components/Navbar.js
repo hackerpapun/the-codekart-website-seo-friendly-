@@ -15,8 +15,12 @@ import CodekartLogo from "../assets/images/navbar/codekartlogo.png";
 import LanguageImage from "../assets/images/navbar/language.png";
 import Insight from "@/pages/InsightNavBar";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { navconstants } from "@/constants/navconstants";
 
 const Navbar = () => {
+  const router = useRouter();
+
   const { theme, switchLightTheme, switchDarkTheme } =
     React.useContext(ThemeContext);
 
@@ -40,6 +44,7 @@ const Navbar = () => {
     setWharareWe(false);
     setIsArrowUp(false);
   };
+
   return (
     <div className="Responsi">
       <Grid container className={styles.MainContainer}>
@@ -48,9 +53,15 @@ const Navbar = () => {
             src={CodekartLogo}
             alt="CodeKart Logo"
             className={styles.NavbarLogo}
+            onClick={() => router.push(navconstants.home)}
           />
 
-          <p className={styles.navBarparagraphContainer}>Home</p>
+          <p
+            className={styles.navBarparagraphContainer}
+            onClick={() => router.push(navconstants.home)}
+          >
+            Home
+          </p>
 
           <div
             className={`${styles.navBarparagraphContainer} ${
@@ -135,7 +146,7 @@ const Navbar = () => {
           container
           className={`${styles.dropdown} ${InsightArrow ? styles.active : ""}`}
         >
-          {InsightArrow && <Insight />}
+          {InsightArrow && <Insight onclickInsightFunction={InsightFunction} />}
         </Grid>
       </Grid>
     </div>
