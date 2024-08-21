@@ -4,48 +4,18 @@ import { Grid } from "@mui/material";
 import { notosans } from "@/assets/fonts/fonts";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
-
-const cardData = [
-  {
-    img: "/images/insights/clock.svg",
-    title: "Flexible working hours",
-  },
-  {
-    img: "/images/insights/policy.svg",
-    title: "Health care Insurance",
-  },
-  {
-    img: "/images/insights/confetti.svg",
-    title: "Fun team events",
-  },
-  {
-    img: "/images/insights/rocket.svg",
-    title: "Perfessional grow budget",
-  },
-  {
-    img: "/images/insights/wallet.svg",
-    title: "Competitive salary",
-  },
-  {
-    img: "/images/insights/specs.svg",
-    title: "Compensation for eyeglasses",
-  },
-  {
-    img: "/images/insights/graduationCap.svg",
-    title: "Allowance for first-graders",
-  },
-];
+import { insightsComp3Data } from "./InsightsConstantDatas";
 
 export default function InsightsComp3() {
   return (
     <Grid
       container
-      className={`${styles.insightComp3Container} ${notosans.variable}`}
+      className={`${styles.insightsComp3Container} ${notosans.variable}`}
     >
       <div className={styles.insightsComp3Text1}>
         What benefits are waiting for you?
       </div>
-      <div className={styles.insightsCompOrangeline} />
+      <div className={styles.insightsCompOrangeline} style={{width: 200}} />
       <div className={styles.insightsComp3Text2}>
         At CodeKart, we offer a variety of hand-picked benefits that you can
         take advantage of! Join us to experience a rewarding and supportive work
@@ -53,7 +23,7 @@ export default function InsightsComp3() {
       </div>
       <Grid container className={styles.insightsComp3CardContainer}>
         <Marquee pauseOnHover gradient speed={30}>
-          {cardData?.map((item, i) => (
+          {insightsComp3Data?.map((item, i) => (
               <div className={styles.insightsComp3Card} item={i}>
                 <Image
                   src={item?.img} // Replace with your image path
