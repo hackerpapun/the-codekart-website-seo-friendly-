@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  /* margin-top: 20%; */
 }
 
 .heroText {
@@ -36,7 +37,7 @@
   color: #191919;
   font-weight: 400;
   font-size: 16px;
-      margin-top: 3rem;
+  margin-top: 3rem;
   /* font-family: 'Montserrat'; */
 }
 .homeButton {
@@ -46,9 +47,9 @@
   font-weight: 400 !important;
   font-size: 16px;
   border-radius: 20px;
-      margin-top: 3rem;
-      width: 12rem;
-      height: 2.5rem;
+  margin-top: 3rem;
+  width: 12rem;
+  height: 2.5rem;
 }
 .buttonLogo {
   margin-left: 10px;
@@ -65,34 +66,29 @@
   align-items: center;
   margin-top: 40px;
 }
-.homeButtonImg{
-width: 16px;
+.homeButtonImg {
+  width: 16px;
   height: 16px;
-    margin-left: 0.5rem;
+  margin-left: 0.5rem;
 }
 
-
-
-.homeSecondContainer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
-.companyLogoContainer{
-  
-  display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3rem;
-      width: 12rem;
-}
-
-.companyContainer{
+.homeSecondContainer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.companyNameImg{
-  
+.companyLogoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 12rem;
+}
+
+.companyContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.companyNameImg {
 }

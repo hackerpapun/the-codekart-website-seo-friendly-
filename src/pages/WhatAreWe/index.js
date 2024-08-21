@@ -34,7 +34,7 @@ const WhatAreWe = () => {
             } ${activeSection === "industries" && styles.active}`}
             onMouseEnter={() => handleSectionHover("industries")}
           >
-            <p className={styles.WhatWeDoOverViewFirstElem}>Industries</p>
+            <p className={styles.WhatWeDoOverViewFirstElem}>About Us</p>
             <FaChevronRight />
           </div>
           <hr />
@@ -44,7 +44,7 @@ const WhatAreWe = () => {
             } ${activeSection === "service" && styles.active}`}
             onMouseEnter={() => handleSectionHover("service")}
           >
-            <p className={styles.WhatWeDoOverViewFirstElem}>Service</p>
+            <p className={styles.WhatWeDoOverViewFirstElem}>Contact Us</p>
             <FaChevronRight />
           </div>
           <hr />
