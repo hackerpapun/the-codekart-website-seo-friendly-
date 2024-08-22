@@ -173,7 +173,8 @@
   margin-bottom: 0.6rem;
 }
 .insightsComp4CardContainer {
-  margin: 3rem 0rem;  overflow: hidden;
+  margin: 3rem 0rem;
+  overflow: hidden;
 }
 .insightsComp4Img {
   transition: all 0.25s ease-in-out;
@@ -230,7 +231,7 @@
 }
 .insightsComp5Card:hover {
   transform: scale(1.1);
-  filter:drop-shadow(1);
+  filter: drop-shadow(1);
   cursor: pointer;
 }
 .insightsComp5CardTitle {
@@ -241,7 +242,6 @@
   color: #0c172b;
 }
 
-
 /* insights comp 6 */
 .insightsComp6Container {
   background-color: #e9ebf2;
@@ -251,40 +251,83 @@
   justify-content: center;
   align-items: center;
 }
-.insightsComp6Text {
-  font-family: var(--font-notosans);
-  font-size: 3rem;
-  font-weight: 500;
-  text-align: center;
-  color: #0c172b;
-  margin-bottom: 0.6rem;
-}
-/* insight comp 6 card */
-.insightsComp6CardContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* width: 100%; */
-  margin-top: 2rem;
-}
-.insightsComp6Card {
-  background-color: #ffffff;
-  padding: 1rem;
-  margin: 1rem;
-}
-.insightsComp6CardTitle {
-  font-family: var(--font-notosans);
-  font-size: 1.1rem;
-  font-weight: 500;
-  text-align: left;
-  color: #0c172b;
-  margin: 1rem 0px;
-}
-.insightsComp6CardDescription {
-  font-family: var(--font-notosans);
-  font-size: 0.9rem;
-  font-weight: 300;
-  text-align: left;
-  color: #434343;
-  margin-bottom: 0.6rem;
+
+/* all medi a queries */
+@media screen and (max-width: 768px) {
+  /* insights comp 1 */
+  .insightsComp11 {
+    margin: 1rem 0px;
+  }
+  .insightsComp12 {
+    margin: 0px;
+    font-size: 2rem;
+  }
+  .insightsComp13 {
+    margin-top: 0px;
+    line-height: 1.9em;
+    font-size: 1rem;
+  }
+  .insightsComp14 {
+    margin-top: 0px;
+    line-height: 1.5em;
+    font-size: 1rem;
+  }
+  .insightsComp15 {
+    height: 400px;
+  }
+  /* insights comp 2 */
+  .insightsComp2whatmakeText {
+    font-size: 2rem;
+  }
+  .insightsComp2CardContainer {
+    margin-top: 0px;
+  }
+  .insightsComp2CardTitle {
+    font-size: 0.8rem;
+  }
+  .insightsComp2CardDescription {
+    font-size: 0.6rem;
+    margin-bottom: 0px;
+  }
+  /* insights comp 3 */
+  .insightsComp3Container {
+    padding: 1rem;
+  }
+  .insightsComp3Text1 {
+    font-size: 2rem;
+  }
+  .insightsComp3Text2 {
+    font-size: 1rem;
+  }
+  /* insights comp 4 */
+  .insightsComp4Container {
+    padding: 1rem;
+  }
+  .insightsComp4Text {
+    font-size: 2rem;
+  }
+  .insightsComp4CardContainer {
+    margin: 0px;
+  }
+  /* insights comp 5 */
+  .insightsComp5Container {
+    padding: 1rem 0px;
+  }
+  .insightsComp5Text1 {
+    font-size: 3rem;
+  }
+  .insightsComp5Text2 {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+  .insightsComp5CardContainer {
+    margin: 1rem 0px;
+  }
+  .insightsComp5CardTitle {
+    font-size: 0.7rem;
+  }
+  /* insights comp 6 */
+  .insightsComp6Container {
+    padding: 1rem 0px;
+  }
 }
