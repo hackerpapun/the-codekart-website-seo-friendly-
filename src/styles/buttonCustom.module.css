@@ -1,0 +1,19 @@
+.buttonCustom {
+  border: 1.5px solid #0c172b;
+  border-radius: 1.5rem;
+  color: #000;
+  font-family: var(--font-notosans);
+  font-weight: 400;
+  font-size: 14px;
+  background-color: transparent;
+  box-shadow: none;
+}
+.buttonCustom:hover {
+    background-color: #0c172b;
+    color: #fff;
+}
+.buttonCustomImg {
+  width: 20px;
+  height: 20px;
+  margin-left: 0.5rem;
+}

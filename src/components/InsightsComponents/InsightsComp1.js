@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../styles/insights.module.css";
 import { Grid } from "@mui/material";
-import ButtonComp from "@/components/ButtonComp";
+import HomeButtonComp from "@/components/HomeButtonComp";
 import { montserrat, notosans } from "@/assets/fonts/fonts";
 
 export default function InsightsComp1() {
@@ -20,7 +20,7 @@ export default function InsightsComp1() {
         <div className={`${styles.insightsComp14} ${notosans.variable}`}>
           Explore our current open positions below!
         </div>
-        <ButtonComp
+        <HomeButtonComp
           title="Open Positions"
           buttonStyles={styles.insightsButton}
         />

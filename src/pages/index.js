@@ -8,10 +8,9 @@ import Instagram from "../assets/images/home/instagram.png";
 import Whatsapp from "../assets/images/home/wa.png";
 import Linkedin from "../assets/images/home/linkedin.png";
 import Twitter from "../assets/images/home/twiter.png";
-import UiArrow from "../assets/images/home/uil_arrow-up.png";
 import ScrollButton from "../assets/images/home/scrollBtn.png";
 import Oracle from "../assets/images/home/oracle1.png";
-import ButtonComp from "@/components/ButtonComp";
+import HomeButtonComp from "@/components/HomeButtonComp";
 
 function Home() {
   return (
@@ -49,7 +48,7 @@ function Home() {
             good CEO, and Clean design
           </div>
 
-          <ButtonComp title="Get Started" />
+          <HomeButtonComp title="Get Started" />
           <div className={styles.scrollContainer}>
             <Image src={ScrollButton} className={styles.heroSubTextLogo} />
           </div>
