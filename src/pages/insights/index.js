@@ -6,6 +6,7 @@ import InsightsComp2 from "@/components/InsightsComponents/InsightsComp2";
 import InsightsComp3 from "@/components/InsightsComponents/InsightsComp3";
 import InsightsComp4 from "@/components/InsightsComponents/InsightsComp4";
 import InsightsComp5 from "@/components/InsightsComponents/InsightsComp5";
+import InsightsComp6 from "@/components/InsightsComponents/InsightsComp6";
 
 export default function index() {
   return (
@@ -15,6 +16,7 @@ export default function index() {
       <InsightsComp3 />
       <InsightsComp4 />
       <InsightsComp5 />
+      <InsightsComp6 />
     </Grid>
   );
 }
