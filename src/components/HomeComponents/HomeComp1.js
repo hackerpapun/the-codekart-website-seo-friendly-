@@ -3,9 +3,9 @@ import React from "react";
 import Image from "next/image";
 import styles from "../../styles/Home/HomeComp1.module.css";
 import { homeComp1Data } from "./HomeConstantDatas";
-import HomeButtonComp from "../HomeButtonComp";
 import { Grid } from "@mui/material";
 import { montserrat } from "@/assets/fonts/fonts";
+import HomeButtonComp from "../HomeButtonComp";
 
 export default function HomeComp1() {
   return (
