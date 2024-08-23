@@ -1,0 +1,34 @@
+
+.hero5 {
+    width: 100%;
+    padding: 60px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.hero5Title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero5Subtitle {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.hero5Grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.hero5IndustryItem {
+    background-color: #f8f8f8;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    font-weight: bold;
+}

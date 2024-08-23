@@ -1,0 +1,21 @@
+
+.hero7 {
+    width: 100%;
+    padding: 70px 20px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.hero7Title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.hero7Button {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+}

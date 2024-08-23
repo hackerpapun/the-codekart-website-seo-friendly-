@@ -1,0 +1,48 @@
+.hero4 {
+    width: 100%;
+    padding: 60px;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.hero4Title {
+    font-size: 3rem;
+    font-family: var(--font-montserrat);
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.hero4Grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.hero4BlogItem {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.hero4BlogImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.hero4BlogItemTitle {
+    font-size: 1.4rem;
+    font-family: var(--font-montserrat);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.hero4BlogItemDate {
+    font-size: 1rem;
+    font-family: var(--font-montserrat);
+    color: #666666;
+}
