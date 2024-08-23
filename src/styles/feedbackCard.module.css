@@ -1,0 +1,58 @@
+#feedbackCard1 {
+  background-color: #e9ebf2;
+  border: 1px solid #e9ebf2;
+  padding: 1rem;
+  border-radius: 16px;
+  margin: 1rem;
+  /* max-height: 250px; */
+}
+
+#feedbackCard2 {
+  font-family: var(--font-notosans);
+  font-weight: 600;
+  text-align: left;
+  font-size: medium;
+  color: #000;
+  margin: 1rem 0rem;
+}
+
+#feedbackCard3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#feedbackCard4 {
+  width: 48px;
+  height: 48px;
+  background-color: #fff;
+  margin-right: 1rem;
+  font-family: var(--font-notosans);
+  font-weight: 600;
+  text-align: center;
+  font-size: x-large;
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+#feedbackCard5 {
+  font-family: var(--font-notosans);
+  font-weight: 400;
+  text-align: left;
+  font-size: smaller;
+  color: #000;
+}
+
+#feedbackCard6 {
+    font-family: var(--font-notosans);
+    font-weight: 400;
+    text-align: left;
+    font-size: smaller;
+    color: #000;
+    margin-top: 1rem;
+  }
+  

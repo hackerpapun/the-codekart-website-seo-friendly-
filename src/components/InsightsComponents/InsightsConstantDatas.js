@@ -117,25 +117,29 @@ export const insightsComp5LinksData = [
   },
 ];
 
-// export const insightsComp5FeedbackData = [
-//   {
-//     icon: BsInstagram,
-//     title: "Instagram",
-//     url: "https://www.instagram.com/",
-//   },
-//   {
-//     icon: BsTwitter,
-//     title: "Facebook",
-//     url: "https://www.facebook.com/",
-//   },
-//   {
-//     icon: BsInstagram,
-//     title: "LinkedIn",
-//     url: "https://www.linkedin.com/",
-//   },
-//   {
-//     icon: BsTwitter,
-//     title: "Twitter",
-//     url: "https://www.twitter.com/",
-//   }
-// ];
+export const insightsComp5FeedbackData = [
+  {
+    // pic: "/images/insights/person1.png",
+    name: "Deme Sai Kiran",
+    designation: "Software Engineer",
+    feedback: "Working at CodeKart has been an incredible experience. The supportive and collaborative culture fosters personal and professional growth. The autonomy and career development opportunities have truly empowered me. I appreciate the company’s commitment to innovation and employee well-being. It’s a great place to grow and succeed.",
+  },
+  {
+    pic: "/images/insights/person2.png",
+    name: "Priyanka Gour",
+    designation: "UI/UX Designer",
+    feedback: "CodeKart has provided me with a platform to excel and innovate. The emphasis on personal growth and creative freedom has been empowering. The team’s collaborative spirit and management’s support make it a fantastic place to work. I appreciate the commitment to maintaining a positive and inclusive workplace.",
+  },
+  {
+    pic: "/images/insights/person1.png",
+    name: "Deme Sai Kiran",
+    designation: "Software Engineer",
+    feedback: "Working at CodeKart has been an incredible experience. The supportive and collaborative culture fosters personal and professional growth. The autonomy and career development opportunities have truly empowered me. I appreciate the company’s commitment to innovation and employee well-being. It’s a great place to grow and succeed.",
+  },
+  {
+    pic: "/images/insights/person2.png",
+    name: "Priyanka Gour",
+    designation: "UI/UX Designer",
+    feedback: "CodeKart has provided me with a platform to excel and innovate. The emphasis on personal growth and creative freedom has been empowering. The team’s collaborative spirit and management’s support make it a fantastic place to work. I appreciate the commitment to maintaining a positive and inclusive workplace.",
+  }
+];
