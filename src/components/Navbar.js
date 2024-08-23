@@ -8,21 +8,23 @@ import { FaArrowRight } from "react-icons/fa6";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { IoIosSunny } from "react-icons/io";
 import { MdOutlineNightsStay } from "react-icons/md";
-import WhatWeDo from "@/pages/WhatWeDo";
-import WhatAreWe from "@/pages/WhatAreWe";
+// import WhatWeDo from "@/components/MobileViewNavBar/WhatWeDo";
+// import WhatAreWe from "@/components/NavBarComponent/WhatAreWe";
+import WhatAreWe from "./NavBarComponent/WhatAreWe";
+import WhatWeDo from "./NavBarComponent/WhatWeDo";
 import { ThemeContext } from "@/context/ThemeContext";
 import CodekartLogo from "../assets/images/navbar/codekartlogo.png";
 import LanguageImage from "../assets/images/navbar/language.png";
-import Insight from "@/pages/InsightNavBar";
+// import Insight from "@/components/NavBarComponent/InsightNavBar";
+import Insight from "./NavBarComponent/InsightNavBar";
 import Image from "next/image";
 import { RxCross2 } from "react-icons/rx";
-import MobileViewNavBar from "./MobileViewNavBar";
+import MobileViewNavBar from "./NavBarComponent/MobileViewNavBar";
 import { useRouter } from "next/router";
 import { navconstants } from "@/constants/navconstants";
 
 const Navbar = () => {
   const router = useRouter();
-
   const { theme, switchLightTheme, switchDarkTheme } =
     React.useContext(ThemeContext);
 
@@ -30,36 +32,66 @@ const Navbar = () => {
   const [isArrowUp, setIsArrowUp] = React.useState(false);
   const [whatAreWe, setWharareWe] = React.useState(false);
   const [InsightArrow, setInsightArrow] = React.useState(false);
+  const [isNavbarVisible, setIsNavbarVisible] = React.useState(true);
+  const [lastScrollPosition, setLastScrollPosition] = React.useState(0);
 
   const toggleArrow = () => {
     setIsArrowUp(!isArrowUp);
     setWharareWe(false);
     setInsightArrow(false);
   };
+
   const whatAreWeFun = () => {
     setWharareWe(!whatAreWe);
     setInsightArrow(false);
     setIsArrowUp(false);
   };
+
   const InsightFunction = () => {
     setInsightArrow(!InsightArrow);
     setWharareWe(false);
     setIsArrowUp(false);
   };
 
+  // Scroll behavior to hide/reveal the navbar
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPosition = window.pageYOffset;
+
+      if (
+        currentScrollPosition > lastScrollPosition &&
+        currentScrollPosition > 100
+      ) {
+        setIsNavbarVisible(false);
+      } else if (currentScrollPosition < lastScrollPosition) {
+        setIsNavbarVisible(true);
+      }
+      setLastScrollPosition(currentScrollPosition);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollPosition]);
+
   return (
     <>
-      <div className={styles.ResponsiveContainer}>
+      <div
+        className={`${styles.ResponsiveContainer} ${
+          isNavbarVisible ? styles.showNavbar : styles.hideNavbar
+        }`}
+      >
         <Grid container className={styles.MainContainer}>
           <Grid item xs={12} md={8} className={styles.NavBarTopComponent}>
             <Image
               src={CodekartLogo}
               alt="CodeKart Logo"
               className={styles.NavbarLogo}
-              onClick={() => router.push(navconstants.home)}
             />
 
-            <p className={styles.navBarparagraphContainer} onClick={() => router.push(navconstants.home)}>Home</p>
+            <p className={styles.navBarparagraphContainer}>Home</p>
 
             <div
               className={`${styles.navBarparagraphContainer} ${
@@ -77,7 +109,7 @@ const Navbar = () => {
               }`}
               onClick={whatAreWeFun}
             >
-              What are We
+              What We are
               <MdKeyboardArrowDown className={styles.arrow_icon} />
             </p>
 
@@ -146,7 +178,7 @@ const Navbar = () => {
               InsightArrow ? styles.active : ""
             }`}
           >
-            {InsightArrow && <Insight onclickInsightFunction={InsightFunction} />}
+            {InsightArrow && <Insight />}
           </Grid>
         </Grid>
       </div>
