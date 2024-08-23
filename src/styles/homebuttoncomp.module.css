@@ -1,4 +1,4 @@
-.buttonComp {
+.homebuttonComp {
   background: #e2e2e2 !important;
   border-radius: 14px !important;
   color: #16121e !important;
@@ -9,7 +9,7 @@
   /* width: 12rem;
   height: 2.5rem; */
 }
-.buttonCompImg {
+.homebuttonCompImg {
   width: 16px;
   height: 16px;
   margin-left: 0.5rem;
