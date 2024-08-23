@@ -12,7 +12,7 @@ import ScrollButton from "../assets/images/home/scrollBtn.png";
 import Oracle from "../assets/images/home/oracle1.png";
 import HomeButtonComp from "@/components/HomeButtonComp";
 
-function Home() {
+function Home() { 
   return (
     <>
       <div className={styles.homeContainer}>

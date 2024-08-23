@@ -47,56 +47,74 @@
 .allOpenPositions2 {
   font-family: var(--font-notosans);
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   color: #434343;
   margin: 3rem 0px;
   text-align: justify;
-  line-height: 2rem;
+  line-height: 1.7rem;
 }
 
 .allOpenPositions3 {
   font-family: var(--font-notosans);
-  font-size: 1.1rem;
-  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 600;
   color: #434343;
-  /* margin-bottom: 1rem; */
-  padding: 1rem;
-  cursor: pointer;
-}
-
-@media screen and (min-width: 798px) and (max-width: 1200px) {
-  .allOpenPositions1Container {
-    padding: 1rem;
-    gap: 1rem;
-  }
-}
-
-/* insight comp 6 card */
-.allOpenPositionsCardContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
-  margin-top: 2rem;
+  padding-top: 4rem;
 }
-.allOpenPositionsCard {
-  background-color: #ffffff;
-  padding: 1rem;
-  margin: 1rem;
-}
-.allOpenPositionsCardTitle {
-  font-family: var(--font-notosans);
-  font-size: 1.1rem;
-  font-weight: 500;
-  text-align: left;
-  color: #0c172b;
-  margin: 1rem 0px;
-}
-.allOpenPositionsCardDescription {
-  font-family: var(--font-notosans);
-  font-size: 0.9rem;
-  font-weight: 300;
-  text-align: left;
-  color: #434343;
-  margin-bottom: 0.6rem;
+
+@media screen and (max-width: 798px) {
+  .allOpenPositionsContainer {
+    padding: 1rem 0px;
+    gap: 1rem;
+  }
+  .allOpenPositionsText {
+    font-size: 2rem;
+  }
+  .allOpenPositions1Container {
+    padding: 1rem;
+    gap: 2rem;
+  }
+  .allOpenPositions1 {
+    font-family: var(--font-notosans);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #434343;
+    /* margin-bottom: 1rem; */
+    padding: 1rem;
+    cursor: pointer;
+  }
+  .allOpenPositions1Selected {
+    font-family: var(--font-notosans);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #434343;
+    margin-bottom: 0.5rem;
+    border-left: 3px solid #fa6400;
+    padding: 1rem;
+    background-color: #fff;
+  }
+  
+  .allOpenPositions2 {
+    font-family: var(--font-notosans);
+    font-size: 1rem;
+    font-weight: 400;
+    color: #434343;
+    margin: 3rem 0px;
+    text-align: justify;
+    line-height: 1.7rem;
+  }
+  
+  .allOpenPositions3 {
+    font-family: var(--font-notosans);
+    font-size: 1rem;
+    font-weight: 600;
+    color: #434343;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+  }
 }

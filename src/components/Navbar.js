@@ -10,8 +10,8 @@ import { IoIosSunny } from "react-icons/io";
 import { MdOutlineNightsStay } from "react-icons/md";
 // import WhatWeDo from "@/components/MobileViewNavBar/WhatWeDo";
 // import WhatAreWe from "@/components/NavBarComponent/WhatAreWe";
-import WhatAreWe from "./NavBarComponent/WhatAreWe";
-import WhatWeDo from "./NavBarComponent/WhatWeDo";
+import WhatAreWe from "./NavBarComponent/WhatWeAreNavbar";
+import WhatWeDo from "./NavBarComponent/WhatWeDoNavbar";
 import { ThemeContext } from "@/context/ThemeContext";
 import CodekartLogo from "../assets/images/navbar/codekartlogo.png";
 import LanguageImage from "../assets/images/navbar/language.png";
@@ -89,9 +89,10 @@ const Navbar = () => {
               src={CodekartLogo}
               alt="CodeKart Logo"
               className={styles.NavbarLogo}
+              onClick={() => router.push(navconstants.home)}
             />
 
-            <p className={styles.navBarparagraphContainer}>Home</p>
+            <p className={styles.navBarparagraphContainer} onClick={() => router.push(navconstants.home)}>Home</p>
 
             <div
               className={`${styles.navBarparagraphContainer} ${
@@ -178,7 +179,7 @@ const Navbar = () => {
               InsightArrow ? styles.active : ""
             }`}
           >
-            {InsightArrow && <Insight />}
+            {InsightArrow && <Insight onclickInsightFunction={InsightFunction} />}
           </Grid>
         </Grid>
       </div>

@@ -1,9 +1,9 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
-import styles from "../../../styles/WhatAreWe.module.css";
+import styles from "../../../styles/whatWeAreNavbar.module.css";
 import { FaChevronRight } from "react-icons/fa6";
 
-const WhatAreWe = () => {
+const WhatWeAreNavbar = () => {
   const [activeSection, setActiveSection] = useState("overview");
 
   const handleSectionHover = (section) => {
@@ -93,4 +93,4 @@ const WhatAreWe = () => {
   );
 };
 
-export default WhatAreWe;
+export default WhatWeAreNavbar;
