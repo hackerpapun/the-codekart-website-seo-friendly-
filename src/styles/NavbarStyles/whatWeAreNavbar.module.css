@@ -1,0 +1,133 @@
+.whatWeDoDropDown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid;
+  margin-top: 1% !important;
+  z-index: 999;
+  /* position: absolute; */
+}
+
+.whatweDoContainer {
+  padding-left: 17%;
+  padding-right: 4%;
+  padding-top: 1% !important;
+}
+.whatWeDoContaint {
+  padding-left: 6%;
+}
+
+.WhatWeDoOverView {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  /* padding: 4%; */
+}
+.WhatWeDoOverViewFirstElem {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Noto Sans";
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.whatWeDoContaintParagraph {
+  margin-bottom: 0;
+  margin-top: 8px;
+  font-size: 29px;
+  font-weight: 400;
+  font-family: "Noto Sans";
+}
+.whatWeDoContainerText {
+  margin-top: 17px;
+  font-family: "Noto Sans";
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.discoberAllSolution {
+  border-radius: 35px;
+  padding-top: 6px;
+  padding-bottom: 8px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-top: 23px;
+  background-color: white;
+  font-family: "Noto Sans";
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.WhatWeDoOverView.active {
+  background-color: #e9ebf2;
+}
+
+.serviceTableContaint {
+  padding: 4% !important;
+}
+
+.serviceItems {
+  padding-top: 4%;
+}
+
+.tabelConatints {
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-family: "Noto Sans";
+  font-weight: 500;
+}
+
+.tabelConatints::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* Start from the center */
+  bottom: -8px; /* Adjust as needed */
+  height: 1.5px; /* Thickness of the underline */
+  width: 0; /* Initial width */
+  background-color: black; /* Adjust color as needed */
+  transform: translateX(-50%); /* Center the line */
+  transition: width 0.5s ease-in-out;
+}
+
+.tabelConatints:hover::after {
+  width: 50%; /* Adjust width, leaving 20% padding on both sides */
+}
+
+.tabelConatints:hover {
+  font-size: 18px;
+}
+
+/* service containt */
+.ServicetabelConatints {
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-family: "Noto Sans";
+  font-weight: 500;
+}
+
+.ServicetabelConatints::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* Start from the center */
+  bottom: -8px; /* Adjust as needed */
+  height: 1.5px; /* Thickness of the underline */
+  width: 0; /* Initial width */
+  background-color: black; /* Adjust color as needed */
+  transform: translateX(-50%); /* Center the line */
+  transition: width 0.5s ease-in-out;
+}
+
+.ServicetabelConatints:hover::after {
+  width: 80%; /* Adjust width, leaving 20% padding on both sides */
+}
+
+.ServicetabelConatints:hover {
+  font-size: 18px;
+}

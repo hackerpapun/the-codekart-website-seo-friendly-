@@ -1,55 +1,81 @@
 "use client";
 import * as React from "react";
 import Grid from "@mui/material/Grid";
-import Switch from "@mui/material/Switch";
-import { FaSun, FaMoon } from "react-icons/fa";
-import styles from "../styles/Navbar.module.css";
+import styles from "../../styles/NavbarStyles/Navbar.module.css";
 import { FaArrowRight } from "react-icons/fa6";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { IoIosSunny } from "react-icons/io";
 import { MdOutlineNightsStay } from "react-icons/md";
-import WhatWeDo from "@/pages/WhatWeDo";
-import WhatAreWe from "@/pages/WhatAreWe";
+import WhatAreWe from "./WhatWeAreNavbar";
+import WhatWeDo from "./WhatWeDoNavbar";
 import { ThemeContext } from "@/context/ThemeContext";
-import CodekartLogo from "../assets/images/navbar/codekartlogo.png";
-import LanguageImage from "../assets/images/navbar/language.png";
-import Insight from "@/pages/InsightNavBar";
+import CodekartLogo from "../../assets/images/navbar/codekartlogo.png";
+import LanguageImage from "../../assets/images/navbar/language.png";
+import Insight from "./InsightNavBar";
 import Image from "next/image";
-import { RxCross2 } from "react-icons/rx";
 import MobileViewNavBar from "./MobileViewNavBar";
 import { useRouter } from "next/router";
 import { navconstants } from "@/constants/navconstants";
 
 const Navbar = () => {
   const router = useRouter();
-
   const { theme, switchLightTheme, switchDarkTheme } =
     React.useContext(ThemeContext);
 
-  const [activeDropdown, setActiveDropdown] = React.useState(null);
   const [isArrowUp, setIsArrowUp] = React.useState(false);
   const [whatAreWe, setWharareWe] = React.useState(false);
   const [InsightArrow, setInsightArrow] = React.useState(false);
+  const [isNavbarVisible, setIsNavbarVisible] = React.useState(true);
+  const [lastScrollPosition, setLastScrollPosition] = React.useState(0);
 
   const toggleArrow = () => {
     setIsArrowUp(!isArrowUp);
     setWharareWe(false);
     setInsightArrow(false);
   };
+
   const whatAreWeFun = () => {
     setWharareWe(!whatAreWe);
     setInsightArrow(false);
     setIsArrowUp(false);
   };
+
   const InsightFunction = () => {
     setInsightArrow(!InsightArrow);
     setWharareWe(false);
     setIsArrowUp(false);
   };
 
+  // Scroll behavior to hide/reveal the navbar
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPosition = window.pageYOffset;
+
+      if (
+        currentScrollPosition > lastScrollPosition &&
+        currentScrollPosition > 100
+      ) {
+        setIsNavbarVisible(false);
+      } else if (currentScrollPosition < lastScrollPosition) {
+        setIsNavbarVisible(true);
+      }
+      setLastScrollPosition(currentScrollPosition);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollPosition]);
+
   return (
     <>
-      <div className={styles.ResponsiveContainer}>
+      <div
+        className={`${styles.ResponsiveContainer} ${
+          isNavbarVisible ? styles.showNavbar : styles.hideNavbar
+        }`}
+      >
         <Grid container className={styles.MainContainer}>
           <Grid item xs={12} md={8} className={styles.NavBarTopComponent}>
             <Image
@@ -77,7 +103,7 @@ const Navbar = () => {
               }`}
               onClick={whatAreWeFun}
             >
-              What are We
+              What We are
               <MdKeyboardArrowDown className={styles.arrow_icon} />
             </p>
 

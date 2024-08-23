@@ -1,13 +1,9 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
-import styles from "../../styles/InsightNavbar.module.css";
+import styles from "../../../styles/NavbarStyles/whatWeAreNavbar.module.css";
 import { FaChevronRight } from "react-icons/fa6";
-import { useRouter } from "next/router";
-import { navconstants } from "@/constants/navconstants";
 
-const InsightNavbar = ({ onclickInsightFunction }) => {
-  const router = useRouter();
-
+const WhatWeAreNavbar = () => {
   const [activeSection, setActiveSection] = useState("overview");
 
   const handleSectionHover = (section) => {
@@ -38,9 +34,7 @@ const InsightNavbar = ({ onclickInsightFunction }) => {
             } ${activeSection === "industries" && styles.active}`}
             onMouseEnter={() => handleSectionHover("industries")}
           >
-            <p className={styles.WhatWeDoOverViewFirstElem}>
-              Why Choose CodeKart?
-            </p>
+            <p className={styles.WhatWeDoOverViewFirstElem}>About Us</p>
             <FaChevronRight />
           </div>
           <hr />
@@ -50,7 +44,7 @@ const InsightNavbar = ({ onclickInsightFunction }) => {
             } ${activeSection === "service" && styles.active}`}
             onMouseEnter={() => handleSectionHover("service")}
           >
-            <p className={styles.WhatWeDoOverViewFirstElem}>Careers</p>
+            <p className={styles.WhatWeDoOverViewFirstElem}>Contact Us</p>
             <FaChevronRight />
           </div>
           <hr />
@@ -60,45 +54,38 @@ const InsightNavbar = ({ onclickInsightFunction }) => {
           {activeSection === "overview" && (
             <>
               <p className={styles.whatWeDoContaintParagraph}>
-                Extraordinary expertise leads to remarkable results.
+                We’re in it for good, driving positive change for the benefit of
+                all.
               </p>
               <p className={styles.whatWeDoContainerText}>
-                We share news, insights, analysis, and research tailored to your
-                unique interests to help you deepen your knowledge and impact.
+                Our expert, committed team puts our shared beliefs into action
+                every day. Together, we combine innovation and collective
+                knowledge to create the extraordinary.
               </p>
-              <button
-                className={styles.discoberAllSolution}
-                onClick={() => {
-                  onclickInsightFunction();
-                  router.push(navconstants.insights);
-                }}
-              >
-                Discover Expert Insights
+              <button className={styles.discoberAllSolution}>
+                Discover the difference.
               </button>
             </>
           )}
           {activeSection === "industries" && (
             <Grid container className={styles.serviceTableContaint} spacing={7}>
-              <Grid item sm={12} className={styles.tabelConatints}>
+              <Grid item sm={3} className={styles.tabelConatints}>
                 Strength
               </Grid>
-              <Grid item sm={12} className={styles.tabelConatints}>
+              <Grid item sm={3} className={styles.tabelConatints}>
                 Vision
               </Grid>
             </Grid>
           )}
           {activeSection === "service" && (
-            <>
-              <p className={styles.whatWeDoContaintParagraph}>
-                Want to be a global change-maker? Join our team.
-              </p>
-              <p className={styles.whatWeDoContainerText}>
-                At CodeKart, we believe exceptional work begins with hiring,
-                celebrating, and nurturing the best people from all walks of
-                life.
-              </p>
-              <button className={styles.discoberAllSolution}>Join Us</button>
-            </>
+            <Grid container spacing={5} className={styles.serviceItems}>
+              <Grid item sm={3} className={styles.ServicetabelConatints}>
+                FAQ
+              </Grid>
+              <Grid item sm={5} className={styles.ServicetabelConatints}>
+                Get in Touch With Us
+              </Grid>
+            </Grid>
           )}
         </Grid>
       </Grid>
@@ -106,4 +93,4 @@ const InsightNavbar = ({ onclickInsightFunction }) => {
   );
 };
 
-export default InsightNavbar;
+export default WhatWeAreNavbar;

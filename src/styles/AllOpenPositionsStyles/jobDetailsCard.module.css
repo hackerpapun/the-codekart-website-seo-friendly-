@@ -1,0 +1,37 @@
+.jobDetailsCard1 {
+  font-family: var(--font-notosans);
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: left;
+  color: #0c172b;
+  margin: 1rem 0px;
+}
+.jobDetailsCard2 {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 1rem 0px;
+}
+.jobDetailsCard2Text {
+  font-family: var(--font-notosans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: left;
+  color: #0c172b;
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  border: 1.3px solid #0c172b;
+  margin-right: 1rem;
+}
+.jobDetailsCard3 {
+  font-family: var(--font-notosans);
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: left;
+  color: #434343;
+  margin-bottom: 0.6rem;
+}
+.jobDetailsCard4 {
+   background-color: #0c172b;
+    color: #fff;
+  }

@@ -1,0 +1,94 @@
+.heroContainer {
+  width: 70%;
+}
+.homeContainer {
+  background-image: url("../../assets/images/home/hero.png");
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* margin-top: 20%; */
+}
+
+.heroText {
+  color: #191919;
+  font-weight: 700;
+  font-size: 60px;
+  font-family: "Montserrat";
+}
+.socialMediaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.socialMediaLogo {
+  width: 16px;
+  height: 16px;
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.heroSubText {
+  color: #191919;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 3rem;
+  /* font-family: 'Montserrat'; */
+}
+.homeButton {
+  background: #e2e2e2 !important;
+  border-radius: 14px !important;
+  color: #16121e !important;
+  font-weight: 400 !important;
+  font-size: 16px;
+  border-radius: 20px;
+  margin-top: 3rem;
+  width: 12rem;
+  height: 2.5rem;
+}
+.buttonLogo {
+  margin-left: 10px;
+  width: 16px;
+  height: 16px;
+}
+.heroSubTextLogo {
+  width: 100px;
+  height: 100px;
+}
+.scrollContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.homeButtonImg {
+  width: 16px;
+  height: 16px;
+  margin-left: 0.5rem;
+}
+
+.homeSecondContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.companyLogoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 12rem;
+}
+
+.companyContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.companyNameImg {
+}
