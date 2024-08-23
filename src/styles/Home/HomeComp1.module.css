@@ -1,0 +1,50 @@
+.hero1 {
+    background-image: url("../../assets/images/home/hero.png");
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    width: 100vw;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.hero1Logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.hero1socialMedia {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.hero1heroText {
+    font-size: 4rem;
+    font-family: var(--font-montserrat);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero1heroSubText {
+    font-size: 1.5rem;
+    font-family: var(--font-montserrat);
+    margin-bottom: 30px;
+}
+
+.hero1buttonComp {
+    margin-bottom: 30px;
+}
+
+.hero1scrollContainer {
+    margin-top: 30px;
+}

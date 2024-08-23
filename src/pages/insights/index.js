@@ -11,10 +11,10 @@ export default function index() {
   return (
     <Grid container className={`${montserrat.variable}`}>
       <InsightsComp1 />
-      <InsightsComp2 />
-      <InsightsComp3 />
-      <InsightsComp4 />
-      <InsightsComp5 />
+      // <InsightsComp2 />
+      // <InsightsComp3 />
+      // <InsightsComp4 />
+      // <InsightsComp5 />
     </Grid>
   );
 }

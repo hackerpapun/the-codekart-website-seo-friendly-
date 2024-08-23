@@ -1,80 +1,26 @@
 "use client";
 import React from "react";
-import styles from "../styles/home.module.css";
-import Button from "@mui/material/Button";
-import Image from "next/image";
-// import SendIcon from "@mui/icons-material/Send";
-import Instagram from "../assets/images/home/instagram.png";
-import Whatsapp from "../assets/images/home/wa.png";
-import Linkedin from "../assets/images/home/linkedin.png";
-import Twitter from "../assets/images/home/twiter.png";
-import UiArrow from "../assets/images/home/uil_arrow-up.png";
-import ScrollButton from "../assets/images/home/scrollBtn.png";
-import Oracle from "../assets/images/home/oracle1.png";
-import ButtonComp from "@/components/ButtonComp";
+import { Grid } from "@mui/material";
+import styles from "../styles/Home/home.module.css";
+import HomeComp1 from "@/components/HomeComponents/HomeComp1";
+import HomeComp2 from "@/components/HomeComponents/HomeComp2";
+import HomeComp3 from "@/components/HomeComponents/HomeComp3";
+import HomeComp4 from "@/components/HomeComponents/HomeComp4";
+import HomeComp5 from "@/components/HomeComponents/HomeComp5";
+import HomeComp6 from "@/components/HomeComponents/HomeComp6";
+import HomeComp7 from "@/components/HomeComponents/HomeComp7";
+import { montserrat } from "@/assets/fonts/fonts";
 
-function Home() {
+export default function Home() {
   return (
-    <>
-      <div className={styles.homeContainer}>
-        <div className={styles.heroContainer}>
-          <div className={styles.socialMediaContainer}>
-            <Image
-              src={Instagram}
-              alt="Instagram icon"
-              className={styles.socialMediaLogo}
-            />
-            <Image
-              src={Whatsapp}
-              alt="WhatsApp icon"
-              className={styles.socialMediaLogo}
-            />
-            <Image
-              src={Linkedin}
-              alt="Linkedin icon"
-              className={styles.socialMediaLogo}
-            />
-            <Image
-              src={Twitter}
-              alt="Twitter icon"
-              className={styles.socialMediaLogo}
-            />
-          </div>
-
-          <div className={styles.heroText}>
-            Inspiring Creativity, Delivering Excellence with CodeKart.
-          </div>
-          <div className={styles.heroSubText}>
-            help you to build website company that is modern, user friendly,
-            good CEO, and Clean design
-          </div>
-
-          <ButtonComp title="Get Started" />
-          <div className={styles.scrollContainer}>
-            <Image src={ScrollButton} className={styles.heroSubTextLogo} />
-          </div>
-        </div>
-      </div>
-
-      <div className={styles.homeSecondContainer}>
-        <div>
-          <div>Revitalize Your Brand</div>
-          <div className={styles.companyContainer}>
-            <div>
-              <div className={styles.companyLogoContainer}>
-                <Image src={Oracle} alt="" className={styles.companyNameImg} />
-              </div>
-            </div>
-            <div>
-              <div className={styles.companyLogoContainer}>
-                <Image src={Oracle} alt="" className={styles.homeButtonImg} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+    <Grid container className={`${styles.homeContainer} ${montserrat.variable}`}>
+      <HomeComp1 />
+      <HomeComp2 />
+      <HomeComp3 />
+      <HomeComp4 />
+      <HomeComp5 />
+      <HomeComp6 />
+      <HomeComp7 />
+    </Grid>
   );
 }
-
-export default Home;
