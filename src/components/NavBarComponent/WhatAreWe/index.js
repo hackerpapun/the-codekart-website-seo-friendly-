@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
-import styles from "../../styles/WhatAreWe.module.css";
+import styles from "../../../styles/WhatAreWe.module.css";
 import { FaChevronRight } from "react-icons/fa6";
 
 const WhatAreWe = () => {

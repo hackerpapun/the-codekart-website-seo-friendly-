@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
-import styles from "../../styles/mobileview.module.css";
+import styles from "../../../styles/mobileview.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
-import CodekartLogo from "../../assets/images/navbar/codekartlogo.png";
+import CodekartLogo from "../../../assets/images/navbar/codekartlogo.png";
 import { RxCross2 } from "react-icons/rx";
 import Image from "next/image";
 import { Grid } from "@mui/material";

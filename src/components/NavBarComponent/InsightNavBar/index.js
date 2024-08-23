@@ -1,6 +1,7 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
-import styles from "../../styles/InsightNavbar.module.css";
+import styles from "../../../styles/InsightNavbar.module.css";
+// import styles from '../../../'
 import { FaChevronRight } from "react-icons/fa6";
 import { useRouter } from "next/router";
 import { navconstants } from "@/constants/navconstants";
