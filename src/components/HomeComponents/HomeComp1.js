@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "../../styles/Home/HomeComp1.module.css";
 import { homeComp1Data } from "./HomeConstantDatas";
-import ButtonComp from "../ButtonComp";
+import HomeButtonComp from "../HomeButtonComp";
 import { Grid } from "@mui/material";
 import { montserrat } from "@/assets/fonts/fonts";
 
@@ -24,7 +24,7 @@ export default function HomeComp1() {
       </div>
       <div className={styles.hero1heroText}>{homeComp1Data.heroText}</div>
       <div className={styles.hero1heroSubText}>{homeComp1Data.heroSubText}</div>
-      <ButtonComp title="Get Started" className={styles.hero1buttonComp} />
+      <HomeButtonComp title="Get Started" className={styles.hero1buttonComp} />
       <div className={styles.hero1scrollContainer}>
         <Image
           src={homeComp1Data.scrollButton}

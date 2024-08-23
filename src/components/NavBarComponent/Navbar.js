@@ -85,7 +85,17 @@ const Navbar = () => {
               onClick={() => router.push(navconstants.home)}
             />
 
-            <p className={styles.navBarparagraphContainer} onClick={() => router.push(navconstants.home)}>Home</p>
+            <p
+              className={styles.navBarparagraphContainer}
+              onClick={() => {
+                router.push(navconstants.home);
+                setIsArrowUp(false);
+                setWharareWe(false);
+                setInsightArrow(false);
+              }}
+            >
+              Home
+            </p>
 
             <div
               className={`${styles.navBarparagraphContainer} ${
@@ -172,7 +182,9 @@ const Navbar = () => {
               InsightArrow ? styles.active : ""
             }`}
           >
-            {InsightArrow && <Insight onclickInsightFunction={InsightFunction} />}
+            {InsightArrow && (
+              <Insight onclickInsightFunction={InsightFunction} />
+            )}
           </Grid>
         </Grid>
       </div>
