@@ -1,9 +1,13 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
-import styles from "../../styles/WhatAreWe.module.css";
+import styles from "../../styles/InsightNavbar.module.css";
 import { FaChevronRight } from "react-icons/fa6";
+import { useRouter } from "next/router";
+import { navconstants } from "@/constants/navconstants";
 
-const WhatAreWe = () => {
+const InsightNavbar = ({ onclickInsightFunction }) => {
+  const router = useRouter();
+
   const [activeSection, setActiveSection] = useState("overview");
 
   const handleSectionHover = (section) => {
@@ -34,7 +38,9 @@ const WhatAreWe = () => {
             } ${activeSection === "industries" && styles.active}`}
             onMouseEnter={() => handleSectionHover("industries")}
           >
-            <p className={styles.WhatWeDoOverViewFirstElem}>About Us</p>
+            <p className={styles.WhatWeDoOverViewFirstElem}>
+              Why Choose CodeKart?
+            </p>
             <FaChevronRight />
           </div>
           <hr />
@@ -44,7 +50,7 @@ const WhatAreWe = () => {
             } ${activeSection === "service" && styles.active}`}
             onMouseEnter={() => handleSectionHover("service")}
           >
-            <p className={styles.WhatWeDoOverViewFirstElem}>Contact Us</p>
+            <p className={styles.WhatWeDoOverViewFirstElem}>Careers</p>
             <FaChevronRight />
           </div>
           <hr />
@@ -54,38 +60,45 @@ const WhatAreWe = () => {
           {activeSection === "overview" && (
             <>
               <p className={styles.whatWeDoContaintParagraph}>
-                We’re in it for good, driving positive change for the benefit of
-                all.
+                Extraordinary expertise leads to remarkable results.
               </p>
               <p className={styles.whatWeDoContainerText}>
-                Our expert, committed team puts our shared beliefs into action
-                every day. Together, we combine innovation and collective
-                knowledge to create the extraordinary.
+                We share news, insights, analysis, and research tailored to your
+                unique interests to help you deepen your knowledge and impact.
               </p>
-              <button className={styles.discoberAllSolution}>
-                Discover the difference.
+              <button
+                className={styles.discoberAllSolution}
+                onClick={() => {
+                  onclickInsightFunction();
+                  router.push(navconstants.insights);
+                }}
+              >
+                Discover Expert Insights
               </button>
             </>
           )}
           {activeSection === "industries" && (
             <Grid container className={styles.serviceTableContaint} spacing={7}>
-              <Grid item sm={12} className={styles.tabelConatints}>
+              <Grid item sm={4} className={styles.tabelConatints}>
                 Strength
               </Grid>
-              <Grid item sm={12} className={styles.tabelConatints}>
+              <Grid item sm={4} className={styles.tabelConatints}>
                 Vision
               </Grid>
             </Grid>
           )}
           {activeSection === "service" && (
-            <Grid container spacing={5} className={styles.serviceItems}>
-              <Grid item sm={12} className={styles.tabelConatints}>
-                FAQ
-              </Grid>
-              <Grid item sm={12} className={styles.tabelConatints}>
-                Get in Touch With Us
-              </Grid>
-            </Grid>
+            <>
+              <p className={styles.whatWeDoContaintParagraph}>
+                Want to be a global change-maker? Join our team.
+              </p>
+              <p className={styles.whatWeDoContainerText}>
+                At CodeKart, we believe exceptional work begins with hiring,
+                celebrating, and nurturing the best people from all walks of
+                life.
+              </p>
+              <button className={styles.discoberAllSolution}>Join Us</button>
+            </>
           )}
         </Grid>
       </Grid>
@@ -93,4 +106,4 @@ const WhatAreWe = () => {
   );
 };
 
-export default WhatAreWe;
+export default InsightNavbar;

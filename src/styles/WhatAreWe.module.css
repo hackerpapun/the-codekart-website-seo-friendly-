@@ -56,6 +56,7 @@
   background-color: white;
   font-family: "Noto Sans";
   font-weight: 500;
+  cursor: pointer;
 }
 
 .WhatWeDoOverView.active {
@@ -66,10 +67,67 @@
   padding: 4% !important;
 }
 
+.serviceItems {
+  padding-top: 4%;
+}
+
 .tabelConatints {
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+  font-family: "Noto Sans";
+  font-weight: 500;
   font-family: "Noto Sans";
   font-weight: 500;
 }
-.serviceItems {
-  padding-top: 4%;
+
+.tabelConatints::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* Start from the center */
+  bottom: -8px; /* Adjust as needed */
+  height: 1.5px; /* Thickness of the underline */
+  width: 0; /* Initial width */
+  background-color: black; /* Adjust color as needed */
+  transform: translateX(-50%); /* Center the line */
+  transition: width 0.5s ease-in-out;
+}
+
+.tabelConatints:hover::after {
+  width: 50%; /* Adjust width, leaving 20% padding on both sides */
+}
+
+.tabelConatints:hover {
+  font-size: 18px;
+}
+
+/* service containt */
+.ServicetabelConatints {
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-family: "Noto Sans";
+  font-weight: 500;
+}
+
+.ServicetabelConatints::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* Start from the center */
+  bottom: -8px; /* Adjust as needed */
+  height: 1.5px; /* Thickness of the underline */
+  width: 0; /* Initial width */
+  background-color: black; /* Adjust color as needed */
+  transform: translateX(-50%); /* Center the line */
+  transition: width 0.5s ease-in-out;
+}
+
+.ServicetabelConatints:hover::after {
+  width: 80%; /* Adjust width, leaving 20% padding on both sides */
+}
+
+.ServicetabelConatints:hover {
+  font-size: 18px;
 }
