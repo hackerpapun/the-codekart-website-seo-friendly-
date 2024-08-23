@@ -1,9 +1,9 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
-import styles from "../../styles/WhatAreWe.module.css";
+import styles from "../../../styles/whatWeAreNavbar.module.css";
 import { FaChevronRight } from "react-icons/fa6";
 
-const WhatAreWe = () => {
+const WhatWeAreNavbar = () => {
   const [activeSection, setActiveSection] = useState("overview");
 
   const handleSectionHover = (section) => {
@@ -69,20 +69,20 @@ const WhatAreWe = () => {
           )}
           {activeSection === "industries" && (
             <Grid container className={styles.serviceTableContaint} spacing={7}>
-              <Grid item sm={12} className={styles.tabelConatints}>
+              <Grid item sm={3} className={styles.tabelConatints}>
                 Strength
               </Grid>
-              <Grid item sm={12} className={styles.tabelConatints}>
+              <Grid item sm={3} className={styles.tabelConatints}>
                 Vision
               </Grid>
             </Grid>
           )}
           {activeSection === "service" && (
             <Grid container spacing={5} className={styles.serviceItems}>
-              <Grid item sm={12} className={styles.tabelConatints}>
+              <Grid item sm={3} className={styles.ServicetabelConatints}>
                 FAQ
               </Grid>
-              <Grid item sm={12} className={styles.tabelConatints}>
+              <Grid item sm={5} className={styles.ServicetabelConatints}>
                 Get in Touch With Us
               </Grid>
             </Grid>
@@ -93,4 +93,4 @@ const WhatAreWe = () => {
   );
 };
 
-export default WhatAreWe;
+export default WhatWeAreNavbar;

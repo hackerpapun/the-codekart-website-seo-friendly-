@@ -3,12 +3,16 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
-}
-
-.logoContainer {
-  width: 100px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .menuContainer {
@@ -53,37 +57,6 @@
   transform: rotate(0deg);
 }
 
-.NavbarLogo {
-  width: 18%;
-  height: 9vh;
-}
-
-.SideBarScreen {
-  /* background-color: red !important; */
-  position: fixed;
-  /* top: 0; */
-  right: 0;
-  width: 70%;
-  height: 100%;
-  background-color: white;
-  transform: translateX(100%);
-  transition: transform 0.7s ease-out;
-  z-index: 999;
-}
-
-.SideBarScreen.open {
-  transform: translateX(0);
-}
-
-.sideContaint {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5%;
-  padding: 3%;
-  padding-bottom: 0;
-  font-family: "Noto Sans";
-}
 .arrowContainer {
   display: flex;
   justify-content: end;
@@ -100,15 +73,127 @@
 }
 
 @media (max-width: 600px) {
-  .logoContainer {
-    width: 80px;
-  }
-  .SideBarScreen {
-    width: 100%;
-  }
-
   .iconWrapper {
     width: 20px;
     height: 20px;
   }
+}
+
+.subItemContainer.open {
+  max-height: 1000px;
+  transition: max-height 0.5s ease-in;
+}
+
+.SideBarScreen {
+  position: fixed;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  background-color: white;
+  transform: translateX(100%);
+  transition: transform 0.7s ease-out;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  top: 60px;
+  height: 100vh;
+}
+
+.SideBarScreen.open {
+  transform: translateX(0);
+}
+
+.sidebarHeader {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.crossIcon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menuItemsContainer {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+.sideContaint {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-family: "Noto Sans";
+  cursor: pointer;
+}
+
+.arrowContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.noRotate {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.subItemContainer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+  font-family: "Noto Sans";
+}
+
+.subItem {
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+  padding-left: 35px;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: start;
+}
+@media (max-width: 600px) {
+  .SideBarScreen {
+    width: 100%;
+  }
+}
+
+.NavbarLogo {
+  width: 18%;
+  height: auto;
+  max-height: 9vh;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .NavbarLogo {
+    width: 30%;
+    max-height: 7vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .NavbarLogo {
+    width: 40%;
+    max-height: 6vh;
+  }
+}
+
+.ItemTitle {
+  font-size: 18px;
+  font-weight: 500;
 }

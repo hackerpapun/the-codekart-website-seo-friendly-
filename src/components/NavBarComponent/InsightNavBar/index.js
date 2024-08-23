@@ -1,6 +1,7 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
-import styles from "../../styles/InsightNavbar.module.css";
+import styles from "../../../styles/InsightNavbar.module.css";
+// import styles from '../../../'
 import { FaChevronRight } from "react-icons/fa6";
 import { useRouter } from "next/router";
 import { navconstants } from "@/constants/navconstants";
@@ -79,10 +80,10 @@ const InsightNavbar = ({ onclickInsightFunction }) => {
           )}
           {activeSection === "industries" && (
             <Grid container className={styles.serviceTableContaint} spacing={7}>
-              <Grid item sm={12} className={styles.tabelConatints}>
+              <Grid item sm={4} className={styles.tabelConatints}>
                 Strength
               </Grid>
-              <Grid item sm={12} className={styles.tabelConatints}>
+              <Grid item sm={4} className={styles.tabelConatints}>
                 Vision
               </Grid>
             </Grid>
