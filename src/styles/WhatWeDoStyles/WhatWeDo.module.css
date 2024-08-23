@@ -1,0 +1,355 @@
+.whatwedoTextContainer {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .whatwedoCompOrangeline {
+    width: 100px;
+    height: 3px;
+    background-color: #fa6400;
+    margin-bottom: 1rem;
+  }
+  .whatwedoButton {
+    width: 200px;
+    margin-bottom: 1rem;
+  }
+  
+  /* whatwedo comp1 */
+  .whatwedoComp11 {
+    margin: 4rem 0rem;
+  }
+  .whatwedoComp12 {
+    font-family: var(--font-montserrat);
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: left;
+    color: #0c172b;
+    /* margin-top: 1rem; */
+    margin-bottom: 0.6rem;
+  }
+  .whatwedoComp13 {
+    font-family: var(--font-notosans);
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: left;
+    color: #434343;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 2em;
+    letter-spacing: 0.05em;
+  }
+  .whatwedoComp14 {
+    font-family: var(--font-notosans);
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: left;
+    color: #434343;
+    line-height: 2em;
+    letter-spacing: 0.05em;
+  }
+  .whatwedoComp15 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* whatwedo comp 2 */
+  .whatwedoComp2Container {
+    background-color: #e9ebf2;
+    padding: 3rem 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .whatwedoComp2whatmakeText {
+    font-family: var(--font-notosans);
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+    color: #0c172b;
+    margin-bottom: 0.6rem;
+  }
+  /* insight comp 2 card */
+  .whatwedoComp2CardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+    margin-top: 2rem;
+  }
+  .whatwedoComp2Card {
+    background-color: #ffffff;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .whatwedoComp2CardTitle {
+    font-family: var(--font-notosans);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: left;
+    color: #0c172b;
+    margin: 1rem 0px;
+  }
+  .whatwedoComp2CardDescription {
+    font-family: var(--font-notosans);
+    font-size: 0.9rem;
+    font-weight: 300;
+    text-align: left;
+    color: #434343;
+    margin-bottom: 0.6rem;
+  }
+  
+  /* whatwedo comp 3 */
+  .whatwedoComp3Container {
+    padding: 3rem 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .whatwedoComp3Text1 {
+    font-family: var(--font-notosans);
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+    color: #0c172b;
+    margin-bottom: 0.6rem;
+  }
+  
+  .whatwedoComp3Text2 {
+    font-family: var(--font-notosans);
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #434343;
+    text-align: center;
+    margin: 1rem 0px;
+  }
+  
+  .whatwedoComp3CardContainer {
+    margin: 2rem 0px;
+  }
+  
+  .whatwedoComp3Card {
+    background: linear-gradient(
+      180deg,
+      rgba(226, 226, 226, 0.6) 0%,
+      rgba(226, 226, 226, 0.1) 100%
+    );
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .whatwedoComp3CardTitle {
+    font-family: var(--font-notosans);
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: left;
+    color: #0c172b;
+  }
+  
+  /* whatwedo comp 4 */
+  .whatwedoComp4Container {
+    background-color: #0c172b;
+    padding: 4rem 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .whatwedoComp4Text {
+    font-family: var(--font-notosans);
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 0.6rem;
+  }
+  .whatwedoComp4CardContainer {
+    margin: 3rem 0rem;
+    overflow: hidden;
+  }
+  .whatwedoComp4Img {
+    transition: all 0.25s ease-in-out;
+  }
+  .whatwedoComp4Img:hover {
+    transform: scale(1.015);
+    cursor: pointer;
+    filter: brightness(0.5);
+  }
+  
+  /* whatwedo comp 5 */
+  .whatwedoComp5Container {
+    padding: 3rem 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .whatwedoComp5Text1 {
+    font-family: var(--font-montserrat);
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: #0c172b;
+    margin-bottom: 0.6rem;
+  }
+  
+  .whatwedoComp5Text2 {
+    font-family: var(--font-notosans);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #434343;
+    text-align: center;
+    letter-spacing: 0.2em;
+    margin: 1rem 0px;
+  }
+  
+  .whatwedoComp5CardContainer {
+    margin: 2rem 0px;
+  }
+  .whatwedoComp5Card {
+    background: #e2e2e2;
+    padding: 1rem;
+    margin: 0px 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 12px;
+    height: 50px;
+    transition: all ease-in-out 0.5s;
+  }
+  .whatwedoComp5Card:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(1);
+    cursor: pointer;
+  }
+  .whatwedoComp5CardTitle {
+    font-family: var(--font-notosans);
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: left;
+    color: #0c172b;
+  }
+  .whatwedoComp5Text3 {
+    color: #000;
+    font-family: var(--font-notosans);
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 1rem 0rem;
+  }
+  .whatwedoComp5Text4 {
+    background: -webkit-linear-gradient(94.37deg, #FEC801 0%, #FA6400 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .whatwedoComp5Text5 {
+    font-family: var(--font-notosans);
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #434343;
+    text-align: center;
+    margin: 1rem 0.6rem 0px;
+  }
+  .whatwedoComp5
+  
+  /* whatwedo comp 6 */
+  .whatwedoComp6Container {
+    background-color: #e9ebf2;
+    padding: 3rem 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* all medi a queries */
+  @media screen and (max-width: 768px) {
+    /* whatwedo comp 1 */
+    .whatwedoComp11 {
+      margin: 1rem 0px;
+    }
+    .whatwedoComp12 {
+      margin: 0px;
+      font-size: 2rem;
+    }
+    .whatwedoComp13 {
+      margin-top: 0px;
+      line-height: 1.9em;
+      font-size: 1rem;
+    }
+    .whatwedoComp14 {
+      margin-top: 0px;
+      line-height: 1.5em;
+      font-size: 1rem;
+    }
+    .whatwedoComp15 {
+      height: 400px;
+    }
+    /* whatwedo comp 2 */
+    .whatwedoComp2whatmakeText {
+      font-size: 2rem;
+    }
+    .whatwedoComp2CardContainer {
+      margin-top: 0px;
+    }
+    .whatwedoComp2CardTitle {
+      font-size: 0.8rem;
+    }
+    .whatwedoComp2CardDescription {
+      font-size: 0.6rem;
+      margin-bottom: 0px;
+    }
+    /* whatwedo comp 3 */
+    .whatwedoComp3Container {
+      padding: 1rem;
+    }
+    .whatwedoComp3Text1 {
+      font-size: 2rem;
+    }
+    .whatwedoComp3Text2 {
+      font-size: 1rem;
+    }
+    /* whatwedo comp 4 */
+    .whatwedoComp4Container {
+      padding: 1rem;
+    }
+    .whatwedoComp4Text {
+      font-size: 2rem;
+    }
+    .whatwedoComp4CardContainer {
+      margin: 0px;
+    }
+    /* whatwedo comp 5 */
+    .whatwedoComp5Container {
+      padding: 1rem 0px;
+    }
+    .whatwedoComp5Text1 {
+      font-size: 3rem;
+    }
+    .whatwedoComp5Text2 {
+      font-size: 0.8rem;
+      line-height: 1.5rem;
+    }
+    .whatwedoComp5CardContainer {
+      margin: 1rem 0px;
+    }
+    .whatwedoComp5CardTitle {
+      font-size: 0.7rem;
+    }
+    /* whatwedo comp 6 */
+    .whatwedoComp6Container {
+      padding: 1rem 0px;
+    }
+  }
+  

@@ -7,7 +7,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { IoIosSunny } from "react-icons/io";
 import { MdOutlineNightsStay } from "react-icons/md";
 import WhatAreWe from "./WhatWeAreNavbar";
-import WhatWeDo from "./WhatWeDoNavbar";
+import WhatWeDoNavbar from "./WhatWeDoNavbar";
 import { ThemeContext } from "@/context/ThemeContext";
 import CodekartLogo from "../../assets/images/navbar/codekartlogo.png";
 import LanguageImage from "../../assets/images/navbar/language.png";
@@ -28,7 +28,7 @@ const Navbar = () => {
   const [isNavbarVisible, setIsNavbarVisible] = React.useState(true);
   const [lastScrollPosition, setLastScrollPosition] = React.useState(0);
 
-  const toggleArrow = () => {
+  const whatWeDoFun = () => {
     setIsArrowUp(!isArrowUp);
     setWharareWe(false);
     setInsightArrow(false);
@@ -101,7 +101,7 @@ const Navbar = () => {
               className={`${styles.navBarparagraphContainer} ${
                 isArrowUp ? styles.arrow_up : ""
               }`}
-              onClick={toggleArrow}
+              onClick={whatWeDoFun}
             >
               What We do
               <MdKeyboardArrowDown className={styles.arrow_icon} />
@@ -168,7 +168,7 @@ const Navbar = () => {
             container
             className={`${styles.dropdown} ${isArrowUp ? styles.active : ""}`}
           >
-            {isArrowUp && <WhatWeDo />}
+            {isArrowUp && <WhatWeDoNavbar onclickWhatwedoFun={whatWeDoFun} />}
           </Grid>
           <Grid
             container

@@ -4,7 +4,7 @@ import { Grid } from "@mui/material";
 import HomeButtonComp from "@/components/HomeButtonComp";
 import { montserrat, notosans } from "@/assets/fonts/fonts";
 
-export default function WhatWeDoComp1() {
+export default function WhatWeDoComp2() {
   return (
     <Grid
       container
