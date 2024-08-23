@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
-import styles from "../../../styles/whatWeAreNavbar.module.css";
+import styles from "../../../styles/NavbarStyles/whatWeAreNavbar.module.css";
 import { FaChevronRight } from "react-icons/fa6";
 
 const WhatWeAreNavbar = () => {

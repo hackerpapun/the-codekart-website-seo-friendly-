@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import React from "react";
-import styles from "../styles/buttonCustom.module.css";
+import styles from "../styles/CustomButtonStyles/buttonCustom.module.css";
 import { ImArrowRight2 } from "react-icons/im";
 
 export default function ButtonCustom(props) {

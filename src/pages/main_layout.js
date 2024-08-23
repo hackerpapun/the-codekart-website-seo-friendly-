@@ -1,6 +1,6 @@
 // this file will run first
 
-import Navbar from '../components/Navbar'
+import Navbar from '../components/NavBarComponent/Navbar'
 import Footer from '../components/Footer'
 
 export const metadata = {

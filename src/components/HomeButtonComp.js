@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import React from "react";
-import styles from "../styles/homebuttoncomp.module.css";
+import styles from "../styles/HomeStyles/homebuttoncomp.module.css";
 import UiArrow from "../assets/images/home/uil_arrow-up.png";
 import Image from "next/image";
 

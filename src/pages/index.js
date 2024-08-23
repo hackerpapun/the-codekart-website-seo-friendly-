@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
-import styles from "../styles/home.module.css";
-import Button from "@mui/material/Button";
+import styles from "../styles/HomeStyles/home.module.css";
 import Image from "next/image";
 // import SendIcon from "@mui/icons-material/Send";
 import Instagram from "../assets/images/home/instagram.png";

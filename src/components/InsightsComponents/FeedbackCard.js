@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/feedbackCard.module.css";
+import styles from "../../styles/InsightsStyles/feedbackCard.module.css";
 
 export default function FeedbackCard({ key, item }) {
   console.log("item", item);

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/insights.module.css";
+import styles from "../../styles/InsightsStyles/insights.module.css";
 import { Grid, ImageList, ImageListItem, useMediaQuery } from "@mui/material";
 import { notosans } from "@/assets/fonts/fonts";
 import { insightsComp4Data } from "./InsightsConstantDatas";

@@ -1,25 +1,19 @@
 "use client";
 import * as React from "react";
 import Grid from "@mui/material/Grid";
-import Switch from "@mui/material/Switch";
-import { FaSun, FaMoon } from "react-icons/fa";
-import styles from "../styles/Navbar.module.css";
+import styles from "../../styles/NavbarStyles/Navbar.module.css";
 import { FaArrowRight } from "react-icons/fa6";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { IoIosSunny } from "react-icons/io";
 import { MdOutlineNightsStay } from "react-icons/md";
-// import WhatWeDo from "@/components/MobileViewNavBar/WhatWeDo";
-// import WhatAreWe from "@/components/NavBarComponent/WhatAreWe";
-import WhatAreWe from "./NavBarComponent/WhatWeAreNavbar";
-import WhatWeDo from "./NavBarComponent/WhatWeDoNavbar";
+import WhatAreWe from "./WhatWeAreNavbar";
+import WhatWeDo from "./WhatWeDoNavbar";
 import { ThemeContext } from "@/context/ThemeContext";
-import CodekartLogo from "../assets/images/navbar/codekartlogo.png";
-import LanguageImage from "../assets/images/navbar/language.png";
-// import Insight from "@/components/NavBarComponent/InsightNavBar";
-import Insight from "./NavBarComponent/InsightNavBar";
+import CodekartLogo from "../../assets/images/navbar/codekartlogo.png";
+import LanguageImage from "../../assets/images/navbar/language.png";
+import Insight from "./InsightNavBar";
 import Image from "next/image";
-import { RxCross2 } from "react-icons/rx";
-import MobileViewNavBar from "./NavBarComponent/MobileViewNavBar";
+import MobileViewNavBar from "./MobileViewNavBar";
 import { useRouter } from "next/router";
 import { navconstants } from "@/constants/navconstants";
 
@@ -28,7 +22,6 @@ const Navbar = () => {
   const { theme, switchLightTheme, switchDarkTheme } =
     React.useContext(ThemeContext);
 
-  const [activeDropdown, setActiveDropdown] = React.useState(null);
   const [isArrowUp, setIsArrowUp] = React.useState(false);
   const [whatAreWe, setWharareWe] = React.useState(false);
   const [InsightArrow, setInsightArrow] = React.useState(false);

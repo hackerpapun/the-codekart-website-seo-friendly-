@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import styles from "../../styles/jobDetailsCard.module.css";
+import styles from "../../styles/AllOpenPositionsStyles/jobDetailsCard.module.css";
 import ButtonCustom from "../ButtonCustom";
 
 export default function JobDetailsCard({ item }) {

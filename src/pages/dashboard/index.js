@@ -1,5 +1,5 @@
 import DashboardLayout from "@/components/dashboard_nested_layout";
-import styles from "../../styles/dashboard.module.css";
+import styles from "../../styles/DashboardStyles/dashboard.module.css";
 import { roboto } from "@/assets/fonts/fonts";
 import OracleImage from "../../assets/images/home/oracle.png";
 import Image from "next/image";
