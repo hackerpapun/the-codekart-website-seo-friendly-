@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../../styles/allOpenPositions.module.css";
+import styles from "../../styles/AllOpenPositionsStyles/allOpenPositions.module.css";
 import { Grid, useMediaQuery } from "@mui/material";
 import { notosans } from "@/assets/fonts/fonts";
 import { jobCategories, jobs } from "./AllOpenPositionsConstantData";

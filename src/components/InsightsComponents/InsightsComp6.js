@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/insights.module.css";
+import styles from "../../styles/InsightsStyles/insights.module.css";
 import { Grid } from "@mui/material";
 import { notosans } from "@/assets/fonts/fonts";
 import AllOpenPositions from "../AllOpenPositions/AllOpenPositions";
