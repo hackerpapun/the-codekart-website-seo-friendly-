@@ -1,0 +1,40 @@
+.carausalleftcontaint {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Montserrat";
+}
+.carouselItem {
+  color: white;
+  padding-bottom: 20px;
+}
+.carausalMainContainer {
+  background-color: black;
+  height: 260px;
+  align-items: center;
+}
+.carausal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carausaltopContaint {
+  font-family: "Montserrat";
+  margin: 0;
+}
+.carausalbuttomContaint {
+  font-family: "Montserrat";
+  color: #a7a7a7;
+  font-weight: 300;
+}
+.spanContaint {
+  padding-bottom: 7px;
+  border-bottom: 2px solid #fa6400;
+  width: 100%;
+}
+.carausalLeftContainer {
+  margin: 0;
+}

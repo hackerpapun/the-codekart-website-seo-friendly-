@@ -1,0 +1,52 @@
+.strengthContainer {
+  margin-top: 4%;
+}
+.firstStrength {
+  display: flex;
+  justify-content: center;
+}
+.secondStrength {
+  display: flex;
+  justify-content: center;
+}
+.strengthHeader {
+  margin: 0;
+  font-family: "Plus Jakarta Sans";
+}
+.strengthParagraph {
+  margin: 0;
+  font-family: "Plus Jakarta Sans";
+}
+.strengthHeader {
+  margin: 0;
+  font-family: "Plus Jakarta Sans";
+  font-size: 90px;
+  position: relative;
+  width: fit-content;
+}
+.strengthHeader::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  right: 20%;
+  height: 3px;
+  background-color: #fa6400;
+}
+.MainStrengthContainer {
+  padding: 4%;
+  background-color: #e9eaf3;
+  border-radius: 30px;
+}
+.SubStrengthContainer {
+  background-color: white;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+.leftStrengthContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
