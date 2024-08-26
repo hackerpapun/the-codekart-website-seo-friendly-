@@ -8,7 +8,7 @@ export default function WhatWeDoComp1() {
   return (
     <Grid
       container
-      className={`${styles.whatwedoComp11} ${montserrat.variable}`}
+      className={`${styles.whatwedoComp11} ${montserrat.variable} ${notosans.variable}`}
     >
       <Grid item md={1}></Grid>
       <Grid
@@ -17,9 +17,14 @@ export default function WhatWeDoComp1() {
         className={styles.whatwedoTextContainer}
         style={{ padding: "0px 1rem" }}
       >
-        <div className={styles.whatwedoComp12}>Belief Powers Business</div>
+        <div
+          className={styles.whatwedoCompHeader}
+          style={{ textAlign: "left" }}
+        >
+          Belief Powers Business
+        </div>
         <div className={styles.whatwedoCompOrangeline} />
-        <div className={`${styles.whatwedoComp13} ${notosans.variable}`}>
+        <div className={styles.whatwedoComp13}>
           At Codekart, we do more than just transform businesses through
           technology. We help them make a meaningful impact on their customers
           and the communities they serve.

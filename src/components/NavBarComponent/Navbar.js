@@ -130,7 +130,7 @@ const Navbar = () => {
           <Grid item xs={12} md={4}>
             <div className={styles.NavRightContainer}>
               <button className={styles.buttonContainer}>
-                Contact with us
+                Connect with us
                 <div className={styles.arrowContainer}>
                   <FaArrowRight className={styles.arrowIcon} />
                 </div>
