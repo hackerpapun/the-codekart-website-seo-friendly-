@@ -73,7 +73,6 @@
 }
 .whatwedoComp2Text2 {
   font-family: var(--font-notosans);
-  font-family: Noto Sans;
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 43.58px;
@@ -128,12 +127,12 @@
   overflow: scroll;
   padding: 1rem 0px;
 }
-.whatwedoComp2ServicesDiv1 {
+.whatwedoComp2ServicesDiv1Container {
   margin: 1.5rem 0px;
   gap: 1rem;
 }
 .whatwedoComp2ServicesDiv1Img {
-  width: 90% !important;
+  width: 90%;
   height: auto;
   margin: 1rem;
 }
@@ -165,18 +164,17 @@
   line-height: 1.8rem;
 }
 
-
 /* what we do comp 3 */
 .whatwedoComp3IndustryDiv {
   height: 550px;
   overflow: scroll;
 }
-.whatwedoComp3IndustryDiv1 {
+.whatwedoComp3IndustryDiv1Container {
   margin: 1.5rem 0px;
   gap: 1rem;
 }
 .whatwedoComp3IndustryDiv1Img {
-  width: 80% !important;
+  width: 80%;
   height: auto;
   /* margin: 1rem; */
   border-top-right-radius: 1rem;
@@ -205,19 +203,23 @@
 }
 
 /* what we do comp4 */
-.whatwedoComp4Div { 
+.whatwedoComp4Div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .whatwedoComp4Text {
   font-family: var(--font-montserrat);
   color: #0c172b;
   font-size: 2.5rem;
   font-weight: 600;
+  padding-left: 2rem;
 }
 .whatwedoComp4Button {
   height: 48px;
 }
 
-/* all medi a queries */
+/* all media queries */
 @media screen and (max-width: 768px) {
   /* whatwedo comp 1 */
   .whatwedoComp11 {
@@ -244,7 +246,83 @@
   .whatwedoComp2Container {
     padding: 1rem;
   }
+  .whatwedoComp2Card {
+    font-size: 0.8rem;
+  }
   .whatwedoComp2Text2 {
     font-size: 1rem;
+  }
+   /* what we do comp 3 */
+   .whatwedoComp3IndustryDiv {
+    height: 780px;
+  }
+  .whatwedoComp3IndustryDiv1 {
+    display: flex;
+    justify-content: center;
+  }
+  .whatwedoComp3IndustryDiv1Img {
+    width: 60%;
+    border-radius: 1rem;
+  }
+  .whatwedoComp3IndustryDiv1Texts {
+    padding: 1rem;
+  }
+  /* what we do comp 4 */
+  .whatwedoComp4Text {
+    text-align: center;
+    padding-left: 0px;
+    margin-bottom: 1rem;
+  }
+  .whatwedoComp4ButtonContainer {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  /* what we do comp2 */
+  .whatwedoComp2Text2 {
+    font-size: 1.2rem;
+  }
+  .whatwedoComp2Card {
+    font-size: 1rem;
+  }
+  .whatwedoComp2ServicesDiv {
+    height: 800px;
+  }
+  .whatwedoComp2ServicesDiv1 {
+    display: flex;
+    justify-content: center;
+  }
+  .whatwedoComp2ServicesDiv1Img {
+    width: 70%;
+  }
+  .whatwedoComp2ServicesDiv1Texts {
+    padding: 1rem;
+  }
+  /* what we do comp 3 */
+  .whatwedoComp3IndustryDiv {
+    height: 780px;
+  }
+  .whatwedoComp3IndustryDiv1 {
+    display: flex;
+    justify-content: center;
+  }
+  .whatwedoComp3IndustryDiv1Img {
+    width: 60%;
+    border-radius: 1rem;
+  }
+  .whatwedoComp3IndustryDiv1Texts {
+    padding: 1rem;
+  }
+  /* what we do comp 4 */
+  .whatwedoComp4Text {
+    text-align: center;
+    padding-left: 0px;
+    margin-bottom: 1rem;
+  }
+  .whatwedoComp4ButtonContainer {
+    display: flex;
+    justify-content: center;
   }
 }

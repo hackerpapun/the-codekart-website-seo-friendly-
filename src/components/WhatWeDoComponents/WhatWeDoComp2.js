@@ -37,7 +37,7 @@ export default function WhatWeDoComp2() {
           }}
         >
           {whatWeDoComp2ServicesData?.map((item, i) => (
-            <Grid item xs={12} md={6} lg={3} key={i}>
+            <Grid item xs={5} md={4} lg={3} key={i}>
               <a
                 target=""
                 style={{ textDecoration: "none", color: "#000" }}
@@ -59,10 +59,10 @@ export default function WhatWeDoComp2() {
               <Grid
                 container
                 key={i}
-                className={styles.whatwedoComp2ServicesDiv1}
+                className={styles.whatwedoComp2ServicesDiv1Container}
                 id={item?.text1.replace(/ /g, "-")}
               >
-                <Grid item xs={12} md={5} lg={5}>
+                <Grid item xs={12} md={5} lg={5} className={styles.whatwedoComp2ServicesDiv1}>
                   <img
                     src={item?.img}
                     alt={item?.text1}

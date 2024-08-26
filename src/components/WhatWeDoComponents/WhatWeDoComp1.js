@@ -10,10 +10,10 @@ export default function WhatWeDoComp1() {
       container
       className={`${styles.whatwedoComp11} ${montserrat.variable} ${notosans.variable}`}
     >
-      <Grid item md={1}></Grid>
+      <Grid item lg={1}></Grid>
       <Grid
         item
-        md={4}
+        md={5} lg={4}
         className={styles.whatwedoTextContainer}
         style={{ padding: "0px 1rem" }}
       >
