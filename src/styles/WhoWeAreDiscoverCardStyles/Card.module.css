@@ -1,0 +1,24 @@
+.cardContainer {
+  padding-top: 0;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 4%;
+  background-color: white;
+  border-radius: 50px;
+  padding-bottom: 5%;
+  /* margin-bottom: 5% !important; */
+}
+.Discoverimage {
+  width: 100%;
+  height: 350px;
+}
+.ptag {
+  margin: 0;
+  font-family: "Noto Sans";
+}
+.CardImageContainer {
+  padding-top: 0;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 4%;
+}
