@@ -6,34 +6,39 @@ import { montserrat, notosans } from "@/assets/fonts/fonts";
 
 export default function WhatWeDoComp1() {
   return (
-    <Grid container className={`${styles.whatWeDoComp11} ${montserrat.variable}`}>
+    <Grid
+      container
+      className={`${styles.whatwedoComp11} ${montserrat.variable} ${notosans.variable}`}
+    >
       <Grid item md={1}></Grid>
-      <Grid item md={4} className={styles.insightsTextContainer} style={{padding: '0px 1rem'}}>
-        <div className={styles.whatWeDoComp12}>Join Our Team</div>
-        <div className={styles.insightsCompOrangeline} />
-        <div className={`${styles.whatWeDoComp13} ${notosans.variable}`}>
-          At CodeKart, we prioritize our employees, offering autonomy, support
-          for self-development, and career growth. Our development team seeks
-          talented individuals to thrive in our collaborative and innovative
-          culture.
+      <Grid
+        item
+        md={4}
+        className={styles.whatwedoTextContainer}
+        style={{ padding: "0px 1rem" }}
+      >
+        <div
+          className={styles.whatwedoCompHeader}
+          style={{ textAlign: "left" }}
+        >
+          Belief Powers Business
         </div>
-        <div className={`${styles.whatWeDoComp14} ${notosans.variable}`}>
-          Explore our current open positions below!
+        <div className={styles.whatwedoCompOrangeline} />
+        <div className={styles.whatwedoComp13}>
+          At Codekart, we do more than just transform businesses through
+          technology. We help them make a meaningful impact on their customers
+          and the communities they serve.
         </div>
         <HomeButtonComp
           title="Open Positions"
-          buttonStyles={styles.insightsButton}
+          buttonStyles={styles.whatwedoButton}
         />
       </Grid>
       <Grid item md={1}></Grid>
-      <Grid item md={5} style={{padding: '0px 1rem'}}>
-        <video
-          src="/videos/demoVideoJoinTeam.mp4"
-          className={styles.whatWeDoComp15}
-          autoPlay
-          muted
-          loop
-          preload="none"
+      <Grid item md={5} style={{ padding: "0px 1rem" }}>
+        <img
+          src="/images/whatwedo/img1.svg"
+          className={styles.whatwedoComp15}
         />
       </Grid>
       <Grid item md={1}></Grid>

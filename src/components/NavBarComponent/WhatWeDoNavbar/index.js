@@ -2,8 +2,12 @@ import { Grid } from "@mui/material";
 import React, { useState } from "react";
 import styles from "../../../styles/NavbarStyles/whatWeDoNavbar.module.css";
 import { FaChevronRight } from "react-icons/fa6";
+import { useRouter } from "next/router";
+import { navconstants } from "@/constants/navconstants";
 
-const WhatWeDoNavbar = () => {
+const WhatWeDoNavbar = ({ onclickWhatwedoFun }) => {
+  const Router = useRouter();
+
   const [activeSection, setActiveSection] = useState("overview");
 
   const handleSectionHover = (section) => {
@@ -62,7 +66,13 @@ const WhatWeDoNavbar = () => {
                 brighter futures for businesses across various industries and
                 countries.
               </p>
-              <button className={styles.discoberAllSolution}>
+              <button
+                className={styles.discoberAllSolution}
+                onClick={() => {
+                  onclickWhatwedoFun();
+                  Router.push(navconstants.whatwedo);
+                }}
+              >
                 Discover all Solution
               </button>
             </>
