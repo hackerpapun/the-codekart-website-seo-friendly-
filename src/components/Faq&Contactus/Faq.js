@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "../../styles/Faq/faq.module.css";
 import { Grid } from "@mui/material";
-import HomeButtonComp from "@/components/HomeButtonComp";
 import { montserrat, notosans } from "@/assets/fonts/fonts";
 import {
   Accordion,
@@ -48,12 +47,11 @@ const faqData = [
 
 function Faq() {
   return (
-    <>
-      <Grid
-        container
-        className={`${styles.faqHeaderSection} ${montserrat.variable}`}
-      >
-        <Container maxWidth="md" className={styles.faqContainer}>
+    <Grid container spacing={3}>
+      <Grid item md={1}></Grid>
+
+      <Grid item xs={10}>
+        <Container maxWidth={false} className={styles.faqContainer}>
           <Box mt={4}>
             <Box mb={5}>
               <div className={styles.faqHeader}>
@@ -86,7 +84,8 @@ function Faq() {
           </Box>
         </Container>
       </Grid>
-    </>
+      <Grid item md={1}></Grid>
+    </Grid>
   );
 }
 
