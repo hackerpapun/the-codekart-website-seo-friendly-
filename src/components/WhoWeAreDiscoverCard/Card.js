@@ -7,7 +7,7 @@ const Card = ({ image, header, content }) => {
     <>
       <Grid container className={styles.cardContainer}>
         <Grid className={styles.CardImageContainer}>
-          <Grid sm={12} xs={12}>
+          <Grid sm={12} xs={12} className={styles.CardImageContainerResponsive}>
             <img src={image} alt="" className={styles.Discoverimage} />
           </Grid>
         </Grid>

@@ -36,5 +36,22 @@
   width: 100%;
 }
 .carausalLeftContainer {
+  font-family: "Montserrat";
+  font-weight: 700;
+  line-height: 40px;
   margin: 0;
+}
+
+@media (max-width: 600px) {
+  .carausalMainContainer {
+    height: auto;
+    padding: 3%;
+  }
+  .carouselItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+    padding-bottom: 10px;
+  }
 }

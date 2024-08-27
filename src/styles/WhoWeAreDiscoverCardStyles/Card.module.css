@@ -22,3 +22,14 @@
   padding-right: 4%;
   padding-bottom: 4%;
 }
+@media (max-width: 600px) {
+  .Discoverimage {
+    height: auto;
+  }
+  .cardContainer {
+    border-radius: 30px;
+  }
+  .CardImageContainer {
+    width: 100%;
+  }
+}
