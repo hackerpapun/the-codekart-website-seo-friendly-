@@ -1,12 +1,26 @@
 "use client";
 import React from "react";
 import CodekartLogo from "../assets/images/navbar/codekartlogo.png";
-import { Box, Divider, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Divider,
+  Grid,
+  Typography,
+  Button,
+  IconButton,
+} from "@mui/material";
 import styles from "../styles/Footer/Footer.module.css";
 import { montserrat } from "@/assets/fonts/fonts";
 import Image from "next/image";
 import { Facebook, Twitter, Instagram, YouTube } from "@mui/icons-material";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scrolling effect
+    });
+  };
   return (
     <Grid
       container
@@ -25,26 +39,41 @@ export default function Footer() {
       <Typography variant="body2" align="center">
         CodeKart Solutions Private Limited
         <br />
-        Fase-1, Saraswati Vihar, Duplex Número-2,
+        Phase-1, Saraswati Vihar, Duplex Number-2,
         <br />
-        Detrás de Mani Tribhuvan
+        Backside of Mani Tribhuvan
         <br />
         Bhubaneswar, Odisha 751024
       </Typography>
 
-      <Box sx={{ my: 2 }}>
-        <YouTube fontSize="small" sx={{ mx: 1 }} />
-        <Facebook fontSize="small" sx={{ mx: 1 }} />
-        <Twitter fontSize="small" sx={{ mx: 1 }} />
-        <Instagram fontSize="small" sx={{ mx: 1 }} />
+      <Box className={styles.socialMediaIconsContainer}>
+        <Box className={styles.iconContainer}>
+          <YouTube fontSize="small" className={styles.customIcon} />
+        </Box>
+        <Box className={styles.iconContainer}>
+          <Facebook fontSize="small" className={styles.customIcon} />
+        </Box>
+        <Box className={styles.iconContainer}>
+          <Twitter fontSize="small" className={styles.customIcon} />
+        </Box>
+        <Box className={styles.iconContainer}>
+          <Instagram fontSize="small" className={styles.customIcon} />
+        </Box>
       </Box>
+      <IconButton
+        onClick={scrollToTop}
+        className={styles.backToTopIcon}
+        aria-label="back to top"
+      >
+        <KeyboardArrowUpIcon />
+      </IconButton>
       <Divider sx={{ width: "100%", backgroundColor: "#d3d3d3", my: 2 }} />
       <Typography
         variant="caption"
         align="center"
         className={styles.footerCopyright}
       >
-        @2024 Todos los derechos reservados por Codekart Solutions Pvt. Ltd.
+        @2024 All Rights Reserved By Codekart Solutions Pvt.Ltd.
       </Typography>
     </Grid>
   );
