@@ -86,12 +86,14 @@ const Carusal = () => {
                 >
                   {carauSalaData.map((item, index) => (
                     <div key={index} className={styles.carouselItem}>
-                      <p className={styles.carausaltopContaint}>
-                        {item.containt}
-                      </p>
-                      <p className={styles.carausalbuttomContaint}>
-                        {item.buttom}
-                      </p>
+                      <div>
+                        <p className={styles.carausaltopContaint}>
+                          {item.containt}
+                        </p>
+                        <p className={styles.carausalbuttomContaint}>
+                          {item.buttom}
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </Carousel>

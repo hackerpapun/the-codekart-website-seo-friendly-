@@ -2,12 +2,20 @@ import { Grid } from "@mui/material";
 import React, { useState } from "react";
 import styles from "../../../styles/NavbarStyles/whatWeAreNavbar.module.css";
 import { FaChevronRight } from "react-icons/fa6";
+import { useRouter } from "next/router";
 
-const WhatWeAreNavbar = () => {
+const WhatWeAreNavbar = ({ setWharareWe }) => {
   const [activeSection, setActiveSection] = useState("overview");
 
   const handleSectionHover = (section) => {
     setActiveSection(section);
+  };
+
+  const router = useRouter();
+
+  const handleNavigateToDiscover = () => {
+    router.push("/who-we-are-discover");
+    setWharareWe(false);
   };
 
   return (
@@ -62,7 +70,10 @@ const WhatWeAreNavbar = () => {
                 every day. Together, we combine innovation and collective
                 knowledge to create the extraordinary.
               </p>
-              <button className={styles.discoberAllSolution}>
+              <button
+                className={styles.discoberAllSolution}
+                onClick={handleNavigateToDiscover}
+              >
                 Discover the difference.
               </button>
             </>

@@ -174,7 +174,7 @@ const Navbar = () => {
             container
             className={`${styles.dropdown} ${whatAreWe ? styles.active : ""}`}
           >
-            {whatAreWe && <WhatAreWe />}
+            {whatAreWe && <WhatAreWe setWharareWe={setWharareWe} />}
           </Grid>
           <Grid
             container
