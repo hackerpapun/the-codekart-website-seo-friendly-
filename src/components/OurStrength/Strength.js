@@ -14,18 +14,28 @@ const Strength = () => {
           <h1 className={styles.strengthHeader}>STRENGTH</h1>
         </Grid>
       </Grid>
-      <Grid container className={styles.MainStrengthContainer}>
-        <Grid container className={styles.SubStrengthContainer}>
-          <Grid item sm={6} xs={12} className={styles.leftStrengthContainer}>
-            <div>
-              <h1>Innovative Solutions</h1>
-              <p>
-                We deliver creative and forward-thinking solutions that meet the
-                unique needs of our clients.
-              </p>
-            </div>
+      <Grid container className={styles.MainMainStrengthContainer}>
+        <Grid container className={styles.MainStrengthContainer}>
+          <Grid container className={styles.SubStrengthContainer}>
+            <Grid item sm={6} xs={12} className={styles.leftStrengthContainer}>
+              <div>
+                <h1 className={styles.contentLeftContainer}>
+                  Innovative Solutions
+                </h1>
+                <p className={styles.contentRightContainer}>
+                  We deliver creative and forward-thinking solutions that meet
+                  the unique needs of our clients.
+                </p>
+              </div>
+            </Grid>
+            <Grid item sm={6} xs={12}>
+              <img
+                src="/images/WhoWeAreDiscover/strenghtImage.png"
+                alt=""
+                className={styles.rightStrengthContainerPhoto}
+              />
+            </Grid>
           </Grid>
-          <Grid item sm={6} xs={12}></Grid>
         </Grid>
       </Grid>
     </>

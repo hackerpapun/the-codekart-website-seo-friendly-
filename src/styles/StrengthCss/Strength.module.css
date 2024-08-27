@@ -1,26 +1,31 @@
+.MainMainStrengthContainer {
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+}
 .strengthContainer {
   margin-top: 4%;
 }
 .firstStrength {
   display: flex;
   justify-content: center;
+  letter-spacing: 2px;
+  font-family: "Plus Jakarta Sans";
+  font-size: 20px;
 }
 .secondStrength {
   display: flex;
   justify-content: center;
 }
-.strengthHeader {
-  margin: 0;
-  font-family: "Plus Jakarta Sans";
-}
+
 .strengthParagraph {
   margin: 0;
   font-family: "Plus Jakarta Sans";
 }
 .strengthHeader {
+  font-weight: 600;
   margin: 0;
   font-family: "Plus Jakarta Sans";
-  font-size: 90px;
+  font-size: 80px;
   position: relative;
   width: fit-content;
 }
@@ -34,19 +39,58 @@
   background-color: #fa6400;
 }
 .MainStrengthContainer {
-  padding: 4%;
+  padding: 7%;
   background-color: #e9eaf3;
-  border-radius: 30px;
+  border-radius: 100px;
+  margin-top: 2%;
 }
 .SubStrengthContainer {
   background-color: white;
   padding-top: 4%;
   padding-bottom: 4%;
-  padding-left: 1%;
-  padding-right: 1%;
+  padding-left: 3%;
+  padding-right: 3%;
+  border-radius: 60px;
 }
 .leftStrengthContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.rightStrengthContainerPhoto {
+  width: 100%;
+  /* height: 420px; */
+}
+.contentRightContainer {
+  font-family: "Noto Sans";
+}
+.contentLeftContainer {
+  font-family: "Noto Sans";
+  font-weight: bold;
+  font-size: 45px;
+}
+
+@media (max-width: 600px) {
+  .firstStrength {
+    font-size: 15px;
+  }
+  .strengthHeader {
+    font-size: 50px;
+  }
+  .secondStrength {
+    margin-bottom: 3%;
+  }
+  .MainStrengthContainer {
+    border-radius: 40px;
+    padding: 4%;
+  }
+  .SubStrengthContainer {
+    border-radius: 30px;
+  }
+  .contentLeftContainer {
+    font-size: 25px;
+  }
+  .rightStrengthContainerPhoto {
+    height: 350px;
+  }
 }
