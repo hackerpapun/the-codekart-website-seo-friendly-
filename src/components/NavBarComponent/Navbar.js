@@ -113,7 +113,7 @@ const Navbar = () => {
               }`}
               onClick={whatAreWeFun}
             >
-              What We are
+              Who We are
               <MdKeyboardArrowDown className={styles.arrow_icon} />
             </p>
 
