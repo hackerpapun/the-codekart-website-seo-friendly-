@@ -47,7 +47,11 @@ const faqData = [
 
 function Faq() {
   return (
-    <Grid container spacing={3}>
+    <Grid
+      container
+      spacing={3}
+      className={`${montserrat.variable} ${notosans.variable}`}
+    >
       <Grid item md={1}></Grid>
 
       <Grid item xs={10}>

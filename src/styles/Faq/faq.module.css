@@ -37,9 +37,11 @@
     margin-bottom: 1.5rem;
 }
 
+
 .accordion {
-    margin-bottom: 1.2rem;
-    border-radius: 8px;
+    padding: 0.75rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
     background: #E9EBF2;
     /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 }
@@ -91,3 +93,14 @@
         font-size: 0.95rem;
     }
 }
+
+.css-1086bdv-MuiPaper-root-MuiAccordion-root::before {
+    position: absolute;
+    left: 0;
+    top: -1px;
+    right: 0;
+    height: 0px !important;
+    content: "";
+    opacity: 1;
+}
+
