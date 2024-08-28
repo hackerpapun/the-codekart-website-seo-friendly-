@@ -62,8 +62,10 @@
 }
 
 .contactHeader {
-    font-weight: bold;
+    font-family: var(--font-montserrat);
+    font-weight: 500;
     margin-bottom: 2rem;
+    color: #0C172B;
 }
 
 .contactInfoBox {
@@ -83,12 +85,21 @@
 
 .infoTitle {
     font-weight: 600;
+    font-family: var(--font-notosans);
+    color: #0C172B;
+    font-size: 18px;
+}
+.infoDescription {
+    font-weight: 400;
+    font-family: var(--font-notosans);
+    color: #434343;
+    font-size: 12px;
 }
 
 .attachmentLink {
     display: flex;
     align-items: center;
-    color: black;
+    color: #0C172B;
     text-decoration: underline;
     font-family: var(--font-notosans);
 }

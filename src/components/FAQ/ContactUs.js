@@ -89,7 +89,10 @@ function ContactUs() {
                   <Typography variant="h6" mt={4} className={styles.infoTitle}>
                     Our location
                   </Typography>
-                  <Typography variant="body2">
+                  <Typography
+                    variant="body2"
+                    className={styles.infoDescription}
+                  >
                     Duplex No. 2, back side Mani Tribhuvan, Raghunathpur,
                     Bhubaneswar, Odisha 751024
                   </Typography>
@@ -120,48 +123,55 @@ function ContactUs() {
             {/* Right Side - Contact Form */}
             <Grid item xs={12} md={5}>
               <form onSubmit={handleSubmit}>
-                <TextField
-                  fullWidth
-                  label="Your name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  variant="standard"
-                  margin="normal"
-                  required
-                />
-
-                <TextField
-                  fullWidth
-                  label="Your email address"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  variant="standard"
-                  margin="normal"
-                  required
-                />
-                <TextField
-                  fullWidth
-                  label="Phone number"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  variant="standard"
-                  margin="normal"
-                />
-                <TextField
-                  id="standard-multiline-flexible"
-                  label="Message"
-                  name="message"
-                  multiline
-                  maxRows={4}
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  variant="standard"
-                  margin="normal"
-                  fullWidth
-                />
+                <Box mb={3}>
+                  <TextField
+                    fullWidth
+                    label="Your name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    variant="standard"
+                    margin="normal"
+                    required
+                  />
+                </Box>
+                <Box mb={3}>
+                  <TextField
+                    fullWidth
+                    label="Your email address"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    variant="standard"
+                    margin="normal"
+                    required
+                  />
+                </Box>
+                <Box mb={3}>
+                  <TextField
+                    fullWidth
+                    label="Phone number"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    variant="standard"
+                    margin="normal"
+                  />
+                </Box>
+                <Box mb={3}>
+                  <TextField
+                    id="standard-multiline-flexible"
+                    label="Message"
+                    name="message"
+                    multiline
+                    maxRows={4}
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    variant="standard"
+                    margin="normal"
+                    fullWidth
+                  />
+                </Box>
 
                 {/* Attachment & Submit Button */}
                 <Box display="flex" alignItems="center" mt={4} mb={5}>

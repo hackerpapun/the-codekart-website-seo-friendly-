@@ -40,7 +40,7 @@
 
 .accordion {
     padding: 0.75rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     border-radius: 12px;
     background: #E9EBF2;
     /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
@@ -63,14 +63,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
 }
 
 .customIcon {
     color: #fff;
 }
 
+.css-1086bdv-MuiPaper-root-MuiAccordion-root::before {
+    position: absolute;
+    left: 0;
+    top: -1px;
+    right: 0;
+    height: 0px !important;
+    background-color: red !important;
+    content: "" !important;
+}
+
+.MuiAccordion-root.css-1086bdv-MuiPaper-root-MuiAccordion-root::before {
+    height: 0px !important;
+    background-color: red !important;
+}
 /* For smaller screens */
 @media screen and (max-width: 768px) {
     .faqHeader {
@@ -94,13 +108,4 @@
     }
 }
 
-.css-1086bdv-MuiPaper-root-MuiAccordion-root::before {
-    position: absolute;
-    left: 0;
-    top: -1px;
-    right: 0;
-    height: 0px !important;
-    content: "";
-    opacity: 1;
-}
 
