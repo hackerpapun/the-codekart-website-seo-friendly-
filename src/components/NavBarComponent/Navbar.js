@@ -16,6 +16,7 @@ import Image from "next/image";
 import MobileViewNavBar from "./MobileViewNavBar";
 import { useRouter } from "next/router";
 import { navconstants } from "@/constants/navconstants";
+import { notosans } from "@/assets/fonts/fonts";
 
 const Navbar = () => {
   const router = useRouter();
@@ -74,7 +75,7 @@ const Navbar = () => {
       <div
         className={`${styles.ResponsiveContainer} ${
           isNavbarVisible ? styles.showNavbar : styles.hideNavbar
-        }`}
+        } ${notosans.variable}`}
       >
         <Grid container className={styles.MainContainer}>
           <Grid item xs={12} md={8} className={styles.NavBarTopComponent}>
