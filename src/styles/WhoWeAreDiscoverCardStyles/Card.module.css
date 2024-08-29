@@ -1,27 +1,43 @@
 .cardContainer {
   padding-top: 0;
-  padding-left: 4%;
-  padding-right: 4%;
-  padding-bottom: 4%;
+  padding-left: 7%;
+  padding-right: 6%;
+  padding-bottom: 7%;
   background-color: white;
   border-radius: 50px;
-  padding-bottom: 5%;
+  padding-bottom: 7%;
+
   /* margin-bottom: 5% !important; */
 }
 .Discoverimage {
-  width: 100%;
-  height: 350px;
+  width: 90%;
+  height: 280px;
 }
 .ptag {
   margin: 0;
   font-family: "Noto Sans";
+  font-size: 20px;
+}
+.ptagContaint {
+  margin: 0;
+  font-family: "Noto Sans";
+  color: #4b4a4c;
 }
 .CardImageContainer {
-  padding-top: 0;
-  padding-left: 4%;
-  padding-right: 4%;
-  padding-bottom: 4%;
+  padding-top: 0 !important;
+  padding-left: 0% !important;
+  padding-right: 0% !important;
+  padding-bottom: 0% !important;
+  width: 100%;
 }
+.CardImageContainerResponsive {
+  padding: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 @media (max-width: 600px) {
   .Discoverimage {
     height: auto;
@@ -32,4 +48,7 @@
   .CardImageContainer {
     width: 100%;
   }
+}
+.hhhhhhhh {
+  padding: 0%;
 }
