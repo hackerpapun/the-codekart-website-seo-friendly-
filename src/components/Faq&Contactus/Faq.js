@@ -47,7 +47,11 @@ const faqData = [
 
 function Faq() {
   return (
-    <Grid container spacing={3}>
+    <Grid
+      container
+      spacing={3}
+      className={`${montserrat.variable} ${notosans.variable}`}
+    >
       <Grid item md={1}></Grid>
 
       <Grid item xs={10}>
@@ -60,7 +64,15 @@ function Faq() {
               <div className={styles.faqHeaderOrangeLine} />
             </Box>
             {faqData.map((faq, index) => (
-              <Accordion key={index} className={styles.accordion}>
+              <Accordion
+                key={index}
+                className={styles.accordion}
+                sx={{
+                  "&::before": {
+                    height: "0px !important",
+                  },
+                }}
+              >
                 <AccordionSummary
                   expandIcon={
                     <Box className={styles.iconContainer}>

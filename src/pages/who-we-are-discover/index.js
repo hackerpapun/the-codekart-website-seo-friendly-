@@ -35,7 +35,7 @@ const WhoWeAreDiscoverPage = () => {
           <p className={styles.ptag}>our vision</p>
         </Grid>
         <Grid item sm={12} xs={12} className={styles.secondVision}>
-          <h1 className={styles.htag}>vision</h1>
+          <h1 className={styles.htag}>Vision</h1>
         </Grid>
       </Grid>
 

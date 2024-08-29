@@ -103,9 +103,9 @@
   border-color: #d3d3d3;
 }
 .NavbarLogo {
-  width: 18%;
+  width: 16%;
   height: auto;
-  max-height: 9vh;
+  max-height: 8%;
   object-fit: contain;
 }
 
