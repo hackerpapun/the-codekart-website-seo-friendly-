@@ -26,8 +26,8 @@ export const ServiceConstants = [
     route: navconstants.cloudAndDataSolutions,
   },
   {
-    name: "Cybersecurity & Risk Management",
-    route: navconstants.cybersecurityAndRiskManagement,
+    name: "Generative AI",
+    route: navconstants.geneartiveAI,
   },
   {
     name: "IoT & Digital Innovation",

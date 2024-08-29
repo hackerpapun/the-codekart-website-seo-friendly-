@@ -1,26 +1,42 @@
 /* part 1 */
-.wwdServicesGlobal1 {
-  width: 100%;
-  height: 93vh;
+.wwdServicesGlobal1MainContainer {
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.7) 30%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.wwdServicesGlobal1ContainerVideo {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: -1;
+}
+.wwdServicesGlobal1ContainerImage {
+  /* width: 100%;
+  height: 100vh;
+  animation: moveBackground 5s ease-in-out 1;
   overflow: hidden;
-  background-image: url("/images/whatwedo/AI_bg.svg");
-  background-repeat: no-repeat; /* No repeat for a single image */
-  background-size: cover; /* Start with a bigger size */
-  animation: moveBackground 5s ease-in-out 1; /* Animation runs once */
+  z-index: 0; */
+}
+.wwdServicesGlobal1 {
   padding-top: 6.9rem;
+  position: absolute;
+  top: 0px;
 }
 /* animate bg */
 @keyframes moveBackground {
   0% {
-    background-size: 120%; /* Start bigger */
+    width: 110%; /* Start bigger */
   }
   100% {
-    background-size: 100%; /* End at normal size */
+    width: 100%; /* End at normal size */
   }
 }
 .wwdServicesGlobal2 {
   color: #fff;
-  font-family: Montserrat;
+  font-family: var(--font-montserrat);
   font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -29,7 +45,7 @@
   margin-bottom: 4rem;
 }
 .wwdServicesGlobal3 {
-  font-family: Montserrat;
+  font-family: var(--font-montserrat);
   font-size: 3.5rem;
   font-weight: 600;
   color: #fff;
@@ -96,7 +112,7 @@
 }
 .wwdServicesGlobal9 {
   color: #fff;
-  font-family: Montserrat;
+  font-family: var(--font-montserrat);
   font-size: 1.5rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -149,20 +165,22 @@
   padding: 6rem 2rem;
 }
 .wwdServicesGlobal11Text {
-  font-family: var(--font-montserrat);
+  font-family: var(--font-notosans);
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 500;
   padding-left: 2rem;
   width: 80%;
+  line-height: 2.1rem;
+  letter-spacing: 0.06em;
 }
 .wwdServicesGlobal11Button {
   height: 48px;
   color: #fff !important;
   border: 2px solid #fff !important;
-  transition: 1s ease-in-out;
+  transition: 0.8s ease-in-out;
 }
 .wwdServicesGlobal11Button:hover {
-  background-color: #fff;
+  background-color: #fff !important;
   color: #000 !important;
 }

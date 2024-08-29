@@ -12,7 +12,7 @@ export const navconstants = {
   qualityAssuranceAndTesting: "/quality-assurance-and-testing",
   customSoftwareDevelopment: "/custom-software-development",
   cloudAndDataSolutions: "/cloud-and-data-solutions",
-  cybersecurityAndRiskManagement: "/cybersecurity-and-risk-management",
+  geneartiveAI: "/generative-ai",
   iotAndDigitalInnovation: "/iot-and-digital-innovation",
 
   // what we do industry routes
