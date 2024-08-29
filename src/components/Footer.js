@@ -172,6 +172,21 @@ export default function Footer() {
             </div>
           </Grid>
         </Grid>
+        {isVisible && (
+          <IconButton
+            onClick={scrollToTop}
+            className={styles.backToTopIcon}
+            aria-label="back to top"
+            style={{
+              position: "fixed",
+              bottom: "20px",
+              right: "20px",
+              zIndex: 1000,
+            }}
+          >
+            <KeyboardArrowUpIcon />
+          </IconButton>
+        )}
         <Box className={styles.footerBottom}>
           <Image
             src={CodekartLogo}
