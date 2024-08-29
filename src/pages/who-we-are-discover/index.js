@@ -7,6 +7,8 @@ import "react-multi-carousel/lib/styles.css";
 import Carusal from "@/components/WhoWeAreCarausal/Carausal";
 import Strength from "@/components/OurStrength/Strength";
 import CardContainer from "@/components/WhoWeAreDiscoverCardContainer/CardContainer";
+import ContactUs from "@/components/Faq&Contactus/ContactUs";
+import Faq from "@/components/Faq&Contactus/Faq";
 
 const WhoWeAreDiscoverPage = () => {
   return (
@@ -40,6 +42,8 @@ const WhoWeAreDiscoverPage = () => {
       <CardContainer />
       <Carusal />
       <Strength />
+      <ContactUs />
+      <Faq />
     </>
   );
 };

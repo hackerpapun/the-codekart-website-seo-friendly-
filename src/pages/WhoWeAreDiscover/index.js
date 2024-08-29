@@ -6,7 +6,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Carusal from "@/components/WhoWeAreCarausal/Carausal";
 import Strength from "@/components/OurStrength/Strength";
-import Faq from "@/components/FAQ/Faq";
+import Faq from "@/components/Faq&Contactus/Faq";
 import ContactUs from "@/components/FAQ/ContactUs";
 
 const WhoWeAreDiscoverPage = () => {

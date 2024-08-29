@@ -1,0 +1,97 @@
+/* insights comp 5 */
+.stayConnectedCompContainer {
+  padding: 3rem 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stayConnectedCompText1 {
+  font-family: var(--font-montserrat);
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: #0c172b;
+  margin-bottom: 0.6rem;
+}
+
+.stayConnectedCompText2 {
+  font-family: var(--font-notosans);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #434343;
+  text-align: center;
+  letter-spacing: 0.2em;
+  margin: 1rem 0px;
+}
+
+.stayConnectedCompCardContainer {
+  margin: 2rem 0px;
+}
+.stayConnectedCompCard {
+  background: #e2e2e2;
+  padding: 1rem;
+  margin: 0px 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 12px;
+  height: 50px;
+  transition: all ease-in-out 0.5s;
+}
+.stayConnectedCompCard:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(1);
+  cursor: pointer;
+}
+.stayConnectedCompCardTitle {
+  font-family: var(--font-notosans);
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: left;
+  color: #0c172b;
+}
+.stayConnectedCompText3 {
+  color: #000;
+  font-family: var(--font-notosans);
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 1rem 0rem;
+}
+.stayConnectedCompText4 {
+  background: -webkit-linear-gradient(94.37deg, #FEC801 0%, #FA6400 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.stayConnectedCompText5 {
+  font-family: var(--font-notosans);
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #434343;
+  text-align: center;
+  margin: 1rem 0.6rem 0px;
+}
+
+/* all medi a queries */
+@media screen and (max-width: 768px) {
+  /* insights comp 5 */
+  .stayConnectedCompContainer {
+    padding: 1rem 0px;
+  }
+  .stayConnectedCompText1 {
+    font-size: 3rem;
+  }
+  .stayConnectedCompText2 {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+  .stayConnectedCompCardContainer {
+    margin: 1rem 0px;
+  }
+  .stayConnectedCompCardTitle {
+    font-size: 0.7rem;
+  }
+}
