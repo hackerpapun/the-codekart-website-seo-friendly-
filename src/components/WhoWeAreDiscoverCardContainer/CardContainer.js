@@ -14,7 +14,7 @@ const CardContainer = () => {
                 image={"/images/WhoWeAreDiscover/Enovation.png"}
                 header={"Innovation at the Core:"}
                 content={
-                  "We aim to consistently deliver cutting-edge digital solutions that simplify technology, driving business growth and empowering  individuals to achieve their full potential in an ever-evolving  digital landscape"
+                  "We aim to consistently deliver cutting-edge digital solutions that simplify technology, driving business growth and empowering  individuals to achieve their full potential in an ever-evolving  digital landscape."
                 }
               />
             </Grid>

@@ -11,7 +11,7 @@ const Strength = () => {
         </Grid>
 
         <Grid item sm={12} xs={12} className={styles.secondStrength}>
-          <h1 className={styles.strengthHeader}>STRENGTH</h1>
+          <h1 className={styles.strengthHeader}>Strength</h1>
         </Grid>
       </Grid>
       <Grid container className={styles.MainMainStrengthContainer}>
