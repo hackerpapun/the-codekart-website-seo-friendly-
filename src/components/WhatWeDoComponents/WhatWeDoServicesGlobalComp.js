@@ -35,9 +35,7 @@ export default function WhatWeDoServicesGlobalComp({
   return (
     <Box className={`${notosans.variable} ${montserrat.variable}`}>
       {/* image bg part 1 */}
-      <div
-        className={styles.wwdServicesGlobal1MainContainer}
-      >
+      <div className={styles.wwdServicesGlobal1MainContainer}>
         {constantData?.bgVideo ? (
           <video
             src={constantData?.bgVideo}
@@ -55,10 +53,7 @@ export default function WhatWeDoServicesGlobalComp({
           />
         )}
 
-        <Grid
-          container
-          className={`${styles.wwdServicesGlobal1}`}
-        >
+        <Grid container className={styles.wwdServicesGlobal1}>
           <Grid item xs={12} md={1}></Grid>
           <Grid item xs={12} md={9}>
             <div className={styles.wwdServicesGlobal2}>
