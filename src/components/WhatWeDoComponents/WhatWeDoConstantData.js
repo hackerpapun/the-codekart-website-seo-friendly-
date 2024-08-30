@@ -1,41 +1,41 @@
 export const whatWeDoComp2ServicesData = [
   {
-    text1: "Cloud-Powered Web Solutions",
+    text1: `Cloud-Powered Web \nSolutions`,
     text2: "Crafting Your Online Presence",
     text3:
       "Our web development services ensure your website is not only visually appealing but also highly functional and optimized for performance. From e-commerce platforms to corporate websites, we build sites that drive engagement and conversions.",
     img: "/images/whatwedo/service1.svg",
   },
   {
-    text1: "AI-Driven Mobile Solutions",
+    text1: `AI-Driven Mobile \nSolutions`,
     text2: "Engaging and High-Performance Mobile Applications",
     text3:
       "We create dynamic mobile apps for iOS and Android that provide exceptional user experiences. Our apps are designed to be user-friendly, feature-rich, and scalable, ensuring that your business remains competitive in the mobile-first world.",
     img: "/images/whatwedo/service2.svg",
   },
   {
-    text1: "Tailored Enterprise Applications",
+    text1: `Tailored Enterprise \nApplications`,
     text2: "Tailored Solutions for Your Unique Needs",
     text3:
       "At CodeKart, we specialize in developing custom software that perfectly aligns with your business objectives. Whether you need an enterprise application, a bespoke business solution, or a specific tool to streamline your operations, our team is here to bring your vision to life.",
     img: "/images/whatwedo/service3.svg",
   },
   {
-    text1: "Interactive Experience Design",
+    text1: `Interactive Experience \nDesign`,
     text2: "Intuitive and Engaging Interfaces",
     text3:
       "Our design philosophy centers around the user. We create intuitive and engaging interfaces that enhance user satisfaction and drive business success. Our designs are aesthetically pleasing and highly functional, ensuring a seamless user experience.",
     img: "/images/whatwedo/service4.svg",
   },
   {
-    text1: "Cognitive Quality Assurance",
+    text1: `Cognitive Quality \nAssurance`,
     text2: "Ensuring Quality and Reliability",
     text3:
       "Comprehensive quality assurance testing services to identify and fix defects, ensuring your software is reliable, functional, and meets the highest standards before deployment. Enhance user satisfaction and product performance.",
     img: "/images/whatwedo/service5.svg",
   },
   {
-    text1: "Expert Resource Augmentation",
+    text1: `Expert Resource \nAugmentation`,
     text2: "Crafting Your Online Presence",
     text3:
       "Our web development services ensure your website is not only visually appealing but also highly functional and optimized for performance. From e-commerce platforms to corporate websites, we build sites that drive engagement and conversions.",

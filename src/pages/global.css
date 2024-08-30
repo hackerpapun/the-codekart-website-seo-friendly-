@@ -10,4 +10,127 @@
 
 body {
     margin: 0px;
+    scroll-behavior: smooth;
 }
+
+.StickyContainer {
+    position: fixed;
+    right: 0;
+    top: 37%;
+    z-index: 999;
+    display: flex;
+    justify-content: flex-end;
+    /* width: 100%;
+    height: 100%; */
+  }
+  
+  .MotionDiv {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    position: relative;
+  }
+  
+  .MainMessageContainer {
+    width: 65px; /* Adjust based on your image size */
+    height: 40px; /* Adjust based on your image size */
+    background-color: black;
+    color: white;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+  }
+  
+  .messageContainer {
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+    padding-right: 10px;
+  }
+  
+  .animatedCard {
+    width: 200px;
+    height: 200px;
+    /* background-color: white; */
+    border-radius: 10px;
+    padding: 10px;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); */
+    position: relative;
+  }
+  .crossIcon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    padding-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  .inImage {
+    font-size: 25px;
+  }
+  .ingramIcon {
+    position: absolute;
+    left: 67%;
+    top: 20%;
+    background: linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    color: white;
+    padding: 5px 6px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .whatsApp {
+    position: absolute;
+    left: 44%;
+    top: 34%;
+    background-color: #25d366; /* WhatsApp's official green color */
+    color: white;
+    padding: 5px 8px; /* Combined padding-left and padding-right */
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+  }
+  .LinkdLn {
+    position: absolute;
+    left: 46%;
+    top: 55%;
+    background-color: #0a66c2; /* LinkedIn's official blue color */
+    color: white;
+    padding: 5px 8px; /* Padding for a better look */
+    border-radius: 7px; /* Rounded edges */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow effect */
+  }
+  
+  .ContacUs {
+    position: absolute;
+    left: 67%;
+    top: 70%;
+    background-color: #0a66c2; /* LinkedIn's official blue color */
+    color: white;
+    padding: 5px 8px; /* Padding for a better look */
+    border-radius: 7px; /* Rounded edges */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow effect */
+  }

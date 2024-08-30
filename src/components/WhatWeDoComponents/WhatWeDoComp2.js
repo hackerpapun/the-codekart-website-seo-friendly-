@@ -41,7 +41,7 @@ export default function WhatWeDoComp2() {
               <a
                 target=""
                 style={{ textDecoration: "none", color: "#000" }}
-                href={`#${item?.text1.replace(/ /g, "-")}`}
+                href={`#${item?.text1.replace(/[\s\n]+/g, "-")}`}
               >
                 <div className={styles.whatwedoComp2Card}>
                   {item?.text1}
@@ -60,7 +60,7 @@ export default function WhatWeDoComp2() {
                 container
                 key={i}
                 className={styles.whatwedoComp2ServicesDiv1Container}
-                id={item?.text1.replace(/ /g, "-")}
+                id={item?.text1.replace(/[\s\n]+/g, "-")}
               >
                 <Grid item xs={12} md={5} lg={5} className={styles.whatwedoComp2ServicesDiv1}>
                   <img

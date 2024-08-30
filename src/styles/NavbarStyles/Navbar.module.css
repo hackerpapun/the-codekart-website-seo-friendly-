@@ -105,8 +105,8 @@
 .NavbarLogo {
   width: 16%;
   height: auto;
-  max-height: 8%;
-  object-fit: contain;
+  /* max-height: 8%; */
+  /* object-fit: contain; */
 }
 
 .navBarparagraphContainer {

@@ -136,7 +136,7 @@ const Navbar = () => {
                   <FaArrowRight className={styles.arrowIcon} />
                 </div>
               </button>
-              <div className={styles.languageButtonContainer}>
+              {/* <div className={styles.languageButtonContainer}>
                 <Image
                   src={LanguageImage}
                   alt="Language logo"
@@ -160,7 +160,7 @@ const Navbar = () => {
                   <IoIosSunny className={styles.sun_icon} />
                   <MdOutlineNightsStay className={styles.moon_icon} />
                 </div>
-              </button>
+              </button> */}
             </div>
           </Grid>
         </Grid>

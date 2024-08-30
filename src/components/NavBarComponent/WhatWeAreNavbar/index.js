@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import styles from "../../../styles/NavbarStyles/whatWeAreNavbar.module.css";
 import { FaChevronRight } from "react-icons/fa6";
 import { useRouter } from "next/router";
+import { navconstants } from "@/constants/navconstants";
 
 const WhatWeAreNavbar = ({ setWharareWe }) => {
   const [activeSection, setActiveSection] = useState("overview");
@@ -14,7 +15,7 @@ const WhatWeAreNavbar = ({ setWharareWe }) => {
   const router = useRouter();
 
   const handleNavigateToDiscover = () => {
-    router.push("/who-we-are-discover");
+    router.push(navconstants.whoweare);
     setWharareWe(false);
   };
 
