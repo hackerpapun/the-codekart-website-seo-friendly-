@@ -46,3 +46,9 @@
     font-family: var(--font-montserrat);
     color: #666666;
 }
+.whatwedoCompOrangeline {
+    width: 100px;
+    height: 3px;
+    background-color: #fa6400;
+    margin-bottom: 1rem;
+  }

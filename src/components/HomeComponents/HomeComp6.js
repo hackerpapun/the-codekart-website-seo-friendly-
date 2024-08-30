@@ -2,7 +2,7 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import Carousel from "react-multi-carousel";
-import styles from "../../styles/CarausalStyles/Carausal.module.css";
+import styles from "../../styles/Home/HomeComp6.module.css";
 import "react-multi-carousel/lib/styles.css";
 
 const HomeComp6 = () => {
