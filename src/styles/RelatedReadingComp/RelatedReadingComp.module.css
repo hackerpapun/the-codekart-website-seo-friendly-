@@ -1,0 +1,70 @@
+.rrc1 {
+  min-height: 50vh;
+  padding: 5rem 0px;
+}
+.rrc2 {
+  color: #171717;
+  font-family: var(--font-montserrat);
+  font-size: 3.5rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+.rrc3 {
+  font-family: var(--font-notosans);
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  color: #5a5a5a;
+}
+
+.rrc4Card {
+  transition: 0.8s ease-in-out;
+}
+.rrc4Card:hover {
+  transform: scale(1.05);
+}
+
+.rrc4CardImgContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.rrc4CardImg {
+  width: 100%;
+  height: auto;
+}
+.rrc4CardType {
+  position: absolute;
+  bottom: -10px;
+  left: 2.5rem;
+  font-family: var(--font-montserrat);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: left;
+  color: #000;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+}
+.rrc4CardTitle {
+  font-family: var(--font-montserrat);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: left;
+  color: #171717;
+}
+.rrc4CardTitle:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.rrc4CardDate {
+  font-family: var(--font-notosans);
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-align: left;
+  color: #757575;
+  margin-top: 1rem;
+}

@@ -4,6 +4,7 @@ import styles from "../../../styles/NavbarStyles/whatWeDoNavbar.module.css";
 import { FaChevronRight } from "react-icons/fa6";
 import { useRouter } from "next/router";
 import { navconstants } from "@/constants/navconstants";
+import { ServiceConstants } from "./WhatWeDoNavbarConstants";
 
 const WhatWeDoNavbar = ({ onclickWhatwedoFun }) => {
   const Router = useRouter();
@@ -18,7 +19,7 @@ const WhatWeDoNavbar = ({ onclickWhatwedoFun }) => {
     <Grid
       container
       className={styles.whatWeDoDropDown}
-      style={{ marginTop: "20px" }}
+      style={{ padding: "20px" }}
     >
       <Grid container className={styles.whatweDoContainer}>
         <Grid item xs={12} md={3}>
@@ -110,27 +111,20 @@ const WhatWeDoNavbar = ({ onclickWhatwedoFun }) => {
           )}
           {activeSection === "service" && (
             <Grid container spacing={5} className={styles.serviceItems}>
-              <Grid item sm={6} className={styles.ServicetabelConatints}>
-                Custom Software Development
-              </Grid>
-              <Grid item sm={6} className={styles.ServicetabelConatints}>
-                Mobile app development
-              </Grid>
-              <Grid item sm={6} className={styles.ServicetabelConatints}>
-                Web app development
-              </Grid>
-              <Grid item sm={6} className={styles.ServicetabelConatints}>
-                QA Testing
-              </Grid>
-              <Grid item sm={6} className={styles.ServicetabelConatints}>
-                UI/UX Design
-              </Grid>
-              <Grid item sm={6} className={styles.ServicetabelConatints}>
-                AI & Machine Learning
-              </Grid>
-              <Grid item sm={6} className={styles.ServicetabelConatints}>
-                Resource outsourcing
-              </Grid>
+              {ServiceConstants?.map((item, i) => (
+                <Grid
+                  item
+                  sm={6}
+                  className={styles.ServicetabelConatints}
+                  key={i}
+                  onClick={() => {
+                    onclickWhatwedoFun();
+                    Router.push(`${navconstants.whatwedo}${item?.route}`);
+                  }}
+                >
+                  {item?.name}
+                </Grid>
+              ))}
             </Grid>
           )}
         </Grid>

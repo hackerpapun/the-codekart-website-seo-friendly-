@@ -46,7 +46,7 @@ export default function WhatWeDoComp2() {
                 <div className={styles.whatwedoComp2Card}>
                   {item?.text1}
                   <div className={styles.arrowContainer}>
-                    <GoArrowRight className={styles.arrowIcon} />
+                    <GoArrowRight />
                   </div>
                 </div>
               </a>

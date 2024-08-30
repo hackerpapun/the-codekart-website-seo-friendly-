@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <>
       <Navbar />
-      <main>{children}</main>
+      <main style={{paddingTop: '3rem'}}>{children}</main>
       <Footer />
     </>
   )
