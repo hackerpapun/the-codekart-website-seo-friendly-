@@ -1,7 +1,7 @@
 export const navconstants = {
   home: "/",
   whatwedo: "/what-we-do",
-  whoweare: "/whoweare",
+  whoweare: "/who-we-are",
   insights: "/insights",
   jobsAndDetails: "/jobs&details",
 

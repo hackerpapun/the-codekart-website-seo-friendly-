@@ -42,7 +42,9 @@ const WhoWeAreDiscoverPage = () => {
       <CardContainer />
       <Carusal />
       <Strength />
-      <ContactUs />
+      <div id="contactus">
+        <ContactUs />
+      </div>
       <Faq />
     </>
   );

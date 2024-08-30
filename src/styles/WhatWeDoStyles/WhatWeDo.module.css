@@ -89,18 +89,20 @@
 }
 .whatwedoComp2Card {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 14px;
-  padding: 1% 5% 1% 5%;
+  gap: 1rem;
+  padding: 1% 3% 3% 0%;
   height: 20%;
   position: relative;
   overflow: hidden;
   font-family: var(--font-notosans);
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: 400;
   border-bottom: 1px solid #000;
   line-height: 2.5rem;
+  /* letter-spacing: 0.03em; */
+  white-space: pre-line;
 }
 .whatwedoComp2CardTitle {
   font-family: var(--font-notosans);

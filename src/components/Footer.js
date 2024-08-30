@@ -44,68 +44,6 @@ export default function Footer() {
 
   return (
     <>
-      {/* <Grid
-        container
-        direction="column"
-        alignItems="center"
-        className={`${styles.footer} ${montserrat.variable} ${notosans.variable}`}
-      >
-        <Image
-          src={CodekartLogo}
-          alt="CodeKart Logo"
-          width={100}
-          height={40}
-          className={styles.footerImg}
-        />
-
-        <Typography variant="body2" align="center">
-          CodeKart Solutions Private Limited
-          <br />
-          Phase-1, Saraswati Vihar, Duplex Number-2,
-          <br />
-          Backside of Mani Tribhuvan
-          <br />
-          Bhubaneswar, Odisha 751024
-        </Typography>
-
-        <Box className={styles.socialMediaIconsContainer}>
-          <Box className={styles.iconContainer}>
-            <YouTube fontSize="small" className={styles.customIcon} />
-          </Box>
-          <Box className={styles.iconContainer}>
-            <Facebook fontSize="small" className={styles.customIcon} />
-          </Box>
-          <Box className={styles.iconContainer}>
-            <Twitter fontSize="small" className={styles.customIcon} />
-          </Box>
-          <Box className={styles.iconContainer}>
-            <Instagram fontSize="small" className={styles.customIcon} />
-          </Box>
-        </Box>
-        {isVisible && (
-          <IconButton
-            onClick={scrollToTop}
-            className={styles.backToTopIcon}
-            aria-label="back to top"
-            style={{
-              position: "fixed",
-              bottom: "20px",
-              right: "20px",
-              zIndex: 1000,
-            }}
-          >
-            <KeyboardArrowUpIcon />
-          </IconButton>
-        )}
-        <Divider sx={{ width: "100%", backgroundColor: "#d3d3d3", my: 2 }} />
-        <Typography
-          variant="caption"
-          align="center"
-          className={styles.footerCopyright}
-        >
-          @2024 All Rights Reserved By Codekart Solutions Pvt.Ltd.
-        </Typography>
-      </Grid> */}
       <Grid
         className={`${styles.footer2} ${montserrat.variable} ${notosans.variable}`}
       >
@@ -118,12 +56,12 @@ export default function Footer() {
 
             <Box className={styles.address}>
               <Typography mb={4}>
-                Address 1: Phase-1, Saraswati Vihar, Duplex Number-2, Backside
-                of Mani Tribhuvan, Bhubaneswar, Odisha 751024
+                Address 1: MBR Signity, KLV Layout, JP Nagar 8th phase,
+                Bangalore, Pin-560076
               </Typography>
               <Typography mb={4}>
-                Address 2: MBR Signity, KLV Layout, JP Nagar 8th phase,
-                Bangalore, Pin-560076
+                Address 2: Phase-1, Saraswati Vihar, Duplex Number-2, Backside
+                of Mani Tribhuvan, Bhubaneswar, Odisha 751024
               </Typography>
             </Box>
             <Box className={styles.socialMediaIconsContainer2}>
