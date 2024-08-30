@@ -17,6 +17,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import Carusal from "@/components/WhoWeAreCarausal/Carausal";
 import WhatWeDoComp4 from "@/components/WhatWeDoComponents/WhatWeDoComp4";
+import HomeComp8 from "@/components/HomeComponents/HomeComp8";
 
 export default function Home() {
   const [showCard, setShowCard] = useState(false);
@@ -43,7 +44,7 @@ export default function Home() {
       container
       className={`${styles.homeContainer} ${montserrat.variable}`}
     >
-      <div className={styles.StickyContainer}>
+      {/* <div className={styles.StickyContainer}>
         <div className={styles.MotionDiv}>
           <motion.div
             className={styles.MainMessageContainer}
@@ -104,19 +105,18 @@ export default function Home() {
             </motion.div>
           </motion.div>
         </div>
-      </div>
+      </div> */}
       {/* // Animated Message Icon ends */}
       <HomeComp1 />
-      <HomeComp2 />
-      <HomeComp3 />
-      <HomeComp4 />
-      <HomeComp5 />
-      <Carusal />
+      {/* <HomeComp2 /> */}
+      {/* <HomeComp3 /> */}
+      {/* <HomeComp4 /> */}
+      {/* <HomeComp5 /> */}
+      <HomeComp6 />
       <Grid container className={styles.marginTopContainer}>
-        <WhatWeDoComp4 />
+        <HomeComp7 />
       </Grid>
-      {/* <HomeComp6 /> */}
-      {/* <HomeComp7 /> */}
+      <HomeComp8/>  
     </Grid>
   );
 }

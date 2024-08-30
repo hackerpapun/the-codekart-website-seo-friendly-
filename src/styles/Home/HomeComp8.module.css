@@ -1,0 +1,46 @@
+.carouselContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+margin-top: 90px;
+  }
+  
+  .textContainer {
+    width: 20%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .carouselText {
+    color: #fff;
+    font-family: var(--font-montserrat);
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .slidingImageContainer {
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .imageFrame {
+    padding: 5px;
+  }
+  
+  .carouselImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  

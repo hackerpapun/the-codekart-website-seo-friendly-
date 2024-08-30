@@ -1,9 +1,9 @@
+/* Base styles for hero1 */
 .hero1 {
     background-image: url("../../assets/images/home/hero.png");
     background-size: cover;
     height: 100vh;
     background-position: center;
-    width: 100vw;
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
@@ -11,40 +11,161 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-}
-
-.hero1Logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-.hero1socialMedia {
+  }
+  
+  .hero1socialMedia {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-}
-
-.hero1heroText {
-    font-size: 4rem;
+    gap: 8px;
+    height: 10px;
+    align-self: center;
+    margin-bottom: 10px;
+  }
+  
+  .socialMediaLogo {
+    height: 25px;
+    width: 25px;
+  }
+  
+  .hero1heroText {
+    font-size: 7vw;
     font-family: var(--font-montserrat);
     font-weight: bold;
     margin-bottom: 20px;
-}
-
-.hero1heroSubText {
-    font-size: 1.5rem;
+  }
+  
+  .hero1heroSubText {
+    font-size: 1vw;
     font-family: var(--font-montserrat);
-    margin-bottom: 30px;
-}
-
-.hero1buttonComp {
-    margin-bottom: 30px;
-}
-
-.hero1scrollContainer {
+    margin-bottom: 10px;
+  }
+  
+  .hero1buttonComp {
+    margin-bottom: 20px;
+  }
+  
+  .hero1scrollContainer {
     margin-top: 30px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mouseIcon {
+    font-size: 2rem;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .circularText {
+   position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-family: var(--font-montserrat);
+    height: 100%;
+    transform-origin: center;
+    animation: rotateText 10s linear infinite;
 }
+  
+  @keyframes rotateText {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Adjust size for smaller screens */
+  @media only screen and (max-width: 600px) {
+    .circle {
+      width: 100px;
+      height: 100px;
+    }
+    .mouseIcon {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media only screen and (min-width: 1800px) {
+    .circle {
+      width: 200px;
+      height: 200px;
+    }
+    .mouseIcon {
+      font-size: 2.5rem;
+    }
+  }
+  
+
+   
+  /* Adjust font size for extra small devices */
+  @media only screen and (max-width: 600px) {
+    .circle {
+        width: 100px;
+        height: 100px;
+      }
+      .mouseIcon {
+        font-size: 1.5rem;
+      }
+    .hero1heroText {
+      font-size: 7.5vw;
+    }
+    .hero1heroSubText {
+      font-size: 0.8vw;
+    }
+    .socialMediaLogo {
+      width: 3vw;
+    }
+    .hero1socialMedia {
+      margin-bottom: 10px;
+    }
+    .circleText {
+      width: 100px;
+      height: 100px;
+    }
+    .mouseIcon {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Adjust font size for very large screens */
+  @media only screen and (min-width: 1800px) {
+    .hero1heroText {
+      font-size: 8vw;
+    }
+    .hero1heroSubText {
+      font-size: 1.1vw;
+    }
+    .socialMediaLogo {
+      width: 4vw;
+    }
+    .hero1socialMedia {
+      margin-bottom: 10px;
+      width: 10px;
+    }
+    .circleText {
+      width: 180px;
+      height: 180px;
+    }
+    .mouseIcon {
+      font-size: 2.5rem;
+    }
+    .circle {
+        width: 200px;
+        height: 200px;
+      }
+      .mouseIcon {
+        font-size: 2.5rem;
+      }
+  }
+  
