@@ -68,6 +68,7 @@ const relatedReadingData = [
 ];
 
 const allConstantsData = {
+  bgVideo: "/videos/web_bg.mp4",
   bgImage: "/images/whatwedo/qa_bg.svg",
   name: "Quality Assurance & Testing",
   part1Text1: "Comprehensive QA & Testing",

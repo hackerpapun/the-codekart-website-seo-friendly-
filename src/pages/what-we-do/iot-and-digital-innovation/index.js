@@ -50,6 +50,7 @@ const relatedReadingData = [
 ];
 
 const allConstantsData = {
+  bgVideo: "/videos/iot_bg.mp4",
   bgImage: "/images/whatwedo/AI_bg.svg",
   name: "Artificial Intelligence & Machine Learning",
   part1Text1: "Your Vision, Our Talent ",

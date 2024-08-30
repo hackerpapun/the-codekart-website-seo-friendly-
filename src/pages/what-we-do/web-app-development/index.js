@@ -4,7 +4,7 @@ import React from "react";
 const cardData = [
   {
     img: "/images/whatwedo/web2.svg",
-     text1: "Mobile Application Development",
+    text1: "Mobile Application Development",
     text2:
       "Native and cross-platform apps designed for optimal performance and user experience.",
   },
@@ -22,7 +22,7 @@ const cardData = [
   },
   {
     img: "/images/whatwedo/web2.svg",
-     text1: "Mobile Application Development",
+    text1: "Mobile Application Development",
     text2:
       "Native and cross-platform apps designed for optimal performance and user experience.",
   },

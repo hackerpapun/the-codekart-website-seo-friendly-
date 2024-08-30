@@ -50,6 +50,7 @@ const relatedReadingData = [
 ];
 
 const allConstantsData = {
+  bgVideo: "/videos/iot_bg.mp4",
   bgImage: "/images/whatwedo/resource_bg.svg",
   name: "Resource Outsourcing",
   part1Text1: "Expert Resource Outsourcing",
