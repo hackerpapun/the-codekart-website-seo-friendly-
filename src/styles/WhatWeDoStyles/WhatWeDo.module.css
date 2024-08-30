@@ -124,7 +124,7 @@
 
 .whatwedoComp2ServicesDiv {
   height: 600px;
-  overflow: scroll;
+  overflow-y: scroll;
   padding: 1rem 0px;
 }
 .whatwedoComp2ServicesDiv1Container {
@@ -167,7 +167,7 @@
 /* what we do comp 3 */
 .whatwedoComp3IndustryDiv {
   height: 550px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .whatwedoComp3IndustryDiv1Container {
   margin: 1.5rem 0px;

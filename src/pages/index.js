@@ -38,13 +38,42 @@ export default function Home() {
     }),
   };
 
+
+  const relatedReadingData = [
+    {
+      type: "Resource",
+      title: "Over Ride The Digital Design With Additional",
+      img: "/images/whatwedo/relatedReading1.svg",
+      date: "August 3, 2024",
+    },
+    {
+      type: "Resource",
+      title: "Free consultation with experts",
+      img: "/images/whatwedo/relatedReading2.svg",
+      date: "August 10, 2024",
+    },
+    {
+      type: "Resource",
+      title: "Quality Design projects completed",
+      img: "/images/whatwedo/relatedReading3.svg",
+      date: "August 3, 2024",
+    },
+    {
+      type: "Resource",
+      title: "Task completion planning with timelines",
+      img: "/images/whatwedo/relatedReading4.svg",
+      date: "August 10, 2024",
+    },
+  ];
+  
+
   return (
     // Animated Message Icon starts
     <Grid
       container
       className={`${styles.homeContainer} ${montserrat.variable}`}
     >
-      {/* <div className={styles.StickyContainer}>
+      <div className={styles.StickyContainer}>
         <div className={styles.MotionDiv}>
           <motion.div
             className={styles.MainMessageContainer}
@@ -105,18 +134,18 @@ export default function Home() {
             </motion.div>
           </motion.div>
         </div>
-      </div> */}
+      </div>
       {/* // Animated Message Icon ends */}
       <HomeComp1 />
-      {/* <HomeComp2 /> */}
-      {/* <HomeComp3 /> */}
-      {/* <HomeComp4 /> */}
-      {/* <HomeComp5 /> */}
+      <HomeComp2 />
+      <HomeComp3 />
+      <HomeComp4 relatedReadingData={relatedReadingData}/>
+      <HomeComp5 />
       <HomeComp6 />
       <Grid container className={styles.marginTopContainer}>
         <HomeComp7 />
       </Grid>
-      <HomeComp8/>  
+      <HomeComp8 />
     </Grid>
   );
 }

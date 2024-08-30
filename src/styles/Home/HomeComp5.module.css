@@ -1,34 +1,329 @@
-
-.hero5 {
-    width: 100%;
-    padding: 60px;
-    background-color: #ffffff;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.hero5Title {
+.whatwedoTextContainer {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .whatwedoCompHeader {
+    font-family: var(--font-notosans);
     font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.hero5Subtitle {
-    font-size: 2rem;
-    margin-bottom: 40px;
-}
-
-.hero5Grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.hero5IndustryItem {
-    background-color: #f8f8f8;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    text-align: center;
+    color: #0c172b;
+    margin-bottom: 0.6rem;
+  }
+  .whatwedoCompOrangeline {
+    width: 100px;
+    height: 3px;
+    background-color: #fa6400;
+    margin-bottom: 1rem;
+  }
+  .whatwedoCompSmallText {
+    font-family: var(--font-notosans);
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    color: #0c172b;
+    margin: 1.5rem 1rem 0px 0px;
+    letter-spacing: 0.3em;
+  }
+  .whatwedoButton {
+    width: 200px;
+    margin-bottom: 1rem;
+  }
+  
+  /* whatwedo comp1 */
+  .whatwedoComp11 {
+    margin: 4rem 0rem;
+  }
+  .whatwedoComp13 {
+    font-family: var(--font-notosans);
     font-size: 1.2rem;
-    font-weight: bold;
-}
+    font-weight: 400;
+    text-align: left;
+    color: #434343;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 2em;
+    letter-spacing: 0.05em;
+  }
+  .whatwedoComp14 {
+    font-family: var(--font-notosans);
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: left;
+    color: #434343;
+    line-height: 2em;
+    letter-spacing: 0.05em;
+  }
+  .whatwedoComp15 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* whatwedo comp 2 */
+  .whatwedoComp2Container {
+    padding: 3rem 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .whatwedoComp2Text2 {
+    font-family: var(--font-notosans);
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 43.58px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: #4b4a4c;
+    margin-top: 1rem;
+  }
+  .whatwedoComp2CardContainer {
+    margin: 4rem 0px 1rem 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .whatwedoComp2Card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    padding: 1% 5% 1% 5%;
+    height: 20%;
+    position: relative;
+    overflow: hidden;
+    font-family: var(--font-notosans);
+    font-size: 1.7rem;
+    font-weight: 400;
+    border-bottom: 1px solid #000;
+    line-height: 2.5rem;
+  }
+  .whatwedoComp2CardTitle {
+    font-family: var(--font-notosans);
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: left;
+    color: #0c172b;
+  }
+  
+  .arrowContainer {
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    transition: transform 0.3s ease;
+  }
+  .whatwedoComp2Card:hover .arrowContainer {
+    transform: translateX(20px);
+  }
+  
+  .whatwedoComp2ServicesDiv {
+    height: 600px;
+    overflow-y: scroll;
+    padding: 1rem 0px;
+  }
+  .whatwedoComp2ServicesDiv1Container {
+    margin: 1.5rem 0px;
+    gap: 1rem;
+  }
+  .whatwedoComp2ServicesDiv1Img {
+    width: 90%;
+    height: auto;
+    margin: 1rem;
+  }
+  .whatwedoComp2ServicesDiv1Texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 2rem;
+  }
+  .whatwedoComp2ServicesDiv1Text1 {
+    font-family: var(--font-montserrat);
+    color: #0c172b;
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  .whatwedoComp2ServicesDiv1Text2 {
+    font-family: var(--font-notosans);
+    color: #272727;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  .whatwedoComp2ServicesDiv1Text3 {
+    font-family: var(--font-notosans);
+    color: #4b4a4c;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    line-height: 1.8rem;
+  }
+  
+  /* what we do comp 3 */
+  .whatwedoComp3IndustryDiv {
+    height: 550px;
+    overflow-y: scroll;
+  }
+  .whatwedoComp3IndustryDiv1Container {
+    margin: 1.5rem 0px;
+    gap: 1rem;
+  }
+  .whatwedoComp3IndustryDiv1Img {
+    width: 80%;
+    height: auto;
+    /* margin: 1rem; */
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+  .whatwedoComp3IndustryDiv1Texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 2rem;
+  }
+  .whatwedoComp3IndustryDiv1Text1 {
+    font-family: var(--font-montserrat);
+    color: #0c172b;
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  .whatwedoComp3IndustryDiv1Text2 {
+    font-family: var(--font-notosans);
+    color: #4b4a4c;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    line-height: 1.8rem;
+  }
+  
+  /* what we do comp4 */
+  .whatwedoComp4Div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .whatwedoComp4Text {
+    font-family: var(--font-montserrat);
+    color: #0c172b;
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding-left: 2rem;
+  }
+  .whatwedoComp4Button {
+    height: 48px;
+  }
+  
+  /* all media queries */
+  @media screen and (max-width: 768px) {
+    /* whatwedo comp 1 */
+    .whatwedoComp11 {
+      margin: 1rem 0px;
+    }
+    .whatwedoCompHeader {
+      margin: 0px;
+      font-size: 2rem;
+    }
+    .whatwedoComp13 {
+      margin-top: 0px;
+      line-height: 1.9em;
+      font-size: 1rem;
+    }
+    .whatwedoComp14 {
+      margin-top: 0px;
+      line-height: 1.5em;
+      font-size: 1rem;
+    }
+    .whatwedoComp15 {
+      height: 400px;
+    }
+    /* whatwedo comp 2 */
+    .whatwedoComp2Container {
+      padding: 1rem;
+    }
+    .whatwedoComp2Card {
+      font-size: 0.8rem;
+    }
+    .whatwedoComp2Text2 {
+      font-size: 1rem;
+    }
+     /* what we do comp 3 */
+     .whatwedoComp3IndustryDiv {
+      height: 780px;
+    }
+    .whatwedoComp3IndustryDiv1 {
+      display: flex;
+      justify-content: center;
+    }
+    .whatwedoComp3IndustryDiv1Img {
+      width: 60%;
+      border-radius: 1rem;
+    }
+    .whatwedoComp3IndustryDiv1Texts {
+      padding: 1rem;
+    }
+    /* what we do comp 4 */
+    .whatwedoComp4Text {
+      text-align: center;
+      padding-left: 0px;
+      margin-bottom: 1rem;
+    }
+    .whatwedoComp4ButtonContainer {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1200px) {
+    /* what we do comp2 */
+    .whatwedoComp2Text2 {
+      font-size: 1.2rem;
+    }
+    .whatwedoComp2Card {
+      font-size: 1rem;
+    }
+    .whatwedoComp2ServicesDiv {
+      height: 800px;
+    }
+    .whatwedoComp2ServicesDiv1 {
+      display: flex;
+      justify-content: center;
+    }
+    .whatwedoComp2ServicesDiv1Img {
+      width: 70%;
+    }
+    .whatwedoComp2ServicesDiv1Texts {
+      padding: 1rem;
+    }
+    /* what we do comp 3 */
+    .whatwedoComp3IndustryDiv {
+      height: 780px;
+    }
+    .whatwedoComp3IndustryDiv1 {
+      display: flex;
+      justify-content: center;
+    }
+    .whatwedoComp3IndustryDiv1Img {
+      width: 60%;
+      border-radius: 1rem;
+    }
+    .whatwedoComp3IndustryDiv1Texts {
+      padding: 1rem;
+    }
+    /* what we do comp 4 */
+    .whatwedoComp4Text {
+      text-align: center;
+      padding-left: 0px;
+      margin-bottom: 1rem;
+    }
+    .whatwedoComp4ButtonContainer {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  

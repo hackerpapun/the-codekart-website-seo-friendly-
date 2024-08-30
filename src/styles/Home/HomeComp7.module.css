@@ -205,7 +205,7 @@
   /* what we do comp4 */
   .whatwedoComp4Div {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
   .whatwedoComp4Text {
@@ -217,6 +217,7 @@
   }
   .whatwedoComp4Button {
     height: 48px;
+
   }
   
   .homecomp7underline {
