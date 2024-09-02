@@ -3,35 +3,35 @@ import React from "react";
 
 const cardData = [
   {
-    img: "/images/whatwedo/AI_2.svg",
+    img: "/images/whatwedo/AI_3.svg",
     text1: "AI Integration",
     text2:
       "Seamlessly integrate AI into your existing systems to streamline operations and enhance efficiency.",
   },
   {
-    img: "/images/whatwedo/AI_2.svg",
+    img: "/images/whatwedo/AI_4.svg",
     text1: "Machine Learning Development",
     text2: "Custom-built ML models tailored to your specific needs and goals.",
   },
   {
-    img: "/images/whatwedo/AI_2.svg",
+    img: "/images/whatwedo/AI_5.svg",
     text1: "Predictive Analytics",
     text2:
       "Harness the power of data to forecast trends and make informed business decisions.",
   },
   {
-    img: "/images/whatwedo/AI_2.svg",
+    img: "/images/whatwedo/AI_3.svg",
     text1: "AI Integration",
     text2:
       "Seamlessly integrate AI into your existing systems to streamline operations and enhance efficiency.",
   },
   {
-    img: "/images/whatwedo/AI_2.svg",
+    img: "/images/whatwedo/AI_4.svg",
     text1: "Machine Learning Development",
     text2: "Custom-built ML models tailored to your specific needs and goals.",
   },
   {
-    img: "/images/whatwedo/AI_2.svg",
+    img: "/images/whatwedo/AI_5.svg",
     text1: "Predictive Analytics",
     text2:
       "Harness the power of data to forecast trends and make informed business decisions.",

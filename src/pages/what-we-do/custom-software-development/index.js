@@ -68,7 +68,7 @@ const relatedReadingData = [
 ];
 
 const allConstantsData = {
-  bgVideo: "/videos/ai_bg.mp4",
+  // bgVideo: "/videos/ai_bg.mp4",
   bgImage: "/images/whatwedo/software_bg.svg",
   name: "Custom Software Development",
   part1Text1: "Tailored Software Development",

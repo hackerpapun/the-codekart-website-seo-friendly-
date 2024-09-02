@@ -3,22 +3,40 @@ import React from "react";
 
 const cardData = [
   {
-    img: "/images/whatwedo/AI_2.svg",
-    text1: "Dedicated Development Teams",
+    img: "/images/whatwedo/iot2.svg",
+    text1: "IoT Device Integration",
     text2:
-      "Access specialized talent for your development projects, ensuring quality and efficiency.",
+      "Connect and manage IoT devices to enhance functionality and data collection.",
   },
   {
-    img: "/images/whatwedo/AI_2.svg",
-    text1: "Remote IT Staffing",
+    img: "/images/whatwedo/iot3.svg",
+    text1: "Smart Solutions Development",
     text2:
-      "Hire experienced IT professionals to support your operations from anywhere in the world.",
+      "Create intelligent systems that improve efficiency and provide valuable insights.",
   },
   {
-    img: "/images/whatwedo/AI_2.svg",
-    text1: "Project-Based Outsourcing",
+    img: "/images/whatwedo/iot4.svg",
+    text1: "Embedded Systems Design",
     text2:
-      "Scale your workforce based on project needs without the overhead of permanent hires.",
+      "Develop embedded systems for a range of applications, from consumer electronics to industrial equipment.",
+  },
+  {
+    img: "/images/whatwedo/iot2.svg",
+    text1: "IoT Device Integration",
+    text2:
+      "Connect and manage IoT devices to enhance functionality and data collection.",
+  },
+  {
+    img: "/images/whatwedo/iot3.svg",
+    text1: "Smart Solutions Development",
+    text2:
+      "Create intelligent systems that improve efficiency and provide valuable insights.",
+  },
+  {
+    img: "/images/whatwedo/iot4.svg",
+    text1: "Embedded Systems Design",
+    text2:
+      "Develop embedded systems for a range of applications, from consumer electronics to industrial equipment.",
   },
 ];
 
@@ -51,15 +69,15 @@ const relatedReadingData = [
 
 const allConstantsData = {
   bgVideo: "/videos/iot_bg.mp4",
-  bgImage: "/images/whatwedo/AI_bg.svg",
-  name: "Artificial Intelligence & Machine Learning",
-  part1Text1: "Your Vision, Our Talent ",
-  part1Text2: "Empower The Team.",
-  part2Img: "/images/whatwedo/AI_1.svg",
+  // bgImage: "/images/whatwedo/AI_bg.svg",
+  name: "IoT & Digital Innovation",
+  part1Text1: "Pioneering IoT & Digital",
+  part1Text2: "Innovation Solutions",
+  part2Img: "/images/whatwedo/iot1.svg",
   part2Description:
-    "Optimize your operations with Codekart's resource outsourcing services. We provide skilled professionals and dedicated teams to support your projects and enhance your business capabilities.",
+    "Stay at the forefront of technology with Codekart's IoT and digital innovation services. We provide cutting-edge solutions that drive innovation and optimize your operations.",
   part5Description:
-    "Our resource outsourcing solutions help you focus on core business activities while we handle the specialized tasks, providing flexibility and expertise.",
+    "Our cybersecurity and risk management services help you stay secure and resilient in a constantly evolving threat landscape.",
 };
 
 export default function index() {

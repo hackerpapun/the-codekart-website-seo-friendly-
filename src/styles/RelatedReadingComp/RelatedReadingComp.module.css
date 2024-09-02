@@ -10,6 +10,13 @@
   padding-bottom: 1rem;
   text-align: center;
 }
+.rrcOrangeline {
+  width: 100px;
+  height: 3px;
+  background-color: #fa6400;
+  margin: 1.5rem 0px;
+  text-align: center;
+}
 .rrc3 {
   font-family: var(--font-notosans);
   font-size: 1rem;
@@ -34,7 +41,7 @@
   margin-bottom: 2rem;
 }
 .rrc4CardImg {
-  width: 100%;
+  width: 90%;
   height: auto;
 }
 .rrc4CardType {
@@ -67,4 +74,57 @@
   text-align: left;
   color: #757575;
   margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .rrc1 {
+    padding: 2rem 0px;
+  }
+  .rrc2 {
+    font-size: 2rem;
+  }
+  .rrc3 {
+    font-size: 0.8rem;
+  }
+  .rrc4Card {
+    margin-bottom: 1rem;
+    padding: 1rem 0px;
+  }
+  .rrc4CardTitle {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+  .rrc4CardDate {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.6rem;
+  }
+  .rrc4CardType {
+    font-size: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .rrc1 {
+    padding: 2rem 0px;
+  }
+  .rrc2 {
+    font-size: 2.3rem;
+  }
+  .rrc3 {
+    font-size: 1rem;
+  }
+  .rrc4Card {
+    margin-bottom: 1rem;
+    padding: 1rem 0px;
+  }
+  .rrc4CardTitle {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+  .rrc4CardDate {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.6rem;
+  }
 }

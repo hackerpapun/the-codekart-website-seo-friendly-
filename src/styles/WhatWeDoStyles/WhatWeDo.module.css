@@ -224,6 +224,9 @@
 
 /* all media queries */
 @media screen and (max-width: 768px) {
+  .whatwedoTextContainer {
+    min-height: 300px;
+  }
   /* whatwedo comp 1 */
   .whatwedoComp11 {
     margin: 1rem 0px;
@@ -243,17 +246,36 @@
     font-size: 1rem;
   }
   .whatwedoComp15 {
-    height: 400px;
+    height: 200px;
+    margin-top: 1rem;
   }
   /* whatwedo comp 2 */
   .whatwedoComp2Container {
     padding: 1rem;
   }
   .whatwedoComp2Card {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    gap: 0.2rem;
   }
   .whatwedoComp2Text2 {
     font-size: 1rem;
+    line-height: 1.4rem;
+    margin-top: 0.6rem;
+  }
+  .whatwedoComp2ServicesDiv1Texts {
+    gap: 1.2rem;
+    padding: 1rem;
+  }
+  .whatwedoComp2ServicesDiv1Text1 {
+    font-size: 1.5rem;
+  }
+  .whatwedoComp2ServicesDiv1Text2 {
+    font-size: 1rem;
+  }
+  .whatwedoComp2ServicesDiv1Text3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
   }
    /* what we do comp 3 */
    .whatwedoComp3IndustryDiv {
@@ -269,16 +291,29 @@
   }
   .whatwedoComp3IndustryDiv1Texts {
     padding: 1rem;
+    gap: 1.2rem;
+  }
+  .whatwedoComp3IndustryDiv1Text1 {
+    font-size: 1.5rem;
+  }
+  .whatwedoComp3IndustryDiv1Text2 {
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
   }
   /* what we do comp 4 */
   .whatwedoComp4Text {
     text-align: center;
-    padding-left: 0px;
+    padding: 0.6rem;
     margin-bottom: 1rem;
+    font-size: 1.5rem;
   }
   .whatwedoComp4ButtonContainer {
     display: flex;
     justify-content: center;
+  }
+  .whatwedoComp4Button {
+    height: 40px;
+    font-size: x-small !important;
   }
 }
 
@@ -323,9 +358,14 @@
     text-align: center;
     padding-left: 0px;
     margin-bottom: 1rem;
+    font-size: 2rem;
   }
   .whatwedoComp4ButtonContainer {
     display: flex;
     justify-content: center;
+  }
+  .whatwedoComp4Button {
+    height: 40px;
+    font-size: small !important;
   }
 }

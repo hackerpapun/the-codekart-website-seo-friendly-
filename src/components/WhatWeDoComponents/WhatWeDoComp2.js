@@ -37,7 +37,7 @@ export default function WhatWeDoComp2() {
           }}
         >
           {whatWeDoComp2ServicesData?.map((item, i) => (
-            <Grid item xs={5} md={4} lg={3} key={i}>
+            <Grid item xs={4.4} sm={4.5} md={4} lg={3} key={i}>
               <a
                 target=""
                 style={{ textDecoration: "none", color: "#000" }}

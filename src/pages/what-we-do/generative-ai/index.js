@@ -3,22 +3,40 @@ import React from "react";
 
 const cardData = [
   {
-    img: "/images/whatwedo/AI_2.svg",
-    text1: "Dedicated Development Teams",
+    img: "/images/whatwedo/generative_ai2.svg",
+    text1: "AI Integration in Development",
     text2:
-      "Access specialized talent for your development projects, ensuring quality and efficiency.",
+      "Seamlessly embed generative AI into your applications, enabling features such as automated content generation and more",
   },
   {
-    img: "/images/whatwedo/AI_2.svg",
-    text1: "Remote IT Staffing",
+    img: "/images/whatwedo/generative_ai3.svg",
+    text1: "Custom AI Solutions",
     text2:
-      "Hire experienced IT professionals to support your operations from anywhere in the world.",
+      "Tailor-made AI models designed to meet your specific business needs, from natural language generation.",
   },
   {
-    img: "/images/whatwedo/AI_2.svg",
-    text1: "Project-Based Outsourcing",
+    img: "/images/whatwedo/generative_ai4.svg",
+    text1: "AI-Powered User Experience",
     text2:
-      "Scale your workforce based on project needs without the overhead of permanent hires.",
+      "Enhance user experiences by offering AI-driven features like chatbots, AI-assisted design, and personalized content delivery.",
+  },
+  {
+    img: "/images/whatwedo/generative_ai2.svg",
+    text1: "AI Integration in Development",
+    text2:
+      "Seamlessly embed generative AI into your applications, enabling features such as automated content generation and more",
+  },
+  {
+    img: "/images/whatwedo/generative_ai3.svg",
+    text1: "Custom AI Solutions",
+    text2:
+      "Tailor-made AI models designed to meet your specific business needs, from natural language generation.",
+  },
+  {
+    img: "/images/whatwedo/generative_ai4.svg",
+    text1: "AI-Powered User Experience",
+    text2:
+      "Enhance user experiences by offering AI-driven features like chatbots, AI-assisted design, and personalized content delivery.",
   },
 ];
 
@@ -51,15 +69,15 @@ const relatedReadingData = [
 
 const allConstantsData = {
   bgVideo: "/videos/generative_ai_bg.mp4",
-  bgImage: "/images/whatwedo/AI_bg.svg",
-  name: "Artificial Intelligence & Machine Learning",
-  part1Text1: "Your Vision, Our Talent ",
-  part1Text2: "Empower The Team.",
-  part2Img: "/images/whatwedo/AI_1.svg",
+  // bgImage: "/images/whatwedo/AI_bg.svg",
+  name: "Generative AI",
+  part1Text1: "Unlock Creativity with",
+  part1Text2: "Generative AI Solutions",
+  part2Img: "/images/whatwedo/iot1.svg",
   part2Description:
-    "Optimize your operations with Codekart's resource outsourcing services. We provide skilled professionals and dedicated teams to support your projects and enhance your business capabilities.",
+    "Empower your business with Codekart's Generative AI solutions. We specialize in creating AI models that generate original content, optimize workflows, and enable innovative applications across industries.",
   part5Description:
-    "Our resource outsourcing solutions help you focus on core business activities while we handle the specialized tasks, providing flexibility and expertise.",
+    "Our AI-driven solutions are designed to help you stay ahead of the curve by transforming your digital products and services with next-gen intelligence.",
 };
 
 export default function index() {
