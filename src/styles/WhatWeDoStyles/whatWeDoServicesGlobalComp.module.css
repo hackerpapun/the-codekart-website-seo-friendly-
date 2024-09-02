@@ -49,7 +49,7 @@
   background-repeat: no-repeat; /* No repeat for a single image */
   background-size: cover; /* Start with a bigger size */
   animation: moveBackground 4s ease-in-out 1; /* Animation runs once */
-  padding-top: 6.9rem;
+  padding: 6rem 2rem;
 }
 
 .wwdServicesGlobal2,
@@ -228,14 +228,10 @@
 }
 
 @media screen and (max-width: 768px) {
-  .wwdServicesGlobal1ContainerImage {
-    min-height: 60vh;
-  }
-  .wwdServicesGlobal1ContainerVideo {
-    min-height: 60vh;
-  }
-  .wwdServicesGlobal1 {
-    /* padding: 1rem; */
+  .wwdServicesGlobal1ContainerImage,
+  .wwdServicesGlobal1ContainerVideo,
+  .wwdServicesGlobal1Image,
+  .wwdServicesGlobal1Video {
     height: 60vh;
   }
   .wwdServicesGlobal2 {
@@ -280,13 +276,12 @@
 }
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {
-  .wwdServicesGlobal1ContainerImage {
-    min-height: 60vh;
-  }
+  .wwdServicesGlobal1ContainerImage,
   .wwdServicesGlobal1ContainerVideo {
-    min-height: 60vh;
+    height: 60vh;
   }
-  .wwdServicesGlobal1 {
+  .wwdServicesGlobal1Image,
+  .wwdServicesGlobal1Video {
     height: 60vh;
     display: flex;
     flex-direction: column;
