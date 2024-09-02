@@ -10,7 +10,7 @@ export default function WhatWeDoComp1() {
       container
       className={`${styles.whatwedoComp11} ${montserrat.variable} ${notosans.variable}`}
     >
-      <Grid item lg={1}></Grid>
+      <Grid item md={0.5} lg={1}></Grid>
       <Grid
         item
         md={5} lg={4}
@@ -41,7 +41,7 @@ export default function WhatWeDoComp1() {
           className={styles.whatwedoComp15}
         />
       </Grid>
-      <Grid item md={1}></Grid>
+      <Grid item md={0.5}></Grid>
     </Grid>
   );
 }

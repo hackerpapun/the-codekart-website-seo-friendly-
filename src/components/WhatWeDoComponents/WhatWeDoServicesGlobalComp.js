@@ -7,6 +7,8 @@ import ButtonCustom from "../ButtonCustom";
 import RelatedReadingComp from "../RelatedReadingComp/RelatedReadingComp";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { navconstants } from "@/constants/navconstants";
+import { useRouter } from "next/router";
 
 const responsive = {
   superLargeDesktop: {
@@ -32,28 +34,50 @@ export default function WhatWeDoServicesGlobalComp({
   relatedReadingData,
   constantData,
 }) {
+  
+  const Router = useRouter();
+
   return (
     <Box className={`${notosans.variable} ${montserrat.variable}`}>
       {/* image bg part 1 */}
-      <div className={styles.wwdServicesGlobal1MainContainer}>
-        {constantData?.bgVideo ? (
-          <video
-            src={constantData?.bgVideo}
-            autoPlay
-            muted
-            loop
-            preload="none"
-            className={styles.wwdServicesGlobal1ContainerVideo}
-          />
-        ) : (
-          <img
-            src={constantData?.bgImage}
-            alt="Bg Image"
-            className={styles.wwdServicesGlobal1ContainerImage}
-          />
-        )}
+      <div
+        className={
+          constantData?.bgImage
+            ? styles.wwdServicesGlobal1MainContainerImage
+            : styles.wwdServicesGlobal1MainContainerVideo
+        }
+      >
+        {
+          constantData?.bgVideo ? (
+            <video
+              src={constantData?.bgVideo}
+              autoPlay
+              muted
+              loop
+              preload="none"
+              className={styles.wwdServicesGlobal1ContainerVideo}
+            />
+          ) : null
+          // <img
+          //   src={constantData?.bgImage}
+          //   alt="Bg Image"
+          //   className={styles.wwdServicesGlobal1ContainerImage}
+          // />
+        }
 
-        <Grid container className={styles.wwdServicesGlobal1}>
+        <Grid
+          container
+          className={
+            constantData?.bgVideo
+              ? styles.wwdServicesGlobal1Video
+              : styles.wwdServicesGlobal1Image
+          }
+          style={{
+            backgroundImage: constantData?.bgImage
+              ? `url(${constantData?.bgImage})`
+              : "",
+          }}
+        >
           <Grid item xs={12} md={1}></Grid>
           <Grid item xs={12} md={9}>
             <div className={styles.wwdServicesGlobal2}>
@@ -77,12 +101,12 @@ export default function WhatWeDoServicesGlobalComp({
       </div>
 
       {/* part 2 */}
-      <Grid container className={styles.wwdServicesGlobal5} spacing={10}>
-        <Grid item xs={12} lg={1}></Grid>
+      <Grid container className={styles.wwdServicesGlobal5}>
+        <Grid item xs={12} lg={0.5}></Grid>
         <Grid
           item
           xs={12}
-          md={6}
+          sm={5}
           lg={5}
           className={styles.wwdServicesGlobal6Container}
         >
@@ -91,10 +115,11 @@ export default function WhatWeDoServicesGlobalComp({
             {constantData?.part2Description}
           </div>
         </Grid>
+        <Grid item xs={12} sm={0.5} lg={1}></Grid>
         <Grid
           item
           xs={12}
-          md={5}
+          sm={6}
           lg={5}
           className={styles.wwdServicesGlobal6Container}
         >
@@ -103,7 +128,7 @@ export default function WhatWeDoServicesGlobalComp({
             className={styles.wwdServicesGlobal7}
           />
         </Grid>
-        <Grid item xs={12} lg={1}></Grid>
+        <Grid item xs={12} lg={0.5}></Grid>
       </Grid>
 
       {/* part 3 */}
@@ -169,6 +194,7 @@ export default function WhatWeDoServicesGlobalComp({
             title="Contact Us"
             icon={true}
             buttonStyles={styles.wwdServicesGlobal11Button}
+            onClick={() => Router.push(`${navconstants.whoweare}#contactus`)}
           />
         </Grid>
       </Grid>

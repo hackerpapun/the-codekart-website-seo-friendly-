@@ -17,14 +17,17 @@ export default function RelatedReadingComp({ relatedReadingData }) {
           <br />
           tackle any creative task
         </div>
+        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+          <div className={styles.rrcOrangeline} />
+        </div>
         <Grid
           container
-          marginTop={10}
+          marginTop={5}
           display="flex"
           justifyContent="space-evenly"
         >
           {relatedReadingData?.map((item, i) => (
-            <Grid item xs={12} md={5.5} lg={2.6} key={i}>
+            <Grid item xs={5} md={5.5} lg={2.6} key={i}>
               <div className={styles.rrc4Card}>
                 <div className={styles.rrc4CardImgContainer}>
                   <img

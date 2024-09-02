@@ -10,6 +10,7 @@ export default function WhatWeDoComp4() {
       container
       className={`${styles.whatwedoComp4Div} ${notosans.variable}`}
     >
+      <Grid item md={1} />
       <Grid item xs={12} md={8}>
         <div className={styles.whatwedoComp4Text}>
           Request a proposal or consult,

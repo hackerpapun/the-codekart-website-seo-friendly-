@@ -68,7 +68,7 @@ const relatedReadingData = [
 ];
 
 const allConstantsData = {
-  bgVideo: "/videos/ai_bg.mp4",
+  // bgVideo: "/videos/ai_bg.mp4",
   bgImage: "/images/whatwedo/cloud_bg.svg",
   name: "Cloud & Data Solutions",
   part1Text1: "Your Data, Your Future ",

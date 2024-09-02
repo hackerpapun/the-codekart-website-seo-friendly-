@@ -1,13 +1,22 @@
 /* part 1 */
-.wwdServicesGlobal1MainContainer {
+.wwdServicesGlobal1MainContainerImage {
   position: relative;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 30%, rgba(255, 255, 255, 0) 100%);
+  overflow: hidden;
+  animation: moveBackground 5s ease-in-out 1;
+}
+.wwdServicesGlobal1MainContainerVideo {
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.7) 30%,
+    rgba(255, 255, 255, 0) 100%
+  );
   overflow: hidden;
 }
 .wwdServicesGlobal1ContainerVideo {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
   width: 100vw;
   height: 100vh;
   object-fit: cover;
@@ -16,17 +25,31 @@
 }
 
 .wwdServicesGlobal1ContainerImage {
-  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
   height: 100vh;
   object-fit: cover;
   z-index: -1;
 }
 
-.wwdServicesGlobal1 {
+.wwdServicesGlobal1Video {
   height: 100vh;
-  padding-top: 6rem;
+  padding: 6rem 2rem;
   z-index: 1;
   position: relative;
+}
+
+.wwdServicesGlobal1Image {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* background-image: url("/images/whatwedo/AI_bg.svg"); */
+  background-repeat: no-repeat; /* No repeat for a single image */
+  background-size: cover; /* Start with a bigger size */
+  animation: moveBackground 4s ease-in-out 1; /* Animation runs once */
+  padding: 6rem 2rem;
 }
 
 .wwdServicesGlobal2,
@@ -126,6 +149,7 @@
 /* part 3 */
 .wwdServicesGlobal8 {
   background-color: #000;
+  justify-content: center;
   padding: 6rem 2rem;
 }
 .wwdServicesGlobal9 {
@@ -201,4 +225,102 @@
 .wwdServicesGlobal11Button:hover {
   background-color: #fff !important;
   color: #000 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .wwdServicesGlobal1ContainerImage,
+  .wwdServicesGlobal1ContainerVideo,
+  .wwdServicesGlobal1Image,
+  .wwdServicesGlobal1Video {
+    height: 60vh;
+  }
+  .wwdServicesGlobal2 {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .wwdServicesGlobal3 {
+    font-size: 2rem;
+  }
+  .wwdServicesGlobal4 {
+    width: 60%;
+  }
+  .wwdServicesGlobal5 {
+    padding: 0rem 1rem 1rem 1rem;
+  }
+  .wwdServicesOrangeline {
+    margin-bottom: 0.5rem;
+    width: 70px;
+  }
+  .wwdServicesGlobal6Container {
+    padding: 2rem 0px;
+  }
+  .wwdServicesGlobal6 {
+    font-size: medium;
+  }
+  .wwdServicesGlobal10Card {
+    min-height: 200px;
+    padding: 0.2rem 1rem;
+  }
+  .wwdServicesGlobal11Div {
+    padding: 2rem 0px;
+  }
+  .wwdServicesGlobal11Text {
+    font-size: large;
+    margin-bottom: 2rem;
+  }
+  .wwdServicesGlobal11ButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .wwdServicesGlobal1ContainerImage,
+  .wwdServicesGlobal1ContainerVideo {
+    height: 60vh;
+  }
+  .wwdServicesGlobal1Image,
+  .wwdServicesGlobal1Video {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .wwdServicesGlobal2 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .wwdServicesGlobal3 {
+    font-size: 3rem;
+  }
+  .wwdServicesGlobal4 {
+    width: 60%;
+  }
+  .wwdServicesGlobal5 {
+    padding: 0rem 1rem 1rem 1rem;
+  }
+  .wwdServicesOrangeline {
+    margin-bottom: 0.5rem;
+    width: 70px;
+  }
+  .wwdServicesGlobal6Container {
+    padding: 2rem 0px;
+  }
+  .wwdServicesGlobal6 {
+    font-size: medium;
+  }
+  .wwdServicesGlobal10Card {
+    min-height: 200px;
+    padding: 0.3rem 1rem;
+  }
+  .wwdServicesGlobal11Text {
+    font-size: large;
+    margin-bottom: 2rem;
+  }
+  .wwdServicesGlobal11ButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
