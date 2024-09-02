@@ -18,7 +18,7 @@ export default function HomeComp1() {
   };
 
   return (
-    <Grid className={`${styles.hero1} ${montserrat.variable}`}>
+    <Grid className={`${styles.hero1} ${montserrat.variable}`}>  
       <div className={styles.hero1socialMedia}>
         {homeComp1Data.socialMedia.map((media, index) => (
           <img

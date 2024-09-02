@@ -52,32 +52,32 @@ export const homeComp2Data = {
   ],
   brands2: [
     {
-      img: "/images/home/atlassian.svg",
-      alt: "Atlassian",
+      img: "/images/home/Volkswagen.svg",
+      alt: "VolkSwagen",
     },
     {
-      img: "/images/home/deel.svg",
-      alt: "Deel",
+      img: "/images/home/Tata.svg",
+      alt: "Tata",
     },
     {
-      img: "/images/home/weightwatchers.svg",
-      alt: "WeightWatchers",
+      img: "/images/home/Jsw.svg",
+      alt: "Jsw",
     },
     {
-      img: "/images/home/plaid.svg",
-      alt: "Plaid",
+      img: "/images/home/Infovision.svg",
+      alt: "Infovision",
     },
     {
-      img: "/images/home/ideo.svg",
-      alt: "Ideo",
+      img: "/images/home/Dxc.svg",
+      alt: "Dxc",
     },
     {
-      img: "/images/home/microsoft.svg",
-      alt: "Microsoft",
+      img: "/images/home/Bricxy.svg",
+      alt: "Bricxy",
     },
     {
-      img: "/images/home/riotgames.svg",
-      alt: "riotgames",
+      img: "/images/home/Blenheim.svg",
+      alt: "Blenheim",
     },
   ],
   heroTextImage:{

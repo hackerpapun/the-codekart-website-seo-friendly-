@@ -1,6 +1,6 @@
 /* Base styles for hero1 */
 .hero1 {
-    background-image: url("../../assets/images/home/hero.png");
+    background: url("../../assets/images/home/hero.png");
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -13,6 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: orangered;
   }
   
   .hero1socialMedia {
