@@ -34,6 +34,7 @@
 .hero2brandImage {
     align-self: center;
     justify-content: center;
+    mix-blend-mode: multiply;
 }
 
 /* Responsive Styles */
