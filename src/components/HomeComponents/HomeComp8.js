@@ -5,16 +5,17 @@ import "react-multi-carousel/lib/styles.css";
 import styles from "../../styles/Home/HomeComp8.module.css";
 import { montserrat } from "@/assets/fonts/fonts";
 import { BsArrowUpRightCircle } from "react-icons/bs";
+import { getPublicImageUrl } from "@/constants/images";
 
 const images = [
-  "/images/home/image-1.png",
-  "/images/home/image-2.png",
-  "/images/home/image-3.png",
-  "/images/home/image-4.png",
-  "/images/home/image-5.png",
-  "/images/home/image-6.png",
-  "/images/home/image-7.png",
-  "/images/home/image-8.png",
+  getPublicImageUrl("/images/home/image-1.png"),
+  getPublicImageUrl("/images/home/image-2.png"),
+  getPublicImageUrl("/images/home/image-3.png"),
+  getPublicImageUrl("/images/home/image-4.png"),
+  getPublicImageUrl("/images/home/image-5.png"),
+  getPublicImageUrl("/images/home/image-6.png"),
+  getPublicImageUrl("/images/home/image-7.png"),
+  getPublicImageUrl("/images/home/image-8.png"),
 ];
 
 export default function HomeComp8() {

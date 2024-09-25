@@ -3,6 +3,7 @@ import styles from "../../styles/WhatWeDoStyles/WhatWeDo.module.css";
 import { Grid } from "@mui/material";
 import HomeButtonComp from "@/components/HomeButtonComp";
 import { montserrat, notosans } from "@/assets/fonts/fonts";
+import { getPublicImageUrl } from "@/constants/images";
 
 export default function WhatWeDoComp1() {
   return (
@@ -13,7 +14,8 @@ export default function WhatWeDoComp1() {
       <Grid item md={0.5} lg={1}></Grid>
       <Grid
         item
-        md={5} lg={4}
+        md={5}
+        lg={4}
         className={styles.whatwedoTextContainer}
         style={{ padding: "0px 1rem" }}
       >
@@ -37,7 +39,7 @@ export default function WhatWeDoComp1() {
       <Grid item md={1}></Grid>
       <Grid item md={5} style={{ padding: "0px 1rem" }}>
         <img
-          src="/images/whatwedo/img1.svg"
+          src={getPublicImageUrl("/images/whatwedo/img1.svg")}
           className={styles.whatwedoComp15}
         />
       </Grid>

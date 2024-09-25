@@ -21,32 +21,35 @@ import { notosans } from "@/assets/fonts/fonts";
 import ButtonCustom from "@/components/ButtonCustom";
 import HomeComp4 from "@/components/HomeComponents/HomeComp4";
 import RelatedReadingComp from "@/components/RelatedReadingComp/RelatedReadingComp";
+import { getPublicImageUrl } from "@/constants/images";
+
 const relatedReadingData = [
   {
     type: "Resource",
     title: "Over Ride The Digital Design With Additional",
-    img: "/images/whatwedo/relatedReading1.svg",
+    img: getPublicImageUrl("/images/whatwedo/relatedReading1.svg"),
     date: "August 3, 2024",
   },
   {
     type: "Resource",
     title: "Free consultation with experts",
-    img: "/images/whatwedo/relatedReading2.svg",
+    img: getPublicImageUrl("/images/whatwedo/relatedReading2.svg"),
     date: "August 10, 2024",
   },
   {
     type: "Resource",
     title: "Quality Design projects completed",
-    img: "/images/whatwedo/relatedReading3.svg",
+    img: getPublicImageUrl("/images/whatwedo/relatedReading3.svg"),
     date: "August 3, 2024",
   },
   {
     type: "Resource",
     title: "Task completion planning with timelines",
-    img: "/images/whatwedo/relatedReading4.svg",
+    img: getPublicImageUrl("/images/whatwedo/relatedReading4.svg"),
     date: "August 10, 2024",
   },
 ];
+
 export default function Home() {
   return (
     <>
@@ -92,7 +95,7 @@ export default function Home() {
         <Card>
           <CardMedia
             component="img"
-            image="/images/whatwedo/article.png"
+            image={getPublicImageUrl("/images/whatwedo/article.png")}
             alt="Enigma Machine"
             style={{ borderRadius: "8px" }}
           />

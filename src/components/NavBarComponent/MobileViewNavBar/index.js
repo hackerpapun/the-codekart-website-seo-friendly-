@@ -1,11 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "../../../styles/NavbarStyles/mobileview.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
-import CodekartLogo from "../../../assets/images/navbar/codekartlogo.png";
 import { RxCross2 } from "react-icons/rx";
-import Image from "next/image";
 import { Grid } from "@mui/material";
 import { FaAngleDown } from "react-icons/fa6";
+import { IMAGES } from "@/constants/images";
 
 const MobileViewNavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -90,8 +89,8 @@ const MobileViewNavBar = () => {
     <>
       <Grid container className={styles.navbarContainer}>
         <Grid item sm={6} xs={6} className={styles.logoContainer}>
-          <Image
-            src={CodekartLogo}
+          <img
+            src={IMAGES.logo.codekartlogo}
             alt="CodeKart Logo"
             className={styles.NavbarLogo}
           />
