@@ -8,6 +8,7 @@ import { RxCross2 } from "react-icons/rx";
 import { FaInstagram } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
+import { getPublicImageUrl } from "@/constants/images";
 
 export const metadata = {
   title: "Codekart",
@@ -47,7 +48,7 @@ export default function RootLayout({ children }) {
               onClick={handleHideMessage}
             >
               <img
-                src={"/images/home/messageIcon.png"}
+                src={getPublicImageUrl("/images/home/messageIcon.png")}
                 alt="Course Image Placeholder"
                 className="messageContainer"
               />

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../../styles/StrengthCss/Strength.module.css";
 import { Grid } from "@mui/material";
+import { getPublicImageUrl } from "@/constants/images";
 
 const Strength = () => {
   return (
@@ -30,7 +31,9 @@ const Strength = () => {
             </Grid>
             <Grid item sm={6} xs={12}>
               <img
-                src="/images/WhoWeAreDiscover/strenghtImage.png"
+                src={getPublicImageUrl(
+                  "/images/WhoWeAreDiscover/strenghtImage.png"
+                )}
                 alt=""
                 className={styles.rightStrengthContainerPhoto}
               />

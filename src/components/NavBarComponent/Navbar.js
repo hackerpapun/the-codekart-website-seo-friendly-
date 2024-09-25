@@ -9,14 +9,14 @@ import { MdOutlineNightsStay } from "react-icons/md";
 import WhatAreWe from "./WhatWeAreNavbar";
 import WhatWeDoNavbar from "./WhatWeDoNavbar";
 import { ThemeContext } from "@/context/ThemeContext";
-import CodekartLogo from "../../assets/images/navbar/codekartlogo.png";
-import LanguageImage from "../../assets/images/navbar/language.png";
+// import LanguageImage from "../../assets/images/navbar/language.png";
 import Insight from "./InsightNavBar";
 import Image from "next/image";
 import MobileViewNavBar from "./MobileViewNavBar";
 import { useRouter } from "next/router";
 import { navconstants } from "@/constants/navconstants";
 import { notosans } from "@/assets/fonts/fonts";
+import { IMAGES } from "@/constants/images";
 
 const Navbar = () => {
   const router = useRouter();
@@ -79,8 +79,8 @@ const Navbar = () => {
       >
         <Grid container className={styles.MainContainer}>
           <Grid item xs={12} md={8} className={styles.NavBarTopComponent}>
-            <Image
-              src={CodekartLogo}
+            <img
+              src={IMAGES.logo.codekartlogo}
               alt="CodeKart Logo"
               className={styles.NavbarLogo}
               onClick={() => router.push(navconstants.home)}

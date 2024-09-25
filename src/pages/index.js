@@ -11,36 +11,36 @@ import HomeComp6 from "@/components/HomeComponents/HomeComp6";
 import HomeComp7 from "@/components/HomeComponents/HomeComp7";
 import { montserrat } from "@/assets/fonts/fonts";
 import HomeComp8 from "@/components/HomeComponents/HomeComp8";
+import { getPublicImageUrl } from "@/constants/images";
 
 const relatedReadingData = [
   {
     type: "Resource",
     title: "Over Ride The Digital Design With Additional",
-    img: "/images/whatwedo/relatedReading1.svg",
+    img: getPublicImageUrl("/images/whatwedo/relatedReading1.svg"),
     date: "August 3, 2024",
   },
   {
     type: "Resource",
     title: "Free consultation with experts",
-    img: "/images/whatwedo/relatedReading2.svg",
+    img: getPublicImageUrl("/images/whatwedo/relatedReading2.svg"),
     date: "August 10, 2024",
   },
   {
     type: "Resource",
     title: "Quality Design projects completed",
-    img: "/images/whatwedo/relatedReading3.svg",
+    img: getPublicImageUrl("/images/whatwedo/relatedReading3.svg"),
     date: "August 3, 2024",
   },
   {
     type: "Resource",
     title: "Task completion planning with timelines",
-    img: "/images/whatwedo/relatedReading4.svg",
+    img: getPublicImageUrl("/images/whatwedo/relatedReading4.svg"),
     date: "August 10, 2024",
   },
 ];
 
 export default function Home() {
-
   return (
     // Animated Message Icon starts
     <Grid
@@ -51,7 +51,7 @@ export default function Home() {
       <HomeComp1 />
       <HomeComp2 />
       <HomeComp3 />
-      <HomeComp4 relatedReadingData={relatedReadingData}/>
+      <HomeComp4 relatedReadingData={relatedReadingData} />
       <HomeComp5 />
       <HomeComp6 />
       <Grid container className={styles.marginTopContainer}>

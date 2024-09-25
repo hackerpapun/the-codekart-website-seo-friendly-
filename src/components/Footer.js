@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import CodekartLogo from "../assets/images/navbar/codekartlogo.png";
 import {
   Box,
   Divider,
@@ -14,6 +13,7 @@ import Image from "next/image";
 import { Facebook, Twitter, Instagram, YouTube } from "@mui/icons-material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { montserrat, notosans } from "@/assets/fonts/fonts";
+import { IMAGES } from "@/constants/images";
 
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -127,7 +127,7 @@ export default function Footer() {
         )}
         <Box className={styles.footerBottom}>
           <Image
-            src={CodekartLogo}
+            src={IMAGES.logo.codekartlogo}
             alt="CodeKart Logo"
             width={100}
             height={40}

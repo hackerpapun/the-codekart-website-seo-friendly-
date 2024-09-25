@@ -8,6 +8,7 @@ import Carusal from "@/components/WhoWeAreCarausal/Carausal";
 import Strength from "@/components/OurStrength/Strength";
 import Faq from "@/components/Faq&Contactus/Faq";
 import ContactUs from "@/components/Faq&Contactus/ContactUs";
+import { getPublicImageUrl } from "@/constants/images";
 
 const WhoWeAreDiscoverPage = () => {
   return (
@@ -42,7 +43,9 @@ const WhoWeAreDiscoverPage = () => {
         <Grid container spacing={3}>
           <Grid item sm={4} xs={12}>
             <Card
-              image={"/images/WhoWeAreDiscover/Enovation.png"}
+              image={getPublicImageUrl(
+                "/images/WhoWeAreDiscover/Enovation.png"
+              )}
               header={"Innovation at the Core:"}
               content={
                 "We aim to consistently deliver cutting-edge digital solutions that simplify technology, driving business growth and empowering  individuals to achieve their full potential in an ever-evolving  digital landscape"
@@ -51,7 +54,7 @@ const WhoWeAreDiscoverPage = () => {
           </Grid>
           <Grid item sm={4} xs={12}>
             <Card
-              image={"/images/WhoWeAreDiscover/Empowerd.png"}
+              image={getPublicImageUrl("/images/WhoWeAreDiscover/Empowerd.png")}
               header={"Client-Centered Excellence: "}
               content={
                 "Our commitment is to exceed client expectations by delivering reliable, high-quality products and services that are tailored to meet unique needs, fostering long-term partnerships based on trust and mutual success."
@@ -60,7 +63,9 @@ const WhoWeAreDiscoverPage = () => {
           </Grid>
           <Grid item sm={4} xs={12}>
             <Card
-              image={"/images/WhoWeAreDiscover/ClientCenterd.png"}
+              image={getPublicImageUrl(
+                "/images/WhoWeAreDiscover/ClientCenterd.png"
+              )}
               header={"Empowering Through Technology: "}
               content={
                 "We strive to make technology accessible and intuitive, enabling businesses and individuals to harness the power of digital tools for transformative outcomes, ensuring they remain competitive in a dynamic market."
