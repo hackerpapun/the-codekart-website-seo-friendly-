@@ -4,10 +4,14 @@ import styles from "../../styles/Home/HomeComp7.module.css";
 import { Divider, Grid } from "@mui/material";
 import ButtonCustom from "../ButtonCustom";
 import { notosans } from "@/assets/fonts/fonts";
+import { navconstants } from "@/constants/navconstants";
 
 export default function HomeComp7() {
   return (
-    <Grid container className={`${styles.whatwedoComp4Div} ${notosans.variable}`}>
+    <Grid
+      container
+      className={`${styles.whatwedoComp4Div} ${notosans.variable}`}
+    >
       <Grid item xs={12} md={8}>
         <div className={styles.whatwedoComp4Text}>
           Request a proposal or consult,
@@ -20,10 +24,19 @@ export default function HomeComp7() {
           title="Contact Us"
           icon={true}
           buttonStyles={styles.whatwedoComp4Button}
+          onClickLink={`${navconstants.whoweare}#contactus`}
         />
       </Grid>
       <Grid item xs={12}>
-        <Divider sx={{ width: '90%', height: '1px', margin: 'auto', backgroundColor: 'darkgray', marginTop: '40px'}} />
+        <Divider
+          sx={{
+            width: "90%",
+            height: "1px",
+            margin: "auto",
+            backgroundColor: "darkgray",
+            marginTop: "40px",
+          }}
+        />
       </Grid>
     </Grid>
   );

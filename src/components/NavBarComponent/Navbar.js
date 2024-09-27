@@ -9,7 +9,6 @@ import { MdOutlineNightsStay } from "react-icons/md";
 import WhatAreWe from "./WhatWeAreNavbar";
 import WhatWeDoNavbar from "./WhatWeDoNavbar";
 import { ThemeContext } from "@/context/ThemeContext";
-// import LanguageImage from "../../assets/images/navbar/language.png";
 import Insight from "./InsightNavBar";
 import Image from "next/image";
 import MobileViewNavBar from "./MobileViewNavBar";
@@ -84,6 +83,7 @@ const Navbar = () => {
               alt="CodeKart Logo"
               className={styles.NavbarLogo}
               onClick={() => router.push(navconstants.home)}
+              href="/"
             />
 
             <p

@@ -105,6 +105,7 @@
 .NavbarLogo {
   width: 16%;
   height: auto;
+  cursor: pointer;
   /* max-height: 8%; */
   /* object-fit: contain; */
 }
