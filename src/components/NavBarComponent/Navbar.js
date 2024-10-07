@@ -130,7 +130,7 @@ const Navbar = () => {
           </Grid>
           <Grid item xs={12} md={4}>
             <div className={styles.NavRightContainer}>
-              <button className={styles.buttonContainer}>
+              <button onClick={() => router.push(`${navconstants.whoweare}#contactus`)} style={{ cursor: "pointer" }} className={styles.buttonContainer}>
                 Connect with us
                 <div className={styles.arrowContainer}>
                   <FaArrowRight className={styles.arrowIcon} />
