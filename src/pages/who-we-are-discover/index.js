@@ -13,7 +13,7 @@ import DynamicMetadata from "@/constants/DynamicMetadata";
 
 const WhoWeAreDiscoverPage = () => {
   return (
-    <DynamicMetadata title="Who We Are Discover - Codekart" description="Learn more about Codekart Solutions. ">
+    <DynamicMetadata title="Who We Are Discover - Codekart Solutions Private Limited" description="Learn more about Codekart Solutions. ">
       <Grid container className={styles.topcontainer}>
         <Grid item sm={12} xs={12}>
           <div className={styles.AboutUsContainer}>
