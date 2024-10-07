@@ -10,10 +10,11 @@ import {
 } from "@mui/material";
 import styles from "../styles/Footer/Footer.module.css";
 import Image from "next/image";
-import { Facebook, Twitter, Instagram, YouTube } from "@mui/icons-material";
+import { Facebook, Twitter, Instagram, YouTube, LinkedIn } from "@mui/icons-material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { montserrat, notosans } from "@/assets/fonts/fonts";
 import { IMAGES } from "@/constants/images";
+import { RedirectToNewTab } from "@/constants/RedirectToNewTab";
 
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -65,18 +66,27 @@ export default function Footer() {
               </Typography>
             </Box>
             <Box className={styles.socialMediaIconsContainer2}>
-              <Box className={styles.iconContainer2}>
-                <YouTube fontSize="small" className={styles.customIcon} />
-              </Box>
-              <Box className={styles.iconContainer2}>
-                <Facebook fontSize="small" className={styles.customIcon} />
-              </Box>
-              <Box className={styles.iconContainer2}>
-                <Twitter fontSize="small" className={styles.customIcon} />
-              </Box>
-              <Box className={styles.iconContainer2}>
-                <Instagram fontSize="small" className={styles.customIcon} />
-              </Box>
+              <RedirectToNewTab url={"https://www.linkedin.com/company/codekart/"} >
+              {/* href="https://www.linkedin.com/company/codekart/" */}
+                <Box className={styles.iconContainer2}>
+                  <LinkedIn fontSize="small" className={styles.customIcon} />
+                </Box>
+              </RedirectToNewTab>
+              <RedirectToNewTab url={"https://www.facebook.com/TheCodeKart/"}>
+                <Box className={styles.iconContainer2}>
+                  <Facebook fontSize="small" className={styles.customIcon} />
+                </Box>
+              </RedirectToNewTab>
+              <RedirectToNewTab url={"https://x.com/codekart"}>
+                <Box className={styles.iconContainer2}>
+                  <Twitter fontSize="small" className={styles.customIcon} />
+                </Box>
+              </RedirectToNewTab>
+              <RedirectToNewTab url={"https://www.instagram.com/thecodekart/"}>
+                <Box className={styles.iconContainer2}>
+                  <Instagram fontSize="small" className={styles.customIcon} />
+                </Box>
+              </RedirectToNewTab>
             </Box>
           </Grid>
           <Grid item xs={12} md={4}></Grid>

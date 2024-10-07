@@ -5,14 +5,17 @@ import WhatWeDoComp1 from "@/components/WhatWeDoComponents/WhatWeDoComp1";
 import WhatWeDoComp2 from "@/components/WhatWeDoComponents/WhatWeDoComp2";
 import WhatWeDoComp3 from "@/components/WhatWeDoComponents/WhatWeDoComp3";
 import WhatWeDoComp4 from "@/components/WhatWeDoComponents/WhatWeDoComp4";
+import DynamicMetadata from "@/constants/DynamicMetadata";
 
 export default function index() {
   return (
-    <Grid container className={`${montserrat.variable}`}>
+    <DynamicMetadata title="What We Do - Codekart" description="Learn more about Codekart Solutions. ">
+      <Grid container className={`${montserrat.variable}`}>
       <WhatWeDoComp1 />
       <WhatWeDoComp2 />
       <WhatWeDoComp3 />
       <WhatWeDoComp4 />
     </Grid>
+    </DynamicMetadata>
   );
 }
