@@ -11,7 +11,7 @@ export default function HomeComp4({ relatedReadingData }) {
       className={`${styles.rrc1} ${notosans.variable} ${montserrat.variable}`}
     >
       <Grid item xs={12}>
-        <div className={styles.rrc2}>Blog Post's</div>
+        <div className={styles.rrc2}>Blog Post&apos;s</div>
         <div className={styles.rrc3}>
           {" "}
           Our young team has what it takes to

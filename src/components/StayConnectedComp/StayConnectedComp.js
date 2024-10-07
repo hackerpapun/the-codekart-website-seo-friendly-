@@ -19,7 +19,7 @@ export default function StayConnectedComp() {
       <Grid container className={styles.stayConnectedCompCardContainer}>
         {stayConnectedData?.map((item, i) => {
           return (
-            <Grid item xs={6} md={6} lg={3} style={{ gap: 10 }}>
+            <Grid item xs={6} md={6} lg={3} style={{ gap: 10 }} key={i}>
               <div
                 className={styles.stayConnectedCompCard}
                 item={i}
@@ -27,7 +27,9 @@ export default function StayConnectedComp() {
               >
                 <img src={item?.img} width={40} height={40} />
                 <div>
-                  <div className={styles.stayConnectedCompCardTitle}>Codekart</div>
+                  <div className={styles.stayConnectedCompCardTitle}>
+                    Codekart
+                  </div>
                   <div className={styles.stayConnectedCompCardTitle}>
                     {item?.title}
                   </div>
