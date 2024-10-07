@@ -1,5 +1,3 @@
-import dashboard from "@/pages/dashboard";
-
 const CDN_PUBLIC_URL = "https://cdn.thecodekart.com/public";
 const CDN_ASSETS_URL = "https://cdn.thecodekart.com/assets";
 

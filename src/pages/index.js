@@ -43,10 +43,7 @@ const relatedReadingData = [
 export default function Home() {
   return (
     // Animated Message Icon starts
-    <Grid
-      container
-      className={`${styles.homeContainer} ${montserrat.variable}`}
-    >
+    <>
       {/* // Animated Message Icon ends */}
       <HomeComp1 />
       <HomeComp2 />
@@ -58,6 +55,6 @@ export default function Home() {
         <HomeComp7 />
       </Grid>
       <HomeComp8 />
-    </Grid>
+    </>
   );
 }
