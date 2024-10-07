@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import styles from "../styles/Footer/Footer.module.css";
 import Image from "next/image";
-import { Facebook, Twitter, Instagram, YouTube, LinkedIn } from "@mui/icons-material";
+import { Facebook, Twitter, Instagram, YouTube, LinkedIn, X } from "@mui/icons-material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { montserrat, notosans } from "@/assets/fonts/fonts";
 import { IMAGES } from "@/constants/images";
@@ -79,7 +79,7 @@ export default function Footer() {
               </RedirectToNewTab>
               <RedirectToNewTab url={"https://x.com/codekart"}>
                 <Box className={styles.iconContainer2}>
-                  <Twitter fontSize="small" className={styles.customIcon} />
+                  <X fontSize="small" className={styles.customIcon} />
                 </Box>
               </RedirectToNewTab>
               <RedirectToNewTab url={"https://www.instagram.com/thecodekart/"}>

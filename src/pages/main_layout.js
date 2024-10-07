@@ -10,6 +10,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { getPublicImageUrl } from "@/constants/images";
 import { RedirectToNewTab } from "@/constants/RedirectToNewTab";
+import { X } from "@mui/icons-material";
 
 export const metadata = {
   title: "Codekart",
@@ -102,8 +103,9 @@ export default function RootLayout({ children }) {
                   custom={{ x: 0, y: 0 }}
                   variants={iconVariants}
                   className="ContacUs"
+                  style={{backgroundColor:"black"}}
                 >
-                  <FaTwitter className="inImage" />
+                  <X className="inImage" />
                 </motion.div>
               </RedirectToNewTab>
             </motion.div>
