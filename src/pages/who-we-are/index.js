@@ -13,7 +13,7 @@ import Head from 'next/head';
 import DynamicMetadata from "@/constants/DynamicMetadata";
 const WhoWeAreDiscoverPage = () => {
   return (
-    <DynamicMetadata title="Who We Are - Codekart" description="Learn more about Codekart Solutions.">
+    <DynamicMetadata title="Who We Are - Codekart Solutions Private Limited" description="Learn more about Codekart Solutions.">
 
       <Grid container className={styles.topcontainer}>
         <Grid item sm={12} xs={12}>

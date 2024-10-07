@@ -81,7 +81,7 @@ const allConstantsData = {
 
 export default function index() {
   return (
-    <DynamicMetadata title="Artificial Intelligence & Machine Learning - Codekart" description="Learn more about Codekart Solutions. ">
+    <DynamicMetadata title="Artificial Intelligence & Machine Learning - Codekart Solutions Private Limited" description="Learn more about Codekart Solutions. ">
       <WhatWeDoServicesGlobalComp
       constantData={allConstantsData}
       cardData={cardData}

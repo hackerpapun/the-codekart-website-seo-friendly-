@@ -9,7 +9,7 @@ import DynamicMetadata from "@/constants/DynamicMetadata";
 
 export default function index() {
   return (
-    <DynamicMetadata title="What We Do - Codekart" description="Learn more about Codekart Solutions. ">
+    <DynamicMetadata title="What We Do - Codekart Solutions Private Limited Solutions Private Limited" description="Learn more about Codekart Solutions. ">
       <Grid container className={`${montserrat.variable}`}>
       <WhatWeDoComp1 />
       <WhatWeDoComp2 />
