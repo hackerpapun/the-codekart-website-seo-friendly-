@@ -20,7 +20,9 @@ export default function JobDetailsCard({ item }) {
         </div>
         <div className={styles.jobDetailsCard3}>{item?.description}</div>
         <Grid item display="flex" justifyContent="flex-end" marginTop={4}>
+          <span style={{ cursor: "pointer" }} onClick={() => window.open("https://www.linkedin.com/company/codekart/jobs/", "_blank")}>
           <ButtonCustom title="View Details" icon={true} buttonStyles={styles.jobDetailsCard4} />
+          </span>
         </Grid>
       </Grid>
     </Grid>

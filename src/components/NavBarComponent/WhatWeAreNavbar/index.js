@@ -5,7 +5,7 @@ import { FaChevronRight } from "react-icons/fa6";
 import { useRouter } from "next/router";
 import { navconstants } from "@/constants/navconstants";
 
-const WhatWeAreNavbar = ({ setWharareWe }) => {
+const WhatWeAreNavbar = ({ setWharareWe ,onmouseExitNavdropdown}) => {
   const [activeSection, setActiveSection] = useState("overview");
 
   const handleSectionHover = (section) => {
@@ -21,6 +21,7 @@ const WhatWeAreNavbar = ({ setWharareWe }) => {
 
   return (
     <Grid
+    onMouseLeave={onmouseExitNavdropdown}
       container
       className={styles.whatWeDoDropDown}
       style={{ marginTop: "20px" }}
@@ -36,7 +37,6 @@ const WhatWeAreNavbar = ({ setWharareWe }) => {
             <p className={styles.WhatWeDoOverViewFirstElem}>Overview</p>
             <FaChevronRight />
           </div>
-          <hr />
           <div
             className={`${styles.WhatWeDoOverView} ${
               styles.matginToContainet
@@ -46,7 +46,6 @@ const WhatWeAreNavbar = ({ setWharareWe }) => {
             <p className={styles.WhatWeDoOverViewFirstElem}>About Us</p>
             <FaChevronRight />
           </div>
-          <hr />
           <div
             className={`${styles.WhatWeDoOverView} ${
               styles.matginToContainet
@@ -56,7 +55,6 @@ const WhatWeAreNavbar = ({ setWharareWe }) => {
             <p className={styles.WhatWeDoOverViewFirstElem}>Contact Us</p>
             <FaChevronRight />
           </div>
-          <hr />
         </Grid>
 
         <Grid item xs={12} md={8} className={styles.whatWeDoContaint}>

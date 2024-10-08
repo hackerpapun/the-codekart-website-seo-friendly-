@@ -7,6 +7,7 @@ import { montserrat } from "@/assets/fonts/fonts";
 import HomeButtonComp from "../HomeButtonComp";
 import { CiDesktopMouse2 } from "react-icons/ci";
 import { navconstants } from "@/constants/navconstants";
+import {RedirectToNewTab} from "@/constants/RedirectToNewTab";
 
 export default function HomeComp1() {
   const scrollToNextSection = () => {
@@ -20,12 +21,14 @@ export default function HomeComp1() {
     <Grid className={`${styles.hero1} ${montserrat.variable}`}>
       <div className={styles.hero1socialMedia}>
         {homeComp1Data.socialMedia.map((media, index) => (
+          <RedirectToNewTab key={index} url={media.link} >
           <img
             key={index}
             src={media.img}
             alt={`${media.alt} icon`}
             className={styles.socialMediaLogo}
           />
+          </RedirectToNewTab>
         ))}
       </div>
       <div className={styles.hero1heroText}>{homeComp1Data.heroText}</div>

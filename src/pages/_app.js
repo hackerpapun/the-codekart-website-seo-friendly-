@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Codekart Solutions Private Limited Solutions Private Limited</title>
+        <title>Codekart Solutions Private Limited</title>
         <meta name="description" content="Codekart Solutions PVT LTD" />
         <link rel="icon" href="/favicon.ico" />
 

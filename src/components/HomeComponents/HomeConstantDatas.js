@@ -5,18 +5,22 @@ export const homeComp1Data = {
     {
       img: getPublicImageUrl("/images/home/instagram.svg"),
       alt: "Instagram",
+      link:"https://www.instagram.com/thecodekart/"
     },
     {
       img: getPublicImageUrl("/images/home/wa.svg"),
       alt: "WhatsApp",
+      link:"https://wa.me/919999999999"
     },
     {
       img: getPublicImageUrl("/images/home/linkedin.svg"),
       alt: "LinkedIn",
+      link:"https://www.linkedin.com/company/codekart/"
     },
     {
       img: getPublicImageUrl("/images/home/twiter.svg"),
       alt: "Twitter",
+      link:"https://x.com/codekart"
     },
   ],
   heroText: `Inspiring Creativity, \nDelivering Excellence \nwith CodeKart.`,

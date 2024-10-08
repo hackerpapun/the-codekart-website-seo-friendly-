@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { navconstants } from "@/constants/navconstants";
 import { ServiceConstants } from "./WhatWeDoNavbarConstants";
 
-const WhatWeDoNavbar = ({ onclickWhatwedoFun }) => {
+const WhatWeDoNavbar = ({ onclickWhatwedoFun,onmouseExitNavdropdown }) => {
   const Router = useRouter();
 
   const [activeSection, setActiveSection] = useState("overview");
@@ -18,6 +18,7 @@ const WhatWeDoNavbar = ({ onclickWhatwedoFun }) => {
   return (
     <Grid
       container
+      onMouseLeave={onmouseExitNavdropdown}
       className={styles.whatWeDoDropDown}
       style={{ padding: "20px" }}
     >
@@ -32,7 +33,6 @@ const WhatWeDoNavbar = ({ onclickWhatwedoFun }) => {
             <p className={styles.WhatWeDoOverViewFirstElem}>Overview</p>
             <FaChevronRight />
           </div>
-          <hr />
           <div
             className={`${styles.WhatWeDoOverView} ${
               styles.matginToContainet
@@ -42,7 +42,6 @@ const WhatWeDoNavbar = ({ onclickWhatwedoFun }) => {
             <p className={styles.WhatWeDoOverViewFirstElem}>Industries</p>
             <FaChevronRight />
           </div>
-          <hr />
           <div
             className={`${styles.WhatWeDoOverView} ${
               styles.matginToContainet
@@ -52,7 +51,6 @@ const WhatWeDoNavbar = ({ onclickWhatwedoFun }) => {
             <p className={styles.WhatWeDoOverViewFirstElem}>Service</p>
             <FaChevronRight />
           </div>
-          <hr />
         </Grid>
 
         <Grid item xs={12} md={8} className={styles.whatWeDoContaint}>
@@ -81,31 +79,31 @@ const WhatWeDoNavbar = ({ onclickWhatwedoFun }) => {
           {activeSection === "industries" && (
             <Grid container className={styles.serviceTableContaint} spacing={7}>
               <Grid item sm={4} className={styles.tabelConatints}>
-                Healthcare
+                <span onClick={() =>Router.push("/what-we-do/healthcare")}>Healthcare</span>
               </Grid>
               <Grid item sm={4} className={styles.tabelConatints}>
-                Finance
+               <span onClick={() =>Router.push("/what-we-do#Finance")}> Finance</span>
               </Grid>
               <Grid item sm={4} className={styles.tabelConatints}>
-                Retail
+               <span onClick={() =>Router.push("/what-we-do#Retail")}> Retail</span>
               </Grid>
               <Grid item sm={4} className={styles.tabelConatints}>
-                Manufacturing
+                <span onClick={() =>Router.push("/what-we-do#Manufacturing")}>Manufacturing</span>
               </Grid>
               <Grid item sm={4} className={styles.tabelConatints}>
-                Automotive
+              <span onClick={() =>Router.push("/what-we-do#Automotive")}>Automotive</span>
               </Grid>
               <Grid item sm={4} className={styles.tabelConatints}>
-                Logistics
+                <span onClick={() =>Router.push("/what-we-do#Logistics")}>Log Logistics</span>
               </Grid>
               <Grid item sm={4} className={styles.tabelConatints}>
-                Real Estate
+               <span onClick={() =>Router.push("/what-we-do#Real-Estate")}> Real Estate</span>
               </Grid>
               <Grid item sm={4} className={styles.tabelConatints}>
-                Education
+               <span onClick={() =>Router.push("/what-we-do#Education")}> Education </span>
               </Grid>
               <Grid item sm={4} className={styles.tabelConatints}>
-                Energy
+               <span onClick={() =>Router.push("/what-we-do#Energy")}> Energy</span>
               </Grid>
             </Grid>
           )}
