@@ -134,11 +134,12 @@ const MobileViewNavBar = () => {
     <>
       <Grid container className={styles.navbarContainer}>
         <Grid item sm={6} xs={6} className={styles.logoContainer}>
-          <img
+          <Link href="/"><img
             src={IMAGES.logo.codekartlogo}
             alt="CodeKart Logo"
             className={styles.NavbarLogo}
           />
+          </Link>
         </Grid>
         <Grid
           item
