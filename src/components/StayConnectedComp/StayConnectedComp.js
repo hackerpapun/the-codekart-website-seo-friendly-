@@ -27,7 +27,9 @@ export default function StayConnectedComp() {
               >
                 <img src={item?.img} width={40} height={40} />
                 <div>
-                  <div className={styles.stayConnectedCompCardTitle}>Codekart</div>
+                  <div className={styles.stayConnectedCompCardTitle}>
+                    Codekart
+                  </div>
                   <div className={styles.stayConnectedCompCardTitle}>
                     {item?.title}
                   </div>

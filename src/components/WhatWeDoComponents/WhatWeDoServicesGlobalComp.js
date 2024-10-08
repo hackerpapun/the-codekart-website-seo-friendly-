@@ -34,7 +34,6 @@ export default function WhatWeDoServicesGlobalComp({
   relatedReadingData,
   constantData,
 }) {
-  
   const Router = useRouter();
 
   return (
@@ -90,7 +89,7 @@ export default function WhatWeDoServicesGlobalComp({
               {constantData?.part1Text2}
             </div>
             <div className={styles.wwdServicesGlobal4}>
-              Let's talk
+              Let&apos;s talk
               <span className={styles.arrowContainer}>
                 <FaCircleArrowRight size={35} />
               </span>
