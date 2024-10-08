@@ -74,7 +74,7 @@ export default function RootLayout({ children }) {
                   <FaInstagram className="inImage" />
                 </motion.div>
               </RedirectToNewTab>
-              <RedirectToNewTab url={""}>
+              <RedirectToNewTab url={"https://wa.me/919658375094?text=Hi"}>
                 <motion.div
                   initial={{ x: 85, y: 37 }}
                   animate={showCard ? "visible" : "hidden"}

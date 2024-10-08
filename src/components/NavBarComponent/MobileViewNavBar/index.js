@@ -6,6 +6,7 @@ import { Grid } from "@mui/material";
 import { FaAngleDown } from "react-icons/fa6";
 import { IMAGES } from "@/constants/images";
 import Link from "next/link";
+import { navconstants } from "@/constants/navconstants";
 
 const menuItems = [
   {
@@ -32,15 +33,38 @@ const menuItems = [
         title: "Services",
         hasDropdown: true,
         subItems: [
-          { label: "Healthcare", link: "/industries/healthcare" },
-          { label: "Finance", link: "/industries/finance" },
-          { label: "Retail", link: "/industries/retail" },
-          { label: "Manufacturing", link: "/industries/manufacturing" },
-          { label: "Automotive", link: "/industries/automotive" },
-          { label: "Logistics", link: "/industries/logistics" },
-          { label: "Real Estate", link: "/industries/realestate" },
-          { label: "Education", link: "/industries/education" },
-          { label: "Energy", link: "/industries/energy" },
+          {
+           label: "Web & App development",
+            link: navconstants.webAndAppDevelopment,
+          },
+          {
+           label: "Artificial Intelligence & Machine Learning",
+            link: navconstants.AIandMachineLearning,
+          },
+          {
+           label: "Resource Outsourcing",
+            link: navconstants.resourceOutsourcing,
+          },
+          {
+           label: "Quality Assurance & Testing",
+            link: navconstants.qualityAssuranceAndTesting,
+          },
+          {
+           label: "Custom Software Development",
+            link: navconstants.customSoftwareDevelopment,
+          },
+          {
+           label: "Cloud & Data Solutions",
+            link: navconstants.cloudAndDataSolutions,
+          },
+          {
+           label: "Generative AI",
+            link: navconstants.geneartiveAI,
+          },
+          {
+           label: "IoT & Digital Innovation",
+            link: navconstants.iotAndDigitalInnovation,
+          }
         ],
       },
     ],
@@ -54,30 +78,16 @@ const menuItems = [
         title: "About Us",
         hasDropdown: true,
         subItems: [
-          { label: "Healthcare", link: "/industries/healthcare" },
-          { label: "Finance", link: "/industries/finance" },
-          { label: "Retail", link: "/industries/retail" },
-          { label: "Manufacturing", link: "/industries/manufacturing" },
-          { label: "Automotive", link: "/industries/automotive" },
-          { label: "Logistics", link: "/industries/logistics" },
-          { label: "Real Estate", link: "/industries/realestate" },
-          { label: "Education", link: "/industries/education" },
-          { label: "Energy", link: "/industries/energy" },
+          { label: "Strength", link: navconstants.whoweare+"/#ourstrength" },
+          { label: "Vision", link: navconstants.whoweare+"/#ourvision" },
         ],
       },
       {
         title: "Contact Us",
         hasDropdown: true,
         subItems: [
-          { label: "Healthcare", link: "/industries/healthcare" },
-          { label: "Finance", link: "/industries/finance" },
-          { label: "Retail", link: "/industries/retail" },
-          { label: "Manufacturing", link: "/industries/manufacturing" },
-          { label: "Automotive", link: "/industries/automotive" },
-          { label: "Logistics", link: "/industries/logistics" },
-          { label: "Real Estate", link: "/industries/realestate" },
-          { label: "Education", link: "/industries/education" },
-          { label: "Energy", link: "/industries/energy" },
+          { label: "FAQ", link: navconstants.whoweare+"/#Faq" },
+          { label: "Get in Touch With Us", link: navconstants.whoweare+"/#contactus" },
         ],
       },
     ],
@@ -86,22 +96,8 @@ const menuItems = [
     title: "Insights",
     hasDropdown: true,
     subItems: [
-      { label: "Overview", link: "/insights" },
-      {
-        title: "Careers",
-        hasDropdown: true,
-        subItems: [
-          { label: "Healthcare", link: "/industries/healthcare" },
-          { label: "Finance", link: "/industries/finance" },
-          { label: "Retail", link: "/industries/retail" },
-          { label: "Manufacturing", link: "/industries/manufacturing" },
-          { label: "Automotive", link: "/industries/automotive" },
-          { label: "Logistics", link: "/industries/logistics" },
-          { label: "Real Estate", link: "/industries/realestate" },
-          { label: "Education", link: "/industries/education" },
-          { label: "Energy", link: "/industries/energy" },
-        ],
-      },
+      { label: "Overview", link: navconstants.insights },
+      { label: "Career", link: navconstants.insights+"/#allOpenPositions" },
     ],
   },
 ];

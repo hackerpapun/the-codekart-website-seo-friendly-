@@ -10,7 +10,7 @@ export const homeComp1Data = {
     {
       img: getPublicImageUrl("/images/home/wa.svg"),
       alt: "WhatsApp",
-      link:"https://wa.me/919999999999"
+      link:"https://wa.me/9658375094"
     },
     {
       img: getPublicImageUrl("/images/home/linkedin.svg"),
