@@ -31,7 +31,7 @@ const WhoWeAreDiscoverPage = () => {
         </Grid>
       </Grid>
 
-      <Grid container>
+      <Grid container id="ourvision">
         <Grid item sm={12} xs={12} className={styles.secondContainer}>
           <p className={styles.ptag}>our vision</p>
         </Grid>

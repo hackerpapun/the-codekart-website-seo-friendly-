@@ -6,7 +6,7 @@ import { getPublicImageUrl } from "@/constants/images";
 const Strength = () => {
   return (
     <>
-      <Grid container className={styles.strengthContainer}>
+      <Grid container id='ourstrength' className={styles.strengthContainer}>
         <Grid item sm={12} xs={12} className={styles.firstStrength}>
           <p className={styles.strengthParagraph}>our strength</p>
         </Grid>

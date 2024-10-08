@@ -6,7 +6,7 @@ import { FaChevronRight } from "react-icons/fa6";
 import { useRouter } from "next/router";
 import { navconstants } from "@/constants/navconstants";
 
-const InsightNavbar = ({ onclickInsightFunction }) => {
+const InsightNavbar = ({ onclickInsightFunction, onmouseExitNavdropdown }) => {
   const router = useRouter();
 
   const [activeSection, setActiveSection] = useState("overview");
@@ -17,6 +17,7 @@ const InsightNavbar = ({ onclickInsightFunction }) => {
 
   return (
     <Grid
+      onMouseLeave={onmouseExitNavdropdown}
       container
       className={styles.whatWeDoDropDown}
       style={{ marginTop: "20px" }}
@@ -24,37 +25,32 @@ const InsightNavbar = ({ onclickInsightFunction }) => {
       <Grid container className={styles.whatweDoContainer}>
         <Grid item xs={12} md={3}>
           <div
-            className={`${styles.WhatWeDoOverView} ${
-              activeSection === "overview" && styles.active
-            }`}
+            className={`${styles.WhatWeDoOverView} ${activeSection === "overview" && styles.active
+              }`}
             onMouseEnter={() => handleSectionHover("overview")}
           >
             <p className={styles.WhatWeDoOverViewFirstElem}>Overview</p>
             <FaChevronRight />
           </div>
-          <hr />
-          <div
-            className={`${styles.WhatWeDoOverView} ${
-              styles.matginToContainet
-            } ${activeSection === "industries" && styles.active}`}
+          {/* <div
+            className={`${styles.WhatWeDoOverView} ${styles.matginToContainet
+              } ${activeSection === "industries" && styles.active}`}
             onMouseEnter={() => handleSectionHover("industries")}
           >
             <p className={styles.WhatWeDoOverViewFirstElem}>
               Why Choose CodeKart?
             </p>
             <FaChevronRight />
-          </div>
-          <hr />
+          </div> */}
+          {/* <hr /> */}
           <div
-            className={`${styles.WhatWeDoOverView} ${
-              styles.matginToContainet
-            } ${activeSection === "service" && styles.active}`}
+            className={`${styles.WhatWeDoOverView} ${styles.matginToContainet
+              } ${activeSection === "service" && styles.active}`}
             onMouseEnter={() => handleSectionHover("service")}
           >
             <p className={styles.WhatWeDoOverViewFirstElem}>Careers</p>
             <FaChevronRight />
           </div>
-          <hr />
         </Grid>
 
         <Grid item xs={12} md={8} className={styles.whatWeDoContaint}>
@@ -98,7 +94,7 @@ const InsightNavbar = ({ onclickInsightFunction }) => {
                 celebrating, and nurturing the best people from all walks of
                 life.
               </p>
-              <button className={styles.discoberAllSolution}>Join Us</button>
+              <button onClick={() => router.push( navconstants.insights + "/#allOpenPositions")} className={styles.discoberAllSolution}>Join Us</button>
             </>
           )}
         </Grid>

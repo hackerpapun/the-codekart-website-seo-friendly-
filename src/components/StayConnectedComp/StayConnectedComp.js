@@ -19,7 +19,7 @@ export default function StayConnectedComp() {
       <Grid container className={styles.stayConnectedCompCardContainer}>
         {stayConnectedData?.map((item, i) => {
           return (
-            <Grid item xs={6} md={6} lg={3} style={{ gap: 10 }} key={i}>
+            <Grid key={i} item xs={6} md={6} lg={3} style={{ gap: 10 }}>
               <div
                 className={styles.stayConnectedCompCard}
                 item={i}

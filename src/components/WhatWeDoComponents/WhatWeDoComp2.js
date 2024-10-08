@@ -10,6 +10,7 @@ export default function WhatWeDoComp2() {
   return (
     <Grid
       container
+      id="OurService"
       className={`${styles.whatwedoComp2Container} ${notosans.variable}`}
       style={{ position: "relative", overflow: "visible" }}
     >

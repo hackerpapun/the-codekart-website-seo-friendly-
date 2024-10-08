@@ -34,6 +34,7 @@ export default function AllOpenPositions({ numberOfJobsToShow }) {
   return (
     <Grid
       container
+      id="allOpenPositions"
       className={`${styles.allOpenPositionsContainer} ${notosans.variable}`}
     >
       <div className={styles.allOpenPositionsText}>
