@@ -14,4 +14,31 @@ export const IMAGES = {
   dashboard: {
     oracleImg: getAssetsImageUrl("/images/home/oracle.png"),
   },
+  health: {
+    healthBg: getAssetsImageUrl("/images/home/health.png"),
+  },
+  finance: { 
+    financeBg: getAssetsImageUrl("/images/home/finance.png"),
+  },
+  retail: {
+    retailBg: getAssetsImageUrl("/images/home/retail.png"),
+  },
+  manufacturing: {
+    manufacturingBg: getAssetsImageUrl("/images/home/manufacturing.png"),
+  },
+  automotive: {
+    automotiveBg: getAssetsImageUrl("/images/home/manufacturing.png"),
+  },
+  logistics: {
+    logisticsBg: getAssetsImageUrl("/images/home/manufacturing.png"),
+  },
+  realestate: {
+    realestateBg: getAssetsImageUrl("/images/home/manufacturing.png"),
+  },
+  education: {
+    educationBg: getAssetsImageUrl("/images/home/manufacturing.png"),
+  },
+  energy: {
+    energyBg: getAssetsImageUrl("/images/home/manufacturing.png"),
+  },
 };
