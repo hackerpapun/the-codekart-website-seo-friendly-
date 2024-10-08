@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import styles from "../../../styles/NavbarStyles/mobileview.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
@@ -6,126 +6,112 @@ import { Grid } from "@mui/material";
 import { FaAngleDown } from "react-icons/fa6";
 import { IMAGES } from "@/constants/images";
 import Link from "next/link";
-import NavmenuContent from "./NavmunuContent";
+
+const menuItems = [
+  {
+    title: "What we do",
+    hasDropdown: true,
+    subItems: [
+      { label: "Overview", link: "/what-we-do" },
+      {
+        title: "Industries",
+        hasDropdown: true,
+        subItems: [
+          { label: "Healthcare", link: "/industries/healthcare" },
+          { label: "Finance", link: "/industries/finance" },
+          { label: "Retail", link: "/industries/retail" },
+          { label: "Manufacturing", link: "/industries/manufacturing" },
+          { label: "Automotive", link: "/industries/automotive" },
+          { label: "Logistics", link: "/industries/logistics" },
+          { label: "Real Estate", link: "/industries/realestate" },
+          { label: "Education", link: "/industries/education" },
+          { label: "Energy", link: "/industries/energy" },
+        ],
+      },
+      {
+        title: "Services",
+        hasDropdown: true,
+        subItems: [
+          { label: "Healthcare", link: "/industries/healthcare" },
+          { label: "Finance", link: "/industries/finance" },
+          { label: "Retail", link: "/industries/retail" },
+          { label: "Manufacturing", link: "/industries/manufacturing" },
+          { label: "Automotive", link: "/industries/automotive" },
+          { label: "Logistics", link: "/industries/logistics" },
+          { label: "Real Estate", link: "/industries/realestate" },
+          { label: "Education", link: "/industries/education" },
+          { label: "Energy", link: "/industries/energy" },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Who we are",
+    hasDropdown: true,
+    subItems: [
+      { label: "Overview", link: "/who-we-are" },
+      {
+        title: "About Us",
+        hasDropdown: true,
+        subItems: [
+          { label: "Healthcare", link: "/industries/healthcare" },
+          { label: "Finance", link: "/industries/finance" },
+          { label: "Retail", link: "/industries/retail" },
+          { label: "Manufacturing", link: "/industries/manufacturing" },
+          { label: "Automotive", link: "/industries/automotive" },
+          { label: "Logistics", link: "/industries/logistics" },
+          { label: "Real Estate", link: "/industries/realestate" },
+          { label: "Education", link: "/industries/education" },
+          { label: "Energy", link: "/industries/energy" },
+        ],
+      },
+      {
+        title: "Contact Us",
+        hasDropdown: true,
+        subItems: [
+          { label: "Healthcare", link: "/industries/healthcare" },
+          { label: "Finance", link: "/industries/finance" },
+          { label: "Retail", link: "/industries/retail" },
+          { label: "Manufacturing", link: "/industries/manufacturing" },
+          { label: "Automotive", link: "/industries/automotive" },
+          { label: "Logistics", link: "/industries/logistics" },
+          { label: "Real Estate", link: "/industries/realestate" },
+          { label: "Education", link: "/industries/education" },
+          { label: "Energy", link: "/industries/energy" },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Insights",
+    hasDropdown: true,
+    subItems: [
+      { label: "Overview", link: "/insights" },
+      {
+        title: "Careers",
+        hasDropdown: true,
+        subItems: [
+          { label: "Healthcare", link: "/industries/healthcare" },
+          { label: "Finance", link: "/industries/finance" },
+          { label: "Retail", link: "/industries/retail" },
+          { label: "Manufacturing", link: "/industries/manufacturing" },
+          { label: "Automotive", link: "/industries/automotive" },
+          { label: "Logistics", link: "/industries/logistics" },
+          { label: "Real Estate", link: "/industries/realestate" },
+          { label: "Education", link: "/industries/education" },
+          { label: "Energy", link: "/industries/energy" },
+        ],
+      },
+    ],
+  },
+];
 
 const MobileViewNavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
-  const [subMenuHeights, setSubMenuHeights] = useState({});
   const [nestedActiveSections, setNestedActiveSections] = useState({});
 
   const subMenuRefs = useRef({});
-
-  // const menuItems = [
-  //   {
-  //     title: "What we do",
-  //     hasDropdown: true,
-  //     subItems: [
-  //       { label: "Overview", link: "/what-we-do" },
-  //       {
-  //         title: "Industries",
-  //         hasDropdown: true,
-  //         subItems: [
-  //           { label: "Healthcare", link: "/industries/healthcare" },
-  //           { label: "Finance", link: "/industries/finance" },
-  //           { label: "Retail", link: "/industries/retail" },
-  //           { label: "Manufacturing", link: "/industries/manufacturing" },
-  //           { label: "Automotive", link: "/industries/automotive" },
-  //           { label: "Logistics", link: "/industries/logistics" },
-  //           { label: "Real Estate", link: "/industries/realestate" },
-  //           { label: "Education", link: "/industries/education" },
-  //           { label: "Energy", link: "/industries/energy" },
-  //         ],
-  //       },
-  //       {
-  //         title: "Services",
-  //         hasDropdown: true,
-  //         subItems: [
-  //           { label: "Healthcare", link: "/industries/healthcare" },
-  //           { label: "Finance", link: "/industries/finance" },
-  //           { label: "Retail", link: "/industries/retail" },
-  //           { label: "Manufacturing", link: "/industries/manufacturing" },
-  //           { label: "Automotive", link: "/industries/automotive" },
-  //           { label: "Logistics", link: "/industries/logistics" },
-  //           { label: "Real Estate", link: "/industries/realestate" },
-  //           { label: "Education", link: "/industries/education" },
-  //           { label: "Energy", link: "/industries/energy" },
-  //         ],
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "Who we are",
-  //     hasDropdown: true,
-  //     subItems: [
-  //       { label: "Overview", link: "/who-we-are" },
-  //       {
-  //         title: "About Us",
-  //         hasDropdown: true,
-  //         subItems: [
-  //           { label: "Healthcare", link: "/industries/healthcare" },
-  //           { label: "Finance", link: "/industries/finance" },
-  //           { label: "Retail", link: "/industries/retail" },
-  //           { label: "Manufacturing", link: "/industries/manufacturing" },
-  //           { label: "Automotive", link: "/industries/automotive" },
-  //           { label: "Logistics", link: "/industries/logistics" },
-  //           { label: "Real Estate", link: "/industries/realestate" },
-  //           { label: "Education", link: "/industries/education" },
-  //           { label: "Energy", link: "/industries/energy" },
-  //         ],
-  //       },
-  //       {
-  //         title: "Contact Us",
-  //         hasDropdown: true,
-  //         subItems: [
-  //           { label: "Healthcare", link: "/industries/healthcare" },
-  //           { label: "Finance", link: "/industries/finance" },
-  //           { label: "Retail", link: "/industries/retail" },
-  //           { label: "Manufacturing", link: "/industries/manufacturing" },
-  //           { label: "Automotive", link: "/industries/automotive" },
-  //           { label: "Logistics", link: "/industries/logistics" },
-  //           { label: "Real Estate", link: "/industries/realestate" },
-  //           { label: "Education", link: "/industries/education" },
-  //           { label: "Energy", link: "/industries/energy" },
-  //         ],
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "Insights",
-  //     hasDropdown: true,
-  //     subItems: [
-  //       { label: "Overview", link: "/insights" },
-  //       {
-  //         title: "Careers",
-  //         hasDropdown: true,
-  //         subItems: [
-  //           { label: "Healthcare", link: "/industries/healthcare" },
-  //           { label: "Finance", link: "/industries/finance" },
-  //           { label: "Retail", link: "/industries/retail" },
-  //           { label: "Manufacturing", link: "/industries/manufacturing" },
-  //           { label: "Automotive", link: "/industries/automotive" },
-  //           { label: "Logistics", link: "/industries/logistics" },
-  //           { label: "Real Estate", link: "/industries/realestate" },
-  //           { label: "Education", link: "/industries/education" },
-  //           { label: "Energy", link: "/industries/energy" },
-  //         ],
-  //       },
-  //     ],
-  //   },
-  // ]
-const menuItems = NavmenuContent()
-
-  useEffect(() => {
-    menuItems.forEach((item) => {
-      if (subMenuRefs.current[item.title]) {
-        setSubMenuHeights((prev) => ({
-          ...prev,
-          [item.title]: subMenuRefs.current[item.title].scrollHeight,
-        }));
-      }
-    });
-  }, [menuItems]);
 
   const handleToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -165,9 +151,7 @@ const menuItems = NavmenuContent()
           className={styles.menuContainer}
           onClick={handleToggleMenu}
         >
-          <div
-            className={`${styles.iconWrapper} ${isMenuOpen ? styles.open : ""}`}
-          >
+          <div className={`${styles.iconWrapper} ${isMenuOpen ? styles.open : ""}`}>
             <GiHamburgerMenu
               className={`${styles.icon} ${styles.hamburgerIcon}`}
             />
@@ -212,12 +196,6 @@ const menuItems = NavmenuContent()
                   xs={12}
                   className={`${styles.subItemContainer} ${activeSection === item.title ? styles.open : ""}`}
                   ref={(el) => (subMenuRefs.current[item.title] = el)}
-                  style={{
-                    maxHeight:
-                      activeSection === item.title
-                        ? `${subMenuHeights[item.title]}px`
-                        : "0px",
-                  }}
                 >
                   {item.subItems.map((subItem, subIndex) => (
                     <React.Fragment key={subIndex}>

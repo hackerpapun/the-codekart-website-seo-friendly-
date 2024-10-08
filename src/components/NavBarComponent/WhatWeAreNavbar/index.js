@@ -79,17 +79,17 @@ const WhatWeAreNavbar = ({ setWharareWe ,onmouseExitNavdropdown}) => {
           )}
           {activeSection === "industries" && (
             <Grid container className={styles.serviceTableContaint} spacing={7}>
-              <Grid item sm={3} className={styles.tabelConatints}>
+              <Grid onClick={() => router.push(navconstants.whoweare+"/#ourstrength")} item sm={3} className={styles.tabelConatints}>
                 Strength
               </Grid>
-              <Grid item sm={3} className={styles.tabelConatints}>
+              <Grid item sm={3} onClick={() => router.push(navconstants.whoweare+"/#ourvision")} className={styles.tabelConatints}>
                 Vision
               </Grid>
             </Grid>
           )}
           {activeSection === "service" && (
             <Grid container spacing={5} className={styles.serviceItems}>
-              <Grid item sm={3} className={styles.ServicetabelConatints}>
+              <Grid onClick={() => router.push(navconstants.whoweare+"/#Faq")} item sm={3} className={styles.ServicetabelConatints}>
                 FAQ
               </Grid>
               <Grid item sm={5} className={styles.ServicetabelConatints}>

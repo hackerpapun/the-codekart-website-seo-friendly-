@@ -15,6 +15,8 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { montserrat, notosans } from "@/assets/fonts/fonts";
 import { IMAGES } from "@/constants/images";
 import { RedirectToNewTab } from "@/constants/RedirectToNewTab";
+import Link from "next/link";
+import { navconstants } from "@/constants/navconstants";
 
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -97,11 +99,11 @@ export default function Footer() {
             <div className={styles.footerOtherOrangeLine} />
 
             <div className={styles.links}>
-              <a href="#">About Company</a>
-              <a href="#">Latest Services</a>
-              <a href="#">Career</a>
+              <Link href={navconstants.whoweare}>About Company</Link>
+              <Link href={navconstants.whatwedo+"/#OurService"}>Latest Services</Link>
+              <Link href={navconstants.insights+"/#allOpenPositions"}>Career</Link>
               <a href="#">Blog & News</a>
-              <a href="#">Contact Us</a>
+              <Link href={navconstants.whoweare+"/#contactus"}>Contact Us</Link>
             </div>
           </Grid>
 
@@ -112,11 +114,11 @@ export default function Footer() {
             <div className={styles.footerOtherOrangeLine} />
 
             <div className={styles.links}>
-              <a href="#">Product Design</a>
-              <a href="#">Design & Development</a>
-              <a href="#">UX/UI Strategy</a>
-              <a href="#">Software Development</a>
-              <a href="#">Resource Outsourcing</a>
+              <Link href={navconstants.webAndAppDevelopment}>Web & App development</Link>
+              <Link href={navconstants.AIandMachineLearning}>AI and Machine Learning</Link>
+              <Link href={navconstants.geneartiveAI}>Geneartive AI</Link>
+              <Link href={navconstants.iotAndDigitalInnovation}>IOT And Digital Innovation</Link>
+              <Link href={navconstants.cloudAndDataSolutions}>Cloud And DataSolutions</Link>
             </div>
           </Grid>
         </Grid>

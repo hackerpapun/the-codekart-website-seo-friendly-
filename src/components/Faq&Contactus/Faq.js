@@ -49,6 +49,7 @@ function Faq() {
   return (
     <Grid
       container
+      id="Faq"
       spacing={3}
       className={`${montserrat.variable} ${notosans.variable}`}
     >
