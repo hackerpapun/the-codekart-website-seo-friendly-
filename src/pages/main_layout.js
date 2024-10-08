@@ -5,10 +5,12 @@ import Footer from "../components/Footer";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { RxCross2 } from "react-icons/rx";
-import { FaInstagram } from "react-icons/fa6";
+import { FaInstagram, FaTwitter } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { getPublicImageUrl } from "@/constants/images";
+import { RedirectToNewTab } from "@/constants/RedirectToNewTab";
+import { X } from "@mui/icons-material";
 
 export const metadata = {
   title: "Codekart",
@@ -61,42 +63,51 @@ export default function RootLayout({ children }) {
             >
               <RxCross2 className="crossIcon" onClick={handleShowCard} />
 
-              <motion.div
-                initial={{ x: 55, y: 65 }}
-                animate={showCard ? "visible" : "hidden"}
-                custom={{ x: 0, y: 0 }}
-                variants={iconVariants}
-                className="ingramIcon"
-              >
-                <FaInstagram className="inImage" />
-              </motion.div>
-              <motion.div
-                initial={{ x: 85, y: 37 }}
-                animate={showCard ? "visible" : "hidden"}
-                custom={{ x: 0, y: 0 }}
-                variants={iconVariants}
-                className="whatsApp"
-              >
-                <FaWhatsapp className="inImage" />
-              </motion.div>
-              <motion.div
-                initial={{ x: 85, y: -5 }}
-                animate={showCard ? "visible" : "hidden"}
-                custom={{ x: 0, y: 0 }}
-                variants={iconVariants}
-                className="LinkdLn"
-              >
-                <FaLinkedinIn className="inImage" />
-              </motion.div>
-              <motion.div
-                initial={{ x: 55, y: -45 }}
-                animate={showCard ? "visible" : "hidden"}
-                custom={{ x: 0, y: 0 }}
-                variants={iconVariants}
-                className="ContacUs"
-              >
-                <FaInstagram className="inImage" />
-              </motion.div>
+              <RedirectToNewTab url={"https://www.instagram.com/thecodekart/"} >
+                <motion.div
+                  initial={{ x: 55, y: 65 }}
+                  animate={showCard ? "visible" : "hidden"}
+                  custom={{ x: 0, y: 0 }}
+                  variants={iconVariants}
+                  className="ingramIcon"
+                >
+                  <FaInstagram className="inImage" />
+                </motion.div>
+              </RedirectToNewTab>
+              <RedirectToNewTab url={""}>
+                <motion.div
+                  initial={{ x: 85, y: 37 }}
+                  animate={showCard ? "visible" : "hidden"}
+                  custom={{ x: 0, y: 0 }}
+                  variants={iconVariants}
+                  className="whatsApp"
+                >
+                  <FaWhatsapp className="inImage" />
+                </motion.div>
+              </RedirectToNewTab>
+              <RedirectToNewTab url={"https://www.linkedin.com/company/codekart/"}>
+                <motion.div
+                  initial={{ x: 85, y: -5 }}
+                  animate={showCard ? "visible" : "hidden"}
+                  custom={{ x: 0, y: 0 }}
+                  variants={iconVariants}
+                  className="LinkdLn"
+                >
+                  <FaLinkedinIn className="inImage" />
+                </motion.div>
+              </RedirectToNewTab>
+              <RedirectToNewTab url={"https://x.com/codekart"}>
+                <motion.div
+                  initial={{ x: 55, y: -45 }}
+                  animate={showCard ? "visible" : "hidden"}
+                  custom={{ x: 0, y: 0 }}
+                  variants={iconVariants}
+                  className="ContacUs"
+                  style={{backgroundColor:"black"}}
+                >
+                  <X className="inImage" />
+                </motion.div>
+              </RedirectToNewTab>
             </motion.div>
           </div>
         </div>

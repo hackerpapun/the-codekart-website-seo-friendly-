@@ -1,6 +1,7 @@
 import WhatWeDoServicesGlobalComp from "@/components/WhatWeDoComponents/WhatWeDoServicesGlobalComp";
 import React from "react";
 import { getPublicImageUrl } from "@/constants/images";
+import DynamicMetadata from "@/constants/DynamicMetadata";
 
 const cardData = [
   {
@@ -65,10 +66,12 @@ const allConstantsData = {
 
 export default function index() {
   return (
-    <WhatWeDoServicesGlobalComp
+    <DynamicMetadata title="Resource Outsourcing - Codekart Solutions Private Limited" description="Learn more about Codekart Solutions. ">
+      <WhatWeDoServicesGlobalComp
       constantData={allConstantsData}
       cardData={cardData}
       relatedReadingData={relatedReadingData}
     />
+    </DynamicMetadata>
   );
 }

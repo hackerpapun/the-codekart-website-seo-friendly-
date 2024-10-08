@@ -5,8 +5,8 @@ const DynamicMetadata = ({ children, title, description }) => {
     return (
         <>
         <Head>
-            <title>About Us - Codekart</title>
-            <meta name="description" content="Learn more about Codekart Solutions." />
+            <title>{title || "CodeKart"}</title>
+            <meta name="description" content={description || "Learn more about Codekart Solutions."} />
         </Head>
 
         {children}

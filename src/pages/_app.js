@@ -7,8 +7,13 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Codekart</title>
-        <meta name="description" content="Codekart Solutions PVT LTD" />
+        <title>
+          Codekart Solutions Private Limited: Let&apos;s Craft The Future!
+        </title>
+        <meta
+          name="description"
+          content="Inspiring Creativity,  Delivering Excellence  with CodeKart."
+        />
         <link rel="icon" href="/favicon.ico" />
 
         {/* Preconnecting to the Google Fonts server */}
