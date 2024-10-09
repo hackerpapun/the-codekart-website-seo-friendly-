@@ -6,6 +6,7 @@ import styles from "../../styles/Home/HomeComp8.module.css";
 import { montserrat } from "@/assets/fonts/fonts";
 import { BsArrowUpRightCircle } from "react-icons/bs";
 import { getPublicImageUrl } from "@/constants/images";
+import Link from "next/link";
 
 const images = [
   getPublicImageUrl("/images/home/image-1.png"),
@@ -50,7 +51,7 @@ export default function HomeComp8() {
         <div className={styles.carouselText}>
           Take a peek at what goes on at CodeKart!
         </div>
-        <BsArrowUpRightCircle size={30} color="#fff" />
+        <Link href="/what-we-do"><BsArrowUpRightCircle size={30} color="#fff" /></Link>
       </div>
       <div className={styles.slidingImageContainer}>
         <Carousel

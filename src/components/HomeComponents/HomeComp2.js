@@ -5,18 +5,24 @@ import styles from "../../styles/Home/HomeComp2.module.css";
 import { homeComp2Data } from "./HomeConstantDatas";
 import { Grid } from "@mui/material";
 import { montserrat, notosans } from "@/assets/fonts/fonts";
-
+import {Fasthand} from "next/font/google"
+const fasthand = Fasthand({
+  subsets: ['latin'], 
+  variable: '--font-fasthand',
+  weight: '400',
+});
 export default function HomeComp2() {
   return (
     <Grid className={`${styles.hero2} ${notosans.variable}`}>
-      <div className={styles.hero2heroText}>
-        <Image
+      <div className={`${styles.hero2heroText} ${fasthand.variable}`}>
+        {/* <Image
           src={homeComp2Data.heroTextImage.img}
           alt={homeComp2Data.heroTextImage.alt}
           width={400}
           height={100}
           className={styles.hero2brandImage}
-        />
+        /> */}
+        Revitalize Your Brand
       </div>
       <div className={styles.hero2CarouselContainer}>
         <div className={styles.hero2brandsContainer}>

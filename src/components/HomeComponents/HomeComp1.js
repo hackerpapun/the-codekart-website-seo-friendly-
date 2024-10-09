@@ -7,9 +7,11 @@ import { montserrat } from "@/assets/fonts/fonts";
 import HomeButtonComp from "../HomeButtonComp";
 import { CiDesktopMouse2 } from "react-icons/ci";
 import { navconstants } from "@/constants/navconstants";
-import {RedirectToNewTab} from "@/constants/RedirectToNewTab";
-
+import { RedirectToNewTab } from "@/constants/RedirectToNewTab";
+import { useRouter } from 'next/navigation'
+import { motion } from 'framer-motion'
 export default function HomeComp1() {
+  const router = useRouter();
   const scrollToNextSection = () => {
     window.scrollTo({
       top: window.innerHeight,
@@ -19,25 +21,41 @@ export default function HomeComp1() {
 
   return (
     <Grid className={`${styles.hero1} ${montserrat.variable}`}>
-      <div className={styles.hero1socialMedia}>
-        {homeComp1Data.socialMedia.map((media, index) => (
-          <RedirectToNewTab key={index} url={media.link} >
-          <img
-            key={index}
-            src={media.img}
-            alt={`${media.alt} icon`}
-            className={styles.socialMediaLogo}
-          />
-          </RedirectToNewTab>
-        ))}
-      </div>
-      <div className={styles.hero1heroText}>{homeComp1Data.heroText}</div>
-      {/* <div className={styles.hero1heroSubText}>{homeComp1Data.heroSubText}</div> */}
-      <HomeButtonComp
-        title="Contact Us"
-        className={styles.hero1buttonComp}
-        onClickLink={`${navconstants.whoweare}#contactus`}
-      />
+      <video autoPlay style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: -1,
+        }} loop muted playsInline controls>
+      <source src="https://cdn.thecodekart.com/assets/images/home/white-abstract-creative-texture-background-in-moti-2023-11-27-05-05-44-utc.mp4" type="video/mp4" />
+      </video>
+      <motion.h1
+        className="hero1heroTextdummy"
+        animate={{
+          backgroundPosition: ['0% 50%', '200% 50%'],
+        }}
+        transition={{
+          duration: 20,
+          ease: 'linear',
+          repeat: Infinity,
+        }}
+        style={{
+          background: 'linear-gradient(90deg, #FA6400, #FF9F00, #5401AD, #6A1BA0, #FA6400)',
+          backgroundSize: '300% 100%',
+          WebkitBackgroundClip: 'text',
+          backgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          textFillColor: 'transparent',
+          fontSize: '5vw',
+        }}
+      >
+        Inspiring Creativity, Delivering <br /> Excellence with CodeKart.
+      </motion.h1>
+      <div className={styles.hero1heroSubText}>help you to build website company that is modern, user friendly, good <br /> CEO, and Clean design</div>
+      <button onClick={() => { router.push(`${navconstants.whoweare}#contactus`) }} className={styles.hero1btn}>Get started</button>
       <div
         className={styles.hero1scrollContainer}
         onClick={scrollToNextSection}
@@ -48,9 +66,9 @@ export default function HomeComp1() {
             <path
               id="circle"
               d="M 50, 50
-                 m -37, 0
-                 a 37,37 0 1,1 74,0
-                 a 37,37 0 1,1 -74,0"
+               m -37, 0
+               a 37,37 0 1,1 74,0
+               a 37,37 0 1,1 -74,0"
               fill="none"
             />
             <text fontSize="7">
