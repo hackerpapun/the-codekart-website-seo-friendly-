@@ -14,6 +14,11 @@
     height: 260px;
     align-items: center;
   }
+  @media only screen and (max-height: 300px) {
+    .carausalMainContainer {
+      height: 300px;
+    }
+  }
   .carausal {
     width: 100%;
     height: 100%;
