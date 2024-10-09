@@ -29,19 +29,25 @@ const Navbar = () => {
   const [lastScrollPosition, setLastScrollPosition] = React.useState(0);
 
   const whatWeDoFun = () => {
-    setIsArrowUp(!isArrowUp);
+    setIsArrowUp(true);
+    setWharareWe(false);
+    setInsightArrow(false);
+  };
+
+  const onmouseExitNavdropdown = () => {
+    setIsArrowUp(false);
     setWharareWe(false);
     setInsightArrow(false);
   };
 
   const whatAreWeFun = () => {
-    setWharareWe(!whatAreWe);
+    setWharareWe(true);
     setInsightArrow(false);
     setIsArrowUp(false);
   };
 
   const InsightFunction = () => {
-    setInsightArrow(!InsightArrow);
+    setInsightArrow(true);
     setWharareWe(false);
     setIsArrowUp(false);
   };
@@ -56,6 +62,7 @@ const Navbar = () => {
         currentScrollPosition > 100
       ) {
         setIsNavbarVisible(false);
+        onmouseExitNavdropdown()
       } else if (currentScrollPosition < lastScrollPosition) {
         setIsNavbarVisible(true);
       }
@@ -102,7 +109,7 @@ const Navbar = () => {
               className={`${styles.navBarparagraphContainer} ${
                 isArrowUp ? styles.arrow_up : ""
               }`}
-              onClick={whatWeDoFun}
+              onMouseEnter={whatWeDoFun}
             >
               What We do
               <MdKeyboardArrowDown className={styles.arrow_icon} />
@@ -112,7 +119,7 @@ const Navbar = () => {
               className={`${styles.navBarparagraphContainer} ${
                 whatAreWe ? styles.arrow_up : ""
               }`}
-              onClick={whatAreWeFun}
+              onMouseEnter={whatAreWeFun}
             >
               Who We are
               <MdKeyboardArrowDown className={styles.arrow_icon} />
@@ -122,7 +129,7 @@ const Navbar = () => {
               className={`${styles.navBarparagraphContainer} ${
                 InsightArrow ? styles.arrow_up : ""
               }`}
-              onClick={InsightFunction}
+              onMouseEnter={InsightFunction}
             >
               Insight
               <MdKeyboardArrowDown className={styles.arrow_icon} />
@@ -130,7 +137,7 @@ const Navbar = () => {
           </Grid>
           <Grid item xs={12} md={4}>
             <div className={styles.NavRightContainer}>
-              <button className={styles.buttonContainer}>
+              <button onClick={() => router.push(`${navconstants.whoweare}#contactus`)} style={{ cursor: "pointer" }} className={styles.buttonContainer}>
                 Connect with us
                 <div className={styles.arrowContainer}>
                   <FaArrowRight className={styles.arrowIcon} />
@@ -169,13 +176,13 @@ const Navbar = () => {
             container
             className={`${styles.dropdown} ${isArrowUp ? styles.active : ""}`}
           >
-            {isArrowUp && <WhatWeDoNavbar onclickWhatwedoFun={whatWeDoFun} />}
+            {isArrowUp && <WhatWeDoNavbar onmouseExitNavdropdown={onmouseExitNavdropdown} onclickWhatwedoFun={whatWeDoFun} />}
           </Grid>
           <Grid
             container
             className={`${styles.dropdown} ${whatAreWe ? styles.active : ""}`}
           >
-            {whatAreWe && <WhatAreWe setWharareWe={setWharareWe} />}
+            {whatAreWe && <WhatAreWe onmouseExitNavdropdown={onmouseExitNavdropdown} setWharareWe={setWharareWe} />}
           </Grid>
           <Grid
             container
@@ -184,7 +191,7 @@ const Navbar = () => {
             }`}
           >
             {InsightArrow && (
-              <Insight onclickInsightFunction={InsightFunction} />
+              <Insight onmouseExitNavdropdown={onmouseExitNavdropdown} onclickInsightFunction={InsightFunction} />
             )}
           </Grid>
         </Grid>

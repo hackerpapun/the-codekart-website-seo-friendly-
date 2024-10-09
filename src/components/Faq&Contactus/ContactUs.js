@@ -19,49 +19,114 @@ import {
   Send,
 } from "@mui/icons-material";
 import ButtonCustom from "../ButtonCustom";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-const containerStyle = {
-  width: "100%",
-  height: "400px",
-};
+import emailjs from '@emailjs/browser';
 
 const center = {
   lat: 20.2961,
   lng: 85.8245,
 };
+
 function ContactUs() {
   const [formData, setFormData] = useState({
-    name: "Write Your Name",
-    email: "Your email address",
-    phone: "Your phone number",
-    message: "Write about anything ",
+    user_name: "",
+    user_email: "",
+    user_phone: "",
+    user_message: "",
   });
+
+  const [errors, setErrors] = useState({
+    user_name: "",
+    user_email: "",
+    user_phone: "",
+    user_message: "",
+  });
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validateForm = () => {
+    let valid = true;
+    let tempErrors = {
+      user_name: "",
+      user_email: "",
+      user_phone: "",
+      user_message: "",
+    };
+
+    if (!formData.user_name.trim()) {
+      tempErrors.user_name = "Name is required";
+      valid = false;
+    }
+
+    if (!formData.user_email.trim()) {
+      tempErrors.user_email = "Email is required";
+      valid = false;
+    } else if (!validateEmail(formData.user_email)) {
+      tempErrors.user_email = "Invalid email format";
+      valid = false;
+    }
+
+    if (!formData.user_phone.trim()) {
+      tempErrors.user_phone = "Phone number is required";
+      valid = false;
+    }
+
+    if (!formData.user_message.trim()) {
+      tempErrors.user_message = "Message is required";
+      valid = false;
+    }
+
+    setErrors(tempErrors);
+    return valid;
+  };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
       [name]: value,
     });
+
+    // Clear error for the specific input field being changed
+    setErrors({
+      ...errors,
+      [name]: "", // Reset the error message for this field
+    });
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Process form submission
-    console.log("Form Data:", formData);
+
+    if (validateForm()) {
+      emailjs
+        .send(
+          "service_cvh2a9a", 
+          "template_8m5ib0h", 
+          formData, 
+          "rtkdXCan4_S3fO2VA"
+        )
+        .then(
+          (response) => {
+            console.log("SUCCESS!", response.status, response.text);
+            alert("Message sent successfully!");
+          },
+          (error) => {
+            console.error("FAILED...", error);
+            alert("Failed to send message. Please try again later.");
+          }
+        );
+    }
   };
+
   return (
     <Grid
       container
       className={`${styles.contactUsSection} ${montserrat.variable} ${notosans.variable}`}
     >
       <Grid item md={1}></Grid>
-      <Grid
-        item
-        md={10}
-        className={styles.contactUsTextContainer}
-        // style={{ padding: "0px 1rem" }}
-      >
+      <Grid item md={10} className={styles.contactUsTextContainer}>
         <div className={styles.contactUsHeaderContainer}>
           <Typography variant="h3" mb={4} className={styles.contactUsHeader}>
             Contact us
@@ -127,69 +192,68 @@ function ContactUs() {
                   <TextField
                     fullWidth
                     label="Your name"
-                    name="name"
-                    value={formData.name}
+                    name="user_name"
+                    value={formData.user_name}
                     onChange={handleInputChange}
                     variant="standard"
                     margin="normal"
                     required
+                    error={Boolean(errors.user_name)}
+                    helperText={errors.user_name}
                   />
                 </Box>
                 <Box mb={3}>
                   <TextField
                     fullWidth
                     label="Your email address"
-                    name="email"
-                    value={formData.email}
+                    name="user_email"
+                    value={formData.user_email}
                     onChange={handleInputChange}
                     variant="standard"
                     margin="normal"
                     required
+                    error={Boolean(errors.user_email)}
+                    helperText={errors.user_email}
                   />
                 </Box>
                 <Box mb={3}>
                   <TextField
                     fullWidth
                     label="Phone number"
-                    name="phone"
-                    value={formData.phone}
+                    name="user_phone"
+                    value={formData.user_phone}
                     onChange={handleInputChange}
                     variant="standard"
                     margin="normal"
+                    error={Boolean(errors.user_phone)}
+                    helperText={errors.user_phone}
                   />
                 </Box>
                 <Box mb={3}>
                   <TextField
                     id="standard-multiline-flexible"
                     label="Message"
-                    name="message"
+                    name="user_message"
                     multiline
                     maxRows={4}
-                    value={formData.message}
+                    value={formData.user_message}
                     onChange={handleInputChange}
                     variant="standard"
                     margin="normal"
                     fullWidth
+                    error={Boolean(errors.user_message)}
+                    helperText={errors.user_message}
                   />
                 </Box>
 
                 {/* Attachment & Submit Button */}
                 <Box display="flex" alignItems="center" mt={4} mb={5}>
-                  <Link
-                    href="#"
-                    underline="hover"
-                    className={styles.attachmentLink}
-                  >
-                    <IconButton>
-                      <AttachFile />
-                    </IconButton>
-                    Attachment
-                  </Link>
                   <Box sx={{ marginLeft: "auto" }}>
                     <ButtonCustom
                       title="Send it to us"
                       icon={true}
                       buttonStyles={styles.sendButton}
+                      onClick={handleSubmit}
                     />
                   </Box>
                 </Box>
@@ -199,8 +263,8 @@ function ContactUs() {
             <Box className={styles.mapContainer}>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14961.141079966783!2d85.835158!3d20.3711246!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909ee33cbd993%3A0x7656054823a60bbf!2sCodekart%20Solutions%20Private%20Limited!5e0!3m2!1sen!2sin!4v1724757351531!5m2!1sen!2sin"
-                width="100%" // Full width
-                height="400" // Adjust height as needed
+                width="100%"
+                height="400"
                 style={{ border: 0, display: "block" }}
                 allowFullScreen=""
                 loading="lazy"

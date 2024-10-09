@@ -62,12 +62,22 @@ export default function HomeComp8() {
           arrows={false}
         >
           {shuffledImages.map((image, index) => (
-            <div key={index} className={styles.imageFrame}>
-              <img
+            <div key={index} style={{ height: "100%" }} className={styles.imageFrame}>
+              {/* <img
                 src={image}
                 alt={`carousel-image-${index}`}
                 className={styles.carouselImage}
-              />
+              /> */}
+              <div
+                style={{
+                  backgroundImage: `url(${image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundOrigin: "content-box"
+                }}
+                className={styles.carouselImage}
+              >
+              </div>
             </div>
           ))}
         </Carousel>

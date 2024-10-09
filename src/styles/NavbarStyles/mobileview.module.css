@@ -83,6 +83,19 @@
   max-height: 1000px;
   transition: max-height 0.5s ease-in;
 }
+.nestedSubItemContainer{
+}
+.links{
+  color:black;
+  text-decoration: none;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-left: 12px;
+}
+.nestedSubItem{
+  padding-left: 25px;
+  text-align: center;
+}
 
 .SideBarScreen {
   position: fixed;

@@ -9,10 +9,11 @@ import Strength from "@/components/OurStrength/Strength";
 import CardContainer from "@/components/WhoWeAreDiscoverCardContainer/CardContainer";
 import ContactUs from "@/components/Faq&Contactus/ContactUs";
 import Faq from "@/components/Faq&Contactus/Faq";
+import DynamicMetadata from "@/constants/DynamicMetadata";
 
 const WhoWeAreDiscoverPage = () => {
   return (
-    <>
+    <DynamicMetadata title="Who We Are Discover - Codekart Solutions Private Limited" description="Learn more about Codekart Solutions. ">
       <Grid container className={styles.topcontainer}>
         <Grid item sm={12} xs={12}>
           <div className={styles.AboutUsContainer}>
@@ -30,7 +31,7 @@ const WhoWeAreDiscoverPage = () => {
         </Grid>
       </Grid>
 
-      <Grid container>
+      <Grid container id="ourvision">
         <Grid item sm={12} xs={12} className={styles.secondContainer}>
           <p className={styles.ptag}>our vision</p>
         </Grid>
@@ -46,7 +47,7 @@ const WhoWeAreDiscoverPage = () => {
         <ContactUs />
       </div>
       <Faq />
-    </>
+    </DynamicMetadata>
   );
 };
 
