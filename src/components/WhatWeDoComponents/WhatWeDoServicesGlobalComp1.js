@@ -34,6 +34,7 @@ export default function WhatWeDoServicesGlobalComp({
   relatedReadingData,
   constantData,
 }) {
+  
   const Router = useRouter();
 
   return (
@@ -80,16 +81,16 @@ export default function WhatWeDoServicesGlobalComp({
           <Grid item xs={12} md={1}></Grid>
           <Grid item xs={12} md={9}>
             <div className={styles.wwdServicesGlobal2}>
-              Service / {constantData?.name}
+              Industries / {constantData?.name}
             </div>
             <div className={styles.wwdServicesGlobal3}>
               {constantData?.part1Text1}
             </div>
-            <div className={styles.wwdServicesGlobal3}>
-              {constantData?.part1Text2}
+            <div className={styles.wwdServicesGloball3}>
+              {constantData?.part1Text3}
             </div>
             <div className={styles.wwdServicesGlobal4}>
-              Let&apos;s talk
+              Let's talk
               <span className={styles.arrowContainer}>
                 <FaCircleArrowRight size={35} />
               </span>

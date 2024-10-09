@@ -78,8 +78,8 @@ const WhatWeDoNavbar = ({ onclickWhatwedoFun,onmouseExitNavdropdown }) => {
           )}
           {activeSection === "industries" && (
             <Grid container className={styles.serviceTableContaint} spacing={7}>
-              <Grid item sm={4} className={styles.tabelConatints}>
-                <span onClick={() =>Router.push("/what-we-do/healthcare")}>Healthcare</span>
+              <Grid item sm={4} className={styles.tabelConatints} onClick={() => Router.push("/what-we-do/health")}  >
+                Healthcare
               </Grid>
               <Grid item sm={4} className={styles.tabelConatints}>
                <span onClick={() =>Router.push("/what-we-do#Finance")}> Finance</span>

@@ -53,13 +53,20 @@
 }
 
 .wwdServicesGlobal2,
-.wwdServicesGlobal3,
+.wwdServicesGlobal3 
 .wwdServicesGlobal4 {
   color: white;
   /* Ensure content is readable against the background */
   /* padding: 20px; */
   font-size: 1.5rem;
   z-index: 1;
+}
+.wwdServicesGloball3{
+  color: white !important;
+  font-family:"Montserrat";
+  font-size: 20px !important;
+  width: 30rem;
+  line-height: 30px !important;
 }
 
 .arrowContainer {
@@ -293,6 +300,9 @@
   }
   .wwdServicesGlobal3 {
     font-size: 3rem;
+  }
+  .wwdServicesGloball3 {
+    font-size: 2rem;
   }
   .wwdServicesGlobal4 {
     width: 60%;
