@@ -21,41 +21,63 @@ export default function HomeComp1() {
 
   return (
     <Grid className={`${styles.hero1} ${montserrat.variable}`}>
-      <video autoPlay style={{
-          position: 'absolute',
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        controls
+        aria-label="Background animation showcasing modern design"
+        style={{
+          position: "absolute",
           top: 0,
           left: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
           zIndex: -1,
-        }} loop muted playsInline controls>
-      <source src="https://cdn.thecodekart.com/assets/images/home/white-abstract-creative-texture-background-in-moti-2023-11-27-05-05-44-utc.mp4" type="video/mp4" />
+        }}
+      >
+        <source
+          src="https://cdn.thecodekart.com/assets/images/home/white-abstract-creative-texture-background-in-moti-2023-11-27-05-05-44-utc.mp4"
+          type="video/mp4"
+        />
       </video>
       <motion.h1
-        className="hero1heroTextdummy"
+        className={styles.heroTitle}
         animate={{
-          backgroundPosition: ['0% 50%', '200% 50%'],
+          backgroundPosition: ["0% 50%", "200% 50%"],
         }}
         transition={{
           duration: 20,
-          ease: 'linear',
+          ease: "linear",
           repeat: Infinity,
         }}
         style={{
-          background: 'linear-gradient(90deg, #FA6400, #FF9F00, #5401AD, #6A1BA0, #FA6400)',
-          backgroundSize: '300% 100%',
-          WebkitBackgroundClip: 'text',
-          backgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          textFillColor: 'transparent',
-          fontSize: '5vw',
+          background:
+            "linear-gradient(90deg, #FA6400, #FF9F00, #5401AD, #6A1BA0, #FA6400)",
+          backgroundSize: "300% 100%",
+          WebkitBackgroundClip: "text",
+          backgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          textFillColor: "transparent",
+          fontSize: "5vw",
         }}
       >
         Inspiring Creativity, Delivering <br /> Excellence with CodeKart.
       </motion.h1>
-      <div className={styles.hero1heroSubText}>help you to build website company that is modern, user friendly, good <br /> CEO, and Clean design</div>
-      <button onClick={() => { router.push(`${navconstants.whoweare}#contactus`) }} className={styles.hero1btn}>Get started</button>
+      <p className={styles.hero1heroSubText}>
+        help you to build website company that is modern, user friendly, good{" "}
+        <br /> CEO, and Clean design
+      </p>
+      <button
+        onClick={() => {
+          router.push(`${navconstants.whoweare}#contactus`);
+        }}
+        className={styles.hero1btn}
+      >
+        Get started
+      </button>
       <div
         className={styles.hero1scrollContainer}
         onClick={scrollToNextSection}
