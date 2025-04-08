@@ -13,39 +13,38 @@ export default function HomeComp3() {
       className={`${styles.homeComp3Container} ${notosans.variable}`}
       style={{ position: "relative", overflow: "visible" }}
     >
-      <div className={styles.homeComp3SmallText}>What We Do</div>
-      <div className={styles.homeComp3Header}>Our Service</div>
+      <p className={styles.homeComp3SmallText}>What We Do</p>
+      <h2 className={styles.homeComp3Header}>Our Service</h2>
       <div className={styles.homeComp3Orangeline} />
-      <div className={styles.homeComp3Text2}>
+      <p className={styles.homeComp3Text2}>
         Welcome to CodeKart, where we transform your digital dreams into reality
         <br />
         with our comprehensive range of services. Our team of experts is
         dedicated
         <br />
         to delivering innovative solutions that drive business success.
-      </div>
-        <Grid
-          container
-          className={styles.homeComp3CardContainer}
-          gap={10}
-        >
-          {homeComp3Data?.map((item, i) => (
-            <Grid item xs={5} md={4} lg={3} key={i}>
-              <a
-                target=""
-                style={{ textDecoration: "none", color: "#000" }}
-                href={`${navconstants.whatwedo}#${item?.text1?.replace(/[\s\n]+/g, "-")}`}
-              >
-                <div className={styles.homeComp3Card}>
-                  {item?.text1}
-                  <div className={styles.arrowContainer}>
-                    <GoArrowRight />
-                  </div>
+      </p>
+      <Grid container className={styles.homeComp3CardContainer} gap={10}>
+        {homeComp3Data?.map((item, i) => (
+          <Grid item xs={5} md={4} lg={3} key={i}>
+            <a
+              href={`${navconstants.whatwedo}#${item?.text1?.replace(
+                /[\s\n]+/g,
+                "-"
+              )}`}
+              style={{ textDecoration: "none", color: "#000" }}
+              aria-label={`Explore ${item.text1} services`}
+            >
+              <div className={styles.homeComp3Card}>
+                {item?.text1}
+                <div className={styles.arrowContainer}>
+                  <GoArrowRight />
                 </div>
-              </a>
-            </Grid>
-          ))}
-        </Grid>
+              </div>
+            </a>
+          </Grid>
+        ))}
+      </Grid>
     </Grid>
   );
 }

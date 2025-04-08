@@ -10,11 +10,10 @@ const HomeComp6 = () => {
     {
       containt: (
         <>
-          <p>
-            {" "}
+          <blockquote>
             “I had a wonderful experience and I would <br />
             highly recommend this business to others.”
-          </p>
+          </blockquote>
         </>
       ),
       buttom: "Brooklyn Simmons - CEO, HCBA",
@@ -22,8 +21,10 @@ const HomeComp6 = () => {
     {
       containt: (
         <>
-          “I had a wonderful experience and I would <br />
-          highly recommend this business to others.”
+          <blockquote>
+            “I had a wonderful experience and I would <br />
+            highly recommend this business to others.”
+          </blockquote>
         </>
       ),
       buttom: "Brooklyn Simmons - CEO, HCBA",
@@ -31,10 +32,10 @@ const HomeComp6 = () => {
     {
       containt: (
         <>
-          <p>
+          <blockquote>
             “I had a wonderful experience and I would <br />
             highly recommend this business to others.”
-          </p>
+          </blockquote>
         </>
       ),
       buttom: "Brooklyn Simmons - CEO, HCBA",
@@ -59,15 +60,16 @@ const HomeComp6 = () => {
       items: 1,
     },
   };
+
   return (
     <>
       <Grid container className={styles.carausalMainContainer}>
         <Grid sm={6} xs={12} className={styles.carausalleftcontaint}>
           <div>
-            <h1 className={styles.carausalLeftContainer}>
+            <h2 className={styles.carausalLeftContainer}>
               WHAT OTHERS <br />
               <span className={styles.spanContaint}>SAY</span> ABOUT US
-            </h1>
+            </h2>
           </div>
         </Grid>
         <Grid sm={6} xs={12} className={styles.carausal}>
@@ -86,13 +88,17 @@ const HomeComp6 = () => {
                   arrows={false}
                 >
                   {carauSalaData.map((item, index) => (
-                    <div key={index} className={styles.carouselItem}>
+                    <div
+                      key={index}
+                      className={styles.carouselItem}
+                      aria-label={`Client testimonial ${index + 1}`}
+                    >
                       <div>
                         <p className={styles.carausaltopContaint}>
                           {item.containt}
                         </p>
                         <p className={styles.carausalbuttomContaint}>
-                          {item.buttom}
+                          <cite>{item.buttom}</cite>
                         </p>
                       </div>
                     </div>

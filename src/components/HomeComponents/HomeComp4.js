@@ -11,14 +11,14 @@ export default function HomeComp4({ relatedReadingData }) {
       className={`${styles.rrc1} ${notosans.variable} ${montserrat.variable}`}
     >
       <Grid item xs={12}>
-        <div className={styles.rrc2}>Blog Post&apos;s</div>
-        <div className={styles.rrc3}>
-          {" "}
+        <h2 className={styles.rrc2}>Blog Posts</h2>
+        <p className={styles.rrc3}>
           Our young team has what it takes to
           <br />
           tackle any creative task
-        </div>
+        </p>
         <div className={styles.whatwedoCompOrangeline} />
+
         <Grid
           container
           marginTop={10}
@@ -27,12 +27,13 @@ export default function HomeComp4({ relatedReadingData }) {
         >
           {relatedReadingData?.map((item, i) => (
             <Grid item xs={12} md={5.5} lg={2.6} key={i}>
-              <div className={styles.rrc4Card}>
+              <article className={styles.rrc4Card}>
                 <div className={styles.rrc4CardImgContainer}>
                   <img
                     src={item?.img}
                     alt={item?.title}
                     className={styles.rrc4CardImg}
+                    loading="lazy"
                   />
                   <span
                     className={styles.rrc4CardType}
@@ -43,9 +44,11 @@ export default function HomeComp4({ relatedReadingData }) {
                     {item?.type}
                   </span>
                 </div>
-                <div className={styles.rrc4CardTitle}>{item?.title}</div>
-                <div className={styles.rrc4CardDate}>{item?.date}</div>
-              </div>
+                <h3 className={styles.rrc4CardTitle}>{item?.title}</h3>
+                <time className={styles.rrc4CardDate} dateTime={item?.date}>
+                  {item?.date}
+                </time>
+              </article>
             </Grid>
           ))}
         </Grid>

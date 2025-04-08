@@ -47,58 +47,70 @@ const faqData = [
 
 function Faq() {
   return (
-    <Grid
-      container
-      id="Faq"
-      spacing={3}
+    <section
+      id="faq-section"
+      aria-labelledby="faq-heading"
       className={`${montserrat.variable} ${notosans.variable}`}
     >
-      <Grid item md={1}></Grid>
+      <Grid container spacing={3}>
+        <Grid item md={1}></Grid>
 
-      <Grid item xs={10}>
-        <Container maxWidth={false} className={styles.faqContainer}>
-          <Box mt={4}>
-            <Box mb={5}>
-              <div className={styles.faqHeader}>
-                Frequently Asked Questions (Faq)
-              </div>
-              <div className={styles.faqHeaderOrangeLine} />
-            </Box>
-            {faqData.map((faq, index) => (
-              <Accordion
-                key={index}
-                className={styles.accordion}
-                sx={{
-                  "&::before": {
-                    height: "0px !important",
-                  },
-                }}
-              >
-                <AccordionSummary
-                  expandIcon={
-                    <Box className={styles.iconContainer}>
-                      <ExpandMoreIcon className={styles.customIcon} />
-                    </Box>
-                  }
-                  aria-controls={`faq-content-${index}`}
-                  id={`faq-header-${index}`}
+        <Grid item xs={12} md={10}>
+          <Container maxWidth={false} className={styles.faqContainer}>
+            <Box mt={4}>
+              <Box mb={5}>
+                <Typography
+                  id="faq-heading"
+                  variant="h2"
+                  component="h2"
+                  className={styles.faqHeader}
                 >
-                  <Typography className={styles.questionText}>
-                    {faq.question}
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography className={styles.answerText}>
-                    {faq.answer}
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-            ))}
-          </Box>
-        </Container>
+                  Frequently Asked Questions (Faq)
+                </Typography>
+                <div className={styles.faqHeaderOrangeLine} />
+              </Box>
+
+              {faqData.map((faq, index) => (
+                <Accordion
+                  key={index}
+                  className={styles.accordion}
+                  sx={{ "&::before": { height: "0px !important" } }}
+                >
+                  <AccordionSummary
+                    expandIcon={
+                      <Box className={styles.iconContainer}>
+                        <ExpandMoreIcon className={styles.customIcon} />
+                      </Box>
+                    }
+                    aria-controls={`faq-content-${index}`}
+                    id={`faq-header-${index}`}
+                  >
+                    <Typography
+                      className={styles.questionText}
+                      component="h3"
+                      variant="h3"
+                    >
+                      {faq.question}
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails
+                    role="region"
+                    aria-labelledby={`faq-header-${index}`}
+                    id={`faq-content-${index}`}
+                  >
+                    <Typography className={styles.answerText}>
+                      {faq.answer}
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+              ))}
+            </Box>
+          </Container>
+        </Grid>
+
+        <Grid item md={1}></Grid>
       </Grid>
-      <Grid item md={1}></Grid>
-    </Grid>
+    </section>
   );
 }
 

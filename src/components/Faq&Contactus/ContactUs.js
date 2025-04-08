@@ -19,7 +19,7 @@ import {
   Send,
 } from "@mui/icons-material";
 import ButtonCustom from "../ButtonCustom";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 const center = {
   lat: 20.2961,
@@ -89,10 +89,9 @@ function ContactUs() {
       [name]: value,
     });
 
-    // Clear error for the specific input field being changed
     setErrors({
       ...errors,
-      [name]: "", // Reset the error message for this field
+      [name]: "",
     });
   };
 
@@ -102,9 +101,9 @@ function ContactUs() {
     if (validateForm()) {
       emailjs
         .send(
-          "service_cvh2a9a", 
-          "template_8m5ib0h", 
-          formData, 
+          "service_cvh2a9a",
+          "template_8m5ib0h",
+          formData,
           "rtkdXCan4_S3fO2VA"
         )
         .then(
@@ -122,18 +121,24 @@ function ContactUs() {
 
   return (
     <Grid
+      component="section"
       container
       className={`${styles.contactUsSection} ${montserrat.variable} ${notosans.variable}`}
     >
-      <Grid item md={1}></Grid>
+      <Grid item md={1} />
       <Grid item md={10} className={styles.contactUsTextContainer}>
         <div className={styles.contactUsHeaderContainer}>
-          <Typography variant="h3" mb={4} className={styles.contactUsHeader}>
+          <Typography
+            component="h1"
+            variant="h3"
+            mb={4}
+            className={styles.contactUsHeader}
+          >
             Contact us
           </Typography>
         </div>
         <Box sx={{ padding: "2rem 1rem" }}>
-          <Typography className={styles.contactUsContent}>
+          <Typography component="p" className={styles.contactUsContent}>
             Welcome to CodeKart, where we transform your digital dreams into
             reality with our comprehensive range of services. Our team of
             experts is dedicated to delivering innovative solutions that drive
@@ -142,13 +147,18 @@ function ContactUs() {
         </Box>
         <Box sx={{ padding: "2rem 0" }}>
           <Grid container spacing={4} justifyContent="center">
-            {/* Left Side - Contact Information */}
-            <Grid item xs={12} md={5} className={styles.contactLeft}>
+            <Grid
+              item
+              xs={12}
+              md={5}
+              className={styles.contactLeft}
+              component="article"
+            >
               <Typography variant="h4" className={styles.contactHeader}>
                 Get in Touch With Us
                 <div className={styles.faqHeaderOrangeLine} />
               </Typography>
-              <Box className={styles.contactInfoBox}>
+              <Box className={styles.contactInfoBox} component="address">
                 <LocationOn className={styles.icon} />
                 <Box mb={4}>
                   <Typography variant="h6" mt={4} className={styles.infoTitle}>
@@ -163,7 +173,7 @@ function ContactUs() {
                   </Typography>
                 </Box>
               </Box>
-              <Box className={styles.contactInfoBox}>
+              <Box className={styles.contactInfoBox} component="address">
                 <Phone className={styles.icon} />
                 <Box mb={4}>
                   <Typography variant="h6" className={styles.infoTitle}>
@@ -174,7 +184,7 @@ function ContactUs() {
                   </Typography>
                 </Box>
               </Box>
-              <Box className={styles.contactInfoBox} mb={4}>
+              <Box className={styles.contactInfoBox} mb={4} component="address">
                 <Email className={styles.icon} />
                 <Box>
                   <Typography variant="h6" className={styles.infoTitle}>
@@ -185,79 +195,83 @@ function ContactUs() {
               </Box>
             </Grid>
 
-            {/* Right Side - Contact Form */}
-            <Grid item xs={12} md={5}>
-              <form onSubmit={handleSubmit}>
-                <Box mb={3}>
-                  <TextField
-                    fullWidth
-                    label="Your name"
-                    name="user_name"
-                    value={formData.user_name}
-                    onChange={handleInputChange}
-                    variant="standard"
-                    margin="normal"
-                    required
-                    error={Boolean(errors.user_name)}
-                    helperText={errors.user_name}
+            <Grid
+              item
+              xs={12}
+              md={5}
+              component="form"
+              onSubmit={handleSubmit}
+              noValidate
+            >
+              <Box mb={3}>
+                <TextField
+                  fullWidth
+                  label="Your name"
+                  name="user_name"
+                  value={formData.user_name}
+                  onChange={handleInputChange}
+                  variant="standard"
+                  margin="normal"
+                  required
+                  error={Boolean(errors.user_name)}
+                  helperText={errors.user_name}
+                />
+              </Box>
+              <Box mb={3}>
+                <TextField
+                  fullWidth
+                  label="Your email address"
+                  name="user_email"
+                  value={formData.user_email}
+                  onChange={handleInputChange}
+                  variant="standard"
+                  margin="normal"
+                  required
+                  error={Boolean(errors.user_email)}
+                  helperText={errors.user_email}
+                />
+              </Box>
+              <Box mb={3}>
+                <TextField
+                  fullWidth
+                  label="Phone number"
+                  name="user_phone"
+                  value={formData.user_phone}
+                  onChange={handleInputChange}
+                  variant="standard"
+                  margin="normal"
+                  required
+                  error={Boolean(errors.user_phone)}
+                  helperText={errors.user_phone}
+                />
+              </Box>
+              <Box mb={3}>
+                <TextField
+                  id="standard-multiline-flexible"
+                  label="Message"
+                  name="user_message"
+                  multiline
+                  maxRows={4}
+                  value={formData.user_message}
+                  onChange={handleInputChange}
+                  variant="standard"
+                  margin="normal"
+                  fullWidth
+                  required
+                  error={Boolean(errors.user_message)}
+                  helperText={errors.user_message}
+                />
+              </Box>
+              <Box display="flex" alignItems="center" mt={4} mb={5}>
+                <Box sx={{ marginLeft: "auto" }}>
+                  <ButtonCustom
+                    title="Send it to us"
+                    icon={true}
+                    buttonStyles={styles.sendButton}
+                    onClick={handleSubmit}
                   />
                 </Box>
-                <Box mb={3}>
-                  <TextField
-                    fullWidth
-                    label="Your email address"
-                    name="user_email"
-                    value={formData.user_email}
-                    onChange={handleInputChange}
-                    variant="standard"
-                    margin="normal"
-                    required
-                    error={Boolean(errors.user_email)}
-                    helperText={errors.user_email}
-                  />
-                </Box>
-                <Box mb={3}>
-                  <TextField
-                    fullWidth
-                    label="Phone number"
-                    name="user_phone"
-                    value={formData.user_phone}
-                    onChange={handleInputChange}
-                    variant="standard"
-                    margin="normal"
-                    error={Boolean(errors.user_phone)}
-                    helperText={errors.user_phone}
-                  />
-                </Box>
-                <Box mb={3}>
-                  <TextField
-                    id="standard-multiline-flexible"
-                    label="Message"
-                    name="user_message"
-                    multiline
-                    maxRows={4}
-                    value={formData.user_message}
-                    onChange={handleInputChange}
-                    variant="standard"
-                    margin="normal"
-                    fullWidth
-                    error={Boolean(errors.user_message)}
-                    helperText={errors.user_message}
-                  />
-                </Box>
-
-                {/* Attachment & Submit Button */}
-                <Box display="flex" alignItems="center" mt={4} mb={5}>
-                  <Box sx={{ marginLeft: "auto" }}>
-                    <ButtonCustom
-                      title="Send it to us"
-                      icon={true}
-                      buttonStyles={styles.sendButton}
-                      onClick={handleSubmit}
-                    />
-                  </Box>
-                </Box>
-              </form>
+              </Box>
             </Grid>
 
             <Box className={styles.mapContainer}>
@@ -269,12 +283,14 @@ function ContactUs() {
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                aria-label="Codekart Solutions Location Map"
+                title="Codekart Solutions Location"
               ></iframe>
             </Box>
           </Grid>
         </Box>
       </Grid>
-      <Grid item md={1}></Grid>
+      <Grid item md={1} />
     </Grid>
   );
 }

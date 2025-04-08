@@ -20,7 +20,7 @@ const images = [
 ];
 
 export default function HomeComp8() {
-  const [shuffledImages, setShuffledImages] = useState([]);
+const [shuffledImages, setShuffledImages] = useState([]);
 
   useEffect(() => {
     setShuffledImages(images.sort(() => Math.random() - 0.5));
@@ -46,13 +46,22 @@ export default function HomeComp8() {
   };
 
   return (
-    <div className={`${styles.carouselContainer} ${montserrat.variable}`}>
+    <section
+      className={`${styles.carouselContainer} ${montserrat.variable}`}
+      aria-label="CodeKart Office Glimpse Carousel"
+    >
       <div className={styles.textContainer}>
-        <div className={styles.carouselText}>
+        <h2 className={styles.carouselText}>
           Take a peek at what goes on at CodeKart!
-        </div>
-        <Link href="/what-we-do"><BsArrowUpRightCircle size={30} color="#fff" /></Link>
+        </h2>
+        <Link
+          href="/what-we-do"
+          aria-label="Explore what we do at CodeKart"
+        >
+          <BsArrowUpRightCircle size={30} color="#fff" />
+        </Link>
       </div>
+
       <div className={styles.slidingImageContainer}>
         <Carousel
           responsive={responsive}
@@ -63,26 +72,26 @@ export default function HomeComp8() {
           arrows={false}
         >
           {shuffledImages.map((image, index) => (
-            <div key={index} style={{ height: "100%" }} className={styles.imageFrame}>
-              {/* <img
-                src={image}
-                alt={`carousel-image-${index}`}
-                className={styles.carouselImage}
-              /> */}
+            <div
+              key={index}
+              className={styles.imageFrame}
+              style={{ height: "100%" }}
+              role="img"
+              aria-label={`Office moment ${index + 1}`}
+            >
               <div
                 style={{
                   backgroundImage: `url(${image})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
-                  backgroundOrigin: "content-box"
+                  backgroundOrigin: "content-box",
                 }}
                 className={styles.carouselImage}
-              >
-              </div>
+              />
             </div>
           ))}
         </Carousel>
       </div>
-    </div>
+    </section>
   );
 }

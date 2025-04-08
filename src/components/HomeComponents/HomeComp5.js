@@ -13,17 +13,17 @@ export default function HomeComp5() {
       className={`${styles.homeComp5Container} ${notosans.variable}`}
       style={{ position: "relative", overflow: "visible" }}
     >
-      <div className={styles.homeComp5SmallText}>What We Do</div>
-      <div className={styles.homeComp5Header}>Industry</div>
+      <h2 className={styles.homeComp5SmallText}>What We Do</h2>
+      <h3 className={styles.homeComp5Header}>Industry</h3>
       <div className={styles.homeComp5Orangeline} />
-      <div className={styles.homeComp5Text2}>
+      <p className={styles.homeComp5Text2}>
         Welcome to CodeKart, where we transform your digital dreams into reality
         <br />
         with our comprehensive range of services. Our team of experts is
         dedicated
         <br />
         to delivering innovative solutions that drive business success.
-      </div>
+      </p>
       <Grid container className={styles.homeComp5CardContainer} gap={10}>
         {homeComp5Data?.map((item, i) => (
           <Grid item xs={5} md={4} lg={3} key={i}>
@@ -34,13 +34,14 @@ export default function HomeComp5() {
                 / /g,
                 "-"
               )}`}
+              aria-label={`Explore industry: ${item?.text1}`}
             >
-              <div className={styles.homeComp5Card}>
+              <article className={styles.homeComp5Card}>
                 {item?.text1}
                 <div className={styles.arrowContainer}>
                   <GoArrowRight />
                 </div>
-              </div>
+              </article>
             </a>
           </Grid>
         ))}

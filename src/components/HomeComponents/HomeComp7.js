@@ -11,13 +11,15 @@ export default function HomeComp7() {
     <Grid
       container
       className={`${styles.whatwedoComp4Div} ${notosans.variable}`}
+      component="section"
+      aria-label="Contact Proposal Section"
     >
       <Grid item xs={12} md={8}>
-        <div className={styles.whatwedoComp4Text}>
+        <p className={styles.whatwedoComp4Text}>
           Request a proposal or consult,
           <br />
           Feel free to contact us Please.
-        </div>
+        </p>
       </Grid>
       <Grid item xs={12} md={3} className={styles.whatwedoComp4ButtonContainer}>
         <ButtonCustom
@@ -36,6 +38,7 @@ export default function HomeComp7() {
             backgroundColor: "darkgray",
             marginTop: "40px",
           }}
+          role="separator"
         />
       </Grid>
     </Grid>

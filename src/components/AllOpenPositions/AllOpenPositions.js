@@ -34,6 +34,23 @@ export default function AllOpenPositions({ numberOfJobsToShow }) {
       className={`${styles.allOpenPositionsContainer} ${notosans.variable}`}
       aria-labelledby="open-positions-heading"
     >
+      {/* JSON-LD for job postings list */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            itemListElement: jobsToShow.map((job, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              url: `${navconstants.jobsAndDetails}#${job.id}`,
+              name: job.title,
+            })),
+          }),
+        }}
+      />
+
       <h2 id="open-positions-heading" className={styles.allOpenPositionsText}>
         We have {jobs?.length} open positions now!
       </h2>
@@ -41,8 +58,14 @@ export default function AllOpenPositions({ numberOfJobsToShow }) {
       <div className={styles.allOpenPositionsOrangeline} />
 
       <Grid container className={styles.allOpenPositions1Container}>
-        {/* Job Categories */}
-        <Grid item xs={12} md={3} component="nav" aria-label="Job Categories">
+        {/* Job Categories Sidebar */}
+        <Grid
+          item
+          xs={12}
+          md={3}
+          component="aside"
+          aria-label="Filter jobs by category"
+        >
           <div
             className={
               selectedCategory?.includes("all")
@@ -89,40 +112,46 @@ export default function AllOpenPositions({ numberOfJobsToShow }) {
           })}
 
           <p className={styles.allOpenPositions2}>
-            We are always seeking talented people. In case you cannot find your
-            desired position here, please send us your LinkedIn profile and give
-            us your contact information. We will be in touch.
+            We are always seeking talented people. If your desired position
+            isn’t listed, please send us your LinkedIn profile. We'll get in
+            touch.
           </p>
 
           <ButtonCustom
             title="Share your LinkedIn profile"
-            ariaLabel="Share your LinkedIn profile with us"
+            ariaLabel="Share your LinkedIn profile with CodeKart"
           />
         </Grid>
 
-        {/* Job Details */}
+        {/* Job Listings */}
         <Grid
           item
           xs={12}
           md={8.5}
           component="section"
-          aria-label="Open Job Listings"
+          aria-label="List of open job positions"
         >
           {jobsToShow?.length > 0 ? (
             jobsToShow?.map((item, i) => (
-              <article key={i}>
+              <article
+                key={i}
+                id={item.id}
+                aria-label={`Job posting: ${item.title}`}
+              >
                 <JobDetailsCard item={item} />
               </article>
             ))
           ) : (
-            <div className={styles.allOpenPositions3}>No Jobs Found</div>
+            <div className={styles.allOpenPositions3} role="alert">
+              No Jobs Found
+            </div>
           )}
 
-          {/* Link to all jobs */}
+          {/* Show More Link */}
           <Grid item display="flex" justifyContent="center" marginTop={5}>
             {numberOfJobsToShow > 0 && jobsToShow?.length > 0 && (
               <Link href={navconstants.jobsAndDetails} passHref legacyBehavior>
-                <a aria-label="Show all open job positions">
+                <a aria-label="View all job listings">
                   <ButtonCustom title="Show More..." />
                 </a>
               </Link>
