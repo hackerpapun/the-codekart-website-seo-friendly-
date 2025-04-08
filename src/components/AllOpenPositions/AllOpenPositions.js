@@ -5,14 +5,11 @@ import { notosans } from "@/assets/fonts/fonts";
 import { jobCategories, jobs } from "./AllOpenPositionsConstantData";
 import ButtonCustom from "../ButtonCustom";
 import JobDetailsCard from "./JobDetailsCard";
-import { useRouter } from "next/router";
+import Link from "next/link";
 import { navconstants } from "@/constants/navconstants";
 
 export default function AllOpenPositions({ numberOfJobsToShow }) {
-
-  const Router = useRouter();
-  const isMobile = useMediaQuery('(max-width:798px)');
-
+  const isMobile = useMediaQuery("(max-width:798px)");
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   const jobsAccordingToSelectedCategory =
@@ -32,18 +29,20 @@ export default function AllOpenPositions({ numberOfJobsToShow }) {
   };
 
   return (
-    <Grid
-      container
+    <section
       id="allOpenPositions"
       className={`${styles.allOpenPositionsContainer} ${notosans.variable}`}
+      aria-labelledby="open-positions-heading"
     >
-      <div className={styles.allOpenPositionsText}>
+      <h2 id="open-positions-heading" className={styles.allOpenPositionsText}>
         We have {jobs?.length} open positions now!
-      </div>
+      </h2>
+
       <div className={styles.allOpenPositionsOrangeline} />
+
       <Grid container className={styles.allOpenPositions1Container}>
-        {/* job categories */}
-        <Grid item xs={12} md={3} >
+        {/* Job Categories */}
+        <Grid item xs={12} md={3} component="nav" aria-label="Job Categories">
           <div
             className={
               selectedCategory?.includes("all")
@@ -51,15 +50,17 @@ export default function AllOpenPositions({ numberOfJobsToShow }) {
                 : styles.allOpenPositions1
             }
             onClick={() => {
-              if (selectedCategory?.includes("all")) {
-                return;
-              } else {
+              if (!selectedCategory?.includes("all")) {
                 onChangeSelectedCategory("all");
               }
             }}
+            role="button"
+            tabIndex={0}
+            aria-pressed={selectedCategory === "all"}
           >
             All Open Positions ({jobs?.length})
           </div>
+
           {jobCategories?.map((item, i) => {
             const categorySelected = item?.includes(selectedCategory);
             return (
@@ -71,12 +72,13 @@ export default function AllOpenPositions({ numberOfJobsToShow }) {
                     : styles.allOpenPositions1
                 }
                 onClick={() => {
-                  if (categorySelected) {
-                    return;
-                  } else {
+                  if (!categorySelected) {
                     onChangeSelectedCategory(item);
                   }
                 }}
+                role="button"
+                tabIndex={0}
+                aria-pressed={categorySelected}
               >
                 {item}{" "}
                 {categorySelected && (
@@ -85,33 +87,49 @@ export default function AllOpenPositions({ numberOfJobsToShow }) {
               </div>
             );
           })}
-          <div className={styles.allOpenPositions2}>
+
+          <p className={styles.allOpenPositions2}>
             We are always seeking talented people. In case you cannot find your
             desired position here, please send us your LinkedIn profile and give
             us your contact information. We will be in touch.
-          </div>
-          <ButtonCustom title="Share your LinkedIn profile" />
+          </p>
+
+          <ButtonCustom
+            title="Share your LinkedIn profile"
+            ariaLabel="Share your LinkedIn profile with us"
+          />
         </Grid>
-        {/* job details */}
-        <Grid item xs={12} md={8.5}>
+
+        {/* Job Details */}
+        <Grid
+          item
+          xs={12}
+          md={8.5}
+          component="section"
+          aria-label="Open Job Listings"
+        >
           {jobsToShow?.length > 0 ? (
-            jobsToShow?.map((item, i) => {
-              return (
-                <React.Fragment key={i}>
-                  <JobDetailsCard item={item} />
-                </React.Fragment>
-              );
-            })
+            jobsToShow?.map((item, i) => (
+              <article key={i}>
+                <JobDetailsCard item={item} />
+              </article>
+            ))
           ) : (
             <div className={styles.allOpenPositions3}>No Jobs Found</div>
           )}
+
+          {/* Link to all jobs */}
           <Grid item display="flex" justifyContent="center" marginTop={5}>
             {numberOfJobsToShow > 0 && jobsToShow?.length > 0 && (
-              <ButtonCustom title="Show More..." onClick={() => Router.push(navconstants.jobsAndDetails)} />
+              <Link href={navconstants.jobsAndDetails} passHref legacyBehavior>
+                <a aria-label="Show all open job positions">
+                  <ButtonCustom title="Show More..." />
+                </a>
+              </Link>
             )}
           </Grid>
         </Grid>
       </Grid>
-    </Grid>
+    </section>
   );
 }

@@ -4,28 +4,28 @@ export const homeComp1Data = {
   socialMedia: [
     {
       img: getPublicImageUrl("/images/home/instagram.svg"),
-      alt: "Instagram",
-      link:"https://www.instagram.com/thecodekart/"
+      alt: "Follow CodeKart on Instagram",
+      link: "https://www.instagram.com/thecodekart/",
     },
     {
       img: getPublicImageUrl("/images/home/wa.svg"),
-      alt: "WhatsApp",
-      link:"https://wa.me/9658375094"
+      alt: "Chat with CodeKart on WhatsApp",
+      link: "https://wa.me/9658375094",
     },
     {
       img: getPublicImageUrl("/images/home/linkedin.svg"),
-      alt: "LinkedIn",
-      link:"https://www.linkedin.com/company/codekart/"
+      alt: "Connect with CodeKart on LinkedIn",
+      link: "https://www.linkedin.com/company/codekart/",
     },
     {
       img: getPublicImageUrl("/images/home/twiter.svg"),
-      alt: "Twitter",
-      link:"https://x.com/codekart"
+      alt: "Follow CodeKart on Twitter",
+      link: "https://x.com/codekart",
     },
   ],
   heroText: `Inspiring Creativity, \nDelivering Excellence \nwith CodeKart.`,
   heroSubText:
-    "We help you build a modern, user-friendly website with good SEO and a clean design.",
+    "Build a modern, SEO-optimized, and user-friendly website with CodeKart's professional web development services.",
   scrollButton: getPublicImageUrl("/images/home/scrollBtn.png"),
 };
 
@@ -33,107 +33,106 @@ export const homeComp2Data = {
   brands1: [
     {
       img: getPublicImageUrl("/images/home/oracle.svg"),
-      alt: "Oracle",
+      alt: "Oracle - Trusted by CodeKart",
     },
     {
       img: getPublicImageUrl("/images/home/smartdata.svg"),
-      alt: "SmartData",
+      alt: "SmartData - Partnered with CodeKart",
     },
     {
       img: getPublicImageUrl("/images/home/globalpal.svg"),
-      alt: "GlobalPal",
+      alt: "GlobalPal - CodeKart Collaboration",
     },
     {
       img: getPublicImageUrl("/images/home/inergio.svg"),
-      alt: "Inergio",
+      alt: "Inergio - Supported by CodeKart",
     },
     {
       img: getPublicImageUrl("/images/home/winjit.svg"),
-      alt: "Winjit",
+      alt: "Winjit - CodeKart Clients",
     },
     {
       img: getPublicImageUrl("/images/home/oracle.svg"),
-      alt: "Oracle",
+      alt: "Oracle - Trusted Again by CodeKart",
     },
   ],
   brands2: [
     {
       img: getPublicImageUrl("/images/home/Volkswagen.svg"),
-      alt: "Volkswagen",
+      alt: "Volkswagen - Powered by CodeKart",
     },
     {
       img: getPublicImageUrl("/images/home/Tata.svg"),
-      alt: "Tata",
+      alt: "Tata - CodeKart Collaboration",
     },
     {
       img: getPublicImageUrl("/images/home/Jsw.svg"),
-      alt: "JSW",
+      alt: "JSW - Strategic Partner of CodeKart",
     },
     {
       img: getPublicImageUrl("/images/home/Infovision.svg"),
-      alt: "Infovision",
+      alt: "Infovision - CodeKart Client",
     },
     {
       img: getPublicImageUrl("/images/home/Dxc.svg"),
-      alt: "DXC",
+      alt: "DXC - CodeKart Digital Solutions",
     },
     {
       img: getPublicImageUrl("/images/home/Bricxy.svg"),
-      alt: "Bricxy",
+      alt: "Bricxy - Working with CodeKart",
     },
     {
       img: getPublicImageUrl("/images/home/Blenheim.svg"),
-      alt: "Blenheim",
+      alt: "Blenheim - Powered by CodeKart",
     },
   ],
   heroTextImage: {
     img: getPublicImageUrl("/images/home/revitalize-your-brand.png"),
-    alt: "Revitalize Your Brand",
+    alt: "Revitalize Your Brand with CodeKart",
   },
 };
 
 export const HomeComp3Data = [
   {
-    value: "Cloud-Powered Web Solutions",
     text1: `Cloud-Powered Web\nSolutions`,
     text2: "Crafting Your Online Presence",
     text3:
-      "Our web development services ensure your website is not only visually appealing but also highly functional and optimized for performance. From e-commerce platforms to corporate websites, we build sites that drive engagement and conversions.",
+      "We build scalable, SEO-friendly websites that are fast, responsive, and tailored to your brand goals. Ideal for businesses seeking performance and aesthetics.",
     img: getPublicImageUrl("/images/whatwedo/service1.svg"),
   },
   {
     text1: `AI-Driven Mobile\nSolutions`,
     text2: "Engaging and High-Performance Mobile Applications",
     text3:
-      "We create dynamic mobile apps for iOS and Android that provide exceptional user experiences. Our apps are designed to be user-friendly, feature-rich, and scalable, ensuring that your business remains competitive in the mobile-first world.",
+      "We design intuitive and robust apps for Android and iOS, powered by AI for smarter user experiences and real-time insights.",
     img: getPublicImageUrl("/images/whatwedo/service2.svg"),
   },
   {
     text1: `Tailored Enterprise\nApplications`,
     text2: "Tailored Solutions for Your Unique Needs",
     text3:
-      "At CodeKart, we specialize in developing custom software that perfectly aligns with your business objectives. Whether you need an enterprise application, a bespoke business solution, or a specific tool to streamline your operations, our team is here to bring your vision to life.",
+      "Custom enterprise software built around your workflows, helping you automate processes and achieve business growth.",
     img: getPublicImageUrl("/images/whatwedo/service3.svg"),
   },
   {
     text1: `Interactive Experience\nDesign`,
     text2: "Intuitive and Engaging Interfaces",
     text3:
-      "Our design philosophy centers around the user. We create intuitive and engaging interfaces that enhance user satisfaction and drive business success. Our designs are aesthetically pleasing and highly functional, ensuring a seamless user experience.",
+      "UI/UX designs that are user-centric, visually pleasing, and conversion-optimized for better user retention.",
     img: getPublicImageUrl("/images/whatwedo/service4.svg"),
   },
   {
     text1: `Cognitive Quality\nAssurance`,
     text2: "Ensuring Quality and Reliability",
     text3:
-      "Comprehensive quality assurance testing services to identify and fix defects, ensuring your software is reliable, functional, and meets the highest standards before deployment. Enhance user satisfaction and product performance.",
+      "Our QA experts conduct rigorous testing to ensure your software is bug-free, secure, and production-ready.",
     img: getPublicImageUrl("/images/whatwedo/service5.svg"),
   },
   {
     text1: `Expert Resource\nAugmentation`,
-    text2: "Crafting Your Online Presence",
+    text2: "Extend Your Development Team",
     text3:
-      "Our web development services ensure your website is not only visually appealing but also highly functional and optimized for performance. From e-commerce platforms to corporate websites, we build sites that drive engagement and conversions.",
+      "Hire expert developers from CodeKart to boost your project capacity and meet delivery timelines effectively.",
     img: getPublicImageUrl("/images/whatwedo/service6.svg"),
   },
 ];
@@ -142,24 +141,24 @@ export const homeComp4Data = {
   blogposts: [
     {
       img: getPublicImageUrl("/images/home/blogpost1.png"),
-      alt: "Blogpost1",
+      alt: "Top 5 Website Trends in 2024 - CodeKart Blog",
     },
     {
       img: getPublicImageUrl("/images/home/blogpost2.png"),
-      alt: "Blogpost2",
+      alt: "Why SEO is Important for Every Business - CodeKart Blog",
     },
     {
       img: getPublicImageUrl("/images/home/blogpost3.png"),
-      alt: "Blogpost3",
+      alt: "E-commerce Tips to Increase Sales - CodeKart Blog",
     },
     {
       img: getPublicImageUrl("/images/home/blogpost4.png"),
-      alt: "Blogpost4",
+      alt: "Designing for Mobile First - CodeKart Insights",
     },
   ],
   heroText: "Inspiring Creativity, Delivering Excellence with CodeKart.",
   heroSubText:
-    "We help you build a modern, user-friendly website with good SEO and a clean design.",
+    "Professional design and SEO-driven development services to boost your business visibility and performance.",
   scrollButton: getPublicImageUrl("/images/home/scrollBtn.png"),
 };
 
@@ -167,55 +166,55 @@ export const homeComp5Data = [
   {
     text1: "Healthcare",
     text2:
-      "Innovative healthcare solutions enhancing patient care, streamlining operations, and ensuring compliance with industry regulations through advanced technology and custom software.",
+      "Modern healthcare platforms designed to improve patient care and streamline hospital and clinic operations.",
     img: getPublicImageUrl("/images/whatwedo/industry1.svg"),
   },
   {
     text1: "Finance",
     text2:
-      "Robust financial software and services for secure transactions, regulatory compliance, and enhanced customer experiences, driving growth and efficiency.",
+      "Secure and scalable financial solutions to manage transactions, investments, and regulatory compliance.",
     img: getPublicImageUrl("/images/whatwedo/industry2.svg"),
   },
   {
     text1: "Retail",
     text2:
-      "Comprehensive retail solutions to optimize operations, improve customer engagement, and drive sales through seamless e-commerce platforms and inventory management systems.",
+      "Custom eCommerce development, POS integration, and inventory systems to scale retail businesses.",
     img: getPublicImageUrl("/images/whatwedo/industry3.svg"),
   },
   {
     text1: "Education",
     text2:
-      "Advanced educational technologies providing interactive learning experiences, streamlined administrative processes, and improved student outcomes through custom learning management systems.",
+      "Learning management systems and e-learning platforms that transform educational delivery and access.",
     img: getPublicImageUrl("/images/whatwedo/industry4.svg"),
   },
   {
     text1: "Manufacturing",
     text2:
-      "Cutting-edge manufacturing solutions to automate processes, improve production efficiency, and ensure quality control with real-time monitoring and analytics.",
+      "Software for production tracking, automation, and real-time analytics to enhance manufacturing efficiency.",
     img: getPublicImageUrl("/images/whatwedo/industry5.svg"),
   },
   {
     text1: "Logistics",
     text2:
-      "Efficient logistics and supply chain management solutions enhancing operational efficiency, reducing costs, and ensuring timely delivery through advanced tracking and management systems.",
+      "Fleet and warehouse management solutions to optimize routes, track shipments, and reduce logistics costs.",
     img: getPublicImageUrl("/images/whatwedo/industry6.svg"),
   },
   {
     text1: "Real-Estate",
     text2:
-      "Innovative real estate software solutions for property management, client engagement, and streamlined transactions, enhancing operational efficiency and customer satisfaction.",
+      "CRM and property listing platforms to simplify transactions and attract more real estate clients.",
     img: getPublicImageUrl("/images/whatwedo/industry7.svg"),
   },
   {
     text1: "Automotive",
     text2:
-      "Advanced automotive solutions for vehicle management, enhanced customer experiences, and streamlined operations through custom software and integrated technologies.",
+      "Connected vehicle platforms, dealership CRM, and IoT-based solutions for the auto industry.",
     img: getPublicImageUrl("/images/whatwedo/industry8.svg"),
   },
   {
     text1: "Energy",
     text2:
-      "Tailored energy sector solutions optimizing resource management, ensuring regulatory compliance, and enhancing operational efficiency with advanced monitoring and analytics tools.",
+      "Smart energy dashboards, consumption analytics, and resource management systems for the energy sector.",
     img: getPublicImageUrl("/images/whatwedo/industry9.svg"),
   },
 ];

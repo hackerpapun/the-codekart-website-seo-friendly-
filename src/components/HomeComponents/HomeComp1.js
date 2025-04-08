@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import styles from "../../styles/Home/HomeComp1.module.css";
 import { homeComp1Data } from "./HomeConstantDatas";
 import { Grid } from "@mui/material";
@@ -70,14 +71,9 @@ export default function HomeComp1() {
         help you to build website company that is modern, user friendly, good{" "}
         <br /> CEO, and Clean design
       </p>
-      <button
-        onClick={() => {
-          router.push(`${navconstants.whoweare}#contactus`);
-        }}
-        className={styles.hero1btn}
-      >
-        Get started
-      </button>
+      <Link href={`${navconstants.whoweare}#contactus`} passHref legacyBehavior>
+        <a className={styles.hero1btn}>Get started</a>
+      </Link>
       <div
         className={styles.hero1scrollContainer}
         onClick={scrollToNextSection}

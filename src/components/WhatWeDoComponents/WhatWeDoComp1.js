@@ -40,6 +40,7 @@ export default function WhatWeDoComp1() {
       <Grid item md={5} style={{ padding: "0px 1rem" }}>
         <img
           src={getPublicImageUrl("/images/whatwedo/img1.svg")}
+          alt="Codekart helps businesses with impactful tech solutions"
           className={styles.whatwedoComp15}
         />
       </Grid>

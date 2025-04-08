@@ -3,44 +3,44 @@ import { getPublicImageUrl } from "@/constants/images";
 export const whatWeDoComp2ServicesData = [
   {
     text1: `Cloud-Powered Web \nSolutions`,
-    text2: "Crafting Your Online Presence",
+    text2: "SEO-Optimized, High-Performance Web Development",
     text3:
-      "Our web development services ensure your website is not only visually appealing but also highly functional and optimized for performance. From e-commerce platforms to corporate websites, we build sites that drive engagement and conversions.",
+      "We build responsive, fast-loading websites optimized for SEO and user experience. From eCommerce to corporate platforms, our web solutions are scalable, secure, and designed to convert visitors into customers.",
     img: getPublicImageUrl("/images/whatwedo/service1.svg"),
   },
   {
     text1: `AI-Driven Mobile \nSolutions`,
-    text2: "Engaging and High-Performance Mobile Applications",
+    text2: "Custom Mobile Apps for iOS and Android",
     text3:
-      "We create dynamic mobile apps for iOS and Android that provide exceptional user experiences. Our apps are designed to be user-friendly, feature-rich, and scalable, ensuring that your business remains competitive in the mobile-first world.",
+      "Delivering feature-rich mobile apps with intelligent automation and AI integration. Our mobile solutions ensure smooth UX, powerful functionality, and scalability across all modern devices.",
     img: getPublicImageUrl("/images/whatwedo/service2.svg"),
   },
   {
     text1: `Tailored Enterprise \nApplications`,
-    text2: "Tailored Solutions for Your Unique Needs",
+    text2: "Custom Software for Business Efficiency",
     text3:
-      "At CodeKart, we specialize in developing custom software that perfectly aligns with your business objectives. Whether you need an enterprise application, a bespoke business solution, or a specific tool to streamline your operations, our team is here to bring your vision to life.",
+      "We develop powerful enterprise applications tailored to your workflows and goals. From internal platforms to B2B tools, our custom software streamlines operations, reduces costs, and enhances productivity.",
     img: getPublicImageUrl("/images/whatwedo/service3.svg"),
   },
   {
     text1: `Interactive Experience \nDesign`,
-    text2: "Intuitive and Engaging Interfaces",
+    text2: "User-Centric UI/UX Design Services",
     text3:
-      "Our design philosophy centers around the user. We create intuitive and engaging interfaces that enhance user satisfaction and drive business success. Our designs are aesthetically pleasing and highly functional, ensuring a seamless user experience.",
+      "Creating elegant, intuitive designs that keep users engaged and delighted. Our UI/UX experts craft seamless digital experiences that drive retention, satisfaction, and business success.",
     img: getPublicImageUrl("/images/whatwedo/service4.svg"),
   },
   {
     text1: `Cognitive Quality \nAssurance`,
-    text2: "Ensuring Quality and Reliability",
+    text2: "AI-Enabled Software Testing and QA",
     text3:
-      "Comprehensive quality assurance testing services to identify and fix defects, ensuring your software is reliable, functional, and meets the highest standards before deployment. Enhance user satisfaction and product performance.",
+      "We ensure flawless product performance through intelligent testing and automation. Our QA services identify issues early, guarantee security and usability, and deliver a bug-free user experience.",
     img: getPublicImageUrl("/images/whatwedo/service5.svg"),
   },
   {
     text1: `Expert Resource \nAugmentation`,
-    text2: "Crafting Your Online Presence",
+    text2: "On-Demand IT Talent for Fast Scaling",
     text3:
-      "Our web development services ensure your website is not only visually appealing but also highly functional and optimized for performance. From e-commerce platforms to corporate websites, we build sites that drive engagement and conversions.",
+      "Access top-tier developers, designers, and QA engineers to scale your team efficiently. Our resource augmentation model helps you stay agile, meet deadlines, and reduce hiring overhead.",
     img: getPublicImageUrl("/images/whatwedo/service6.svg"),
   },
 ];
@@ -49,55 +49,55 @@ export const whatWeDoComp2IndustryData = [
   {
     text1: "Healthcare",
     text2:
-      "Innovative healthcare solutions enhancing patient care, streamlining operations, and ensuring compliance with industry regulations through advanced technology and custom software.",
+      "Innovative healthcare software enhancing patient care, streamlining operations, and meeting HIPAA and industry regulations with secure and efficient digital solutions.",
     img: getPublicImageUrl("/images/whatwedo/industry1.svg"),
   },
   {
     text1: "Finance",
     text2:
-      "Robust financial software and services for secure transactions, regulatory compliance, and enhanced customer experiences, driving growth and efficiency.",
+      "Advanced fintech solutions built for secure transactions, fraud prevention, regulatory compliance, and seamless customer experiences across digital banking and investment platforms.",
     img: getPublicImageUrl("/images/whatwedo/industry2.svg"),
   },
   {
     text1: "Retail",
     text2:
-      "Comprehensive retail solutions to optimize operations, improve customer engagement, and drive sales through seamless e-commerce platforms and inventory management systems.",
+      "Retail tech solutions that optimize inventory, personalize customer journeys, and boost sales with omnichannel eCommerce platforms, POS systems, and analytics tools.",
     img: getPublicImageUrl("/images/whatwedo/industry3.svg"),
   },
   {
     text1: "Education",
     text2:
-      "Advanced educational technologies providing interactive learning experiences, streamlined administrative processes, and improved student outcomes through custom learning management systems.",
+      "Smart EdTech platforms that foster remote learning, interactive classrooms, and student engagement. From LMS to virtual classrooms, we power education for the digital age.",
     img: getPublicImageUrl("/images/whatwedo/industry4.svg"),
   },
   {
     text1: "Manufacturing",
     text2:
-      "Cutting-edge manufacturing solutions to automate processes, improve production efficiency, and ensure quality control with real-time monitoring and analytics.",
+      "Cutting-edge manufacturing solutions to automate processes, enhance production lines, and improve efficiency through real-time analytics and industrial IoT integration.",
     img: getPublicImageUrl("/images/whatwedo/industry5.svg"),
   },
   {
     text1: "Logistics",
     text2:
-      "Efficient logistics and supply chain management solutions enhancing operational efficiency, reducing costs, and ensuring timely delivery through advanced tracking and management systems.",
+      "End-to-end logistics and supply chain software to optimize route planning, fleet tracking, warehouse operations, and delivery management for greater speed and accuracy.",
     img: getPublicImageUrl("/images/whatwedo/industry6.svg"),
   },
   {
     text1: "Real-Estate",
     text2:
-      "Innovative real estate software solutions for property management, client engagement, and streamlined transactions, enhancing operational efficiency and customer satisfaction.",
+      "Property tech (PropTech) innovations that streamline property management, automate listings, and improve client interactions through advanced CRM and virtual tools.",
     img: getPublicImageUrl("/images/whatwedo/industry7.svg"),
   },
   {
     text1: "Automotive",
     text2:
-      "Advanced automotive solutions for vehicle management, enhanced customer experiences, and streamlined operations through custom software and integrated technologies.",
+      "Smart automotive software enabling connected vehicle systems, customer portals, dealer networks, and real-time diagnostics to drive next-gen mobility experiences.",
     img: getPublicImageUrl("/images/whatwedo/industry8.svg"),
   },
   {
     text1: "Energy",
     text2:
-      "Tailored energy sector solutions optimizing resource management, ensuring regulatory compliance, and enhancing operational efficiency with advanced monitoring and analytics tools.",
+      "Custom energy software to monitor usage, optimize grids, and ensure sustainability through real-time data, predictive analytics, and regulatory compliance tools.",
     img: getPublicImageUrl("/images/whatwedo/industry9.svg"),
   },
 ];
