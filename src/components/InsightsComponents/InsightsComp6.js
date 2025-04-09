@@ -8,9 +8,11 @@ export default function InsightsComp6() {
   return (
     <Grid
       container
+      component="section"
+      aria-label="Current Job Openings at CodeKart"
       className={`${styles.insightsComp6Container} ${notosans.variable}`}
     >
-     <AllOpenPositions numberOfJobsToShow={4} />
+      <AllOpenPositions numberOfJobsToShow={4} />
     </Grid>
   );
 }
