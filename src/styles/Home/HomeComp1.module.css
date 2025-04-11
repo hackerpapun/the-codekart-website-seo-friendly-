@@ -27,6 +27,7 @@
   border-radius: 30px;
   padding: 10px 17px;
   border: none;
+  text-decoration: none;
   color: white;
   cursor: pointer;
 }

@@ -55,14 +55,13 @@ export default function HomeComp1() {
           repeat: Infinity,
         }}
         style={{
-          background:
-            "linear-gradient(90deg, #FA6400, #FF9F00, #5401AD, #6A1BA0, #FA6400)",
-          backgroundSize: "300% 100%",
-          WebkitBackgroundClip: "text",
-          backgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          textFillColor: "transparent",
-          fontSize: "5vw",
+      background: 'linear-gradient(90deg, #FA6400, #FF9F00, #5401AD, #6A1BA0, #FA6400)',
+           backgroundSize: '300% 100%',
+           WebkitBackgroundClip: 'text',
+           backgroundClip: 'text',
+           WebkitTextFillColor: 'transparent',
+           textFillColor: 'transparent',
+           fontSize: '5vw',
         }}
       >
         Inspiring Creativity, Delivering <br /> Excellence with CodeKart.

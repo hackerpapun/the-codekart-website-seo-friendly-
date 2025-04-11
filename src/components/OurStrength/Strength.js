@@ -6,23 +6,31 @@ import { getPublicImageUrl } from "@/constants/images";
 const Strength = () => {
   return (
     <>
-      <Grid container id='ourstrength' className={styles.strengthContainer}>
+      <Grid container id="ourstrength" className={styles.strengthContainer}>
         <Grid item sm={12} xs={12} className={styles.firstStrength}>
-          <p className={styles.strengthParagraph}>our strength</p>
+          <p className={styles.strengthParagraph} aria-label="Our Strength">
+            our strength
+          </p>
         </Grid>
 
         <Grid item sm={12} xs={12} className={styles.secondStrength}>
-          <h1 className={styles.strengthHeader}>Strength</h1>
+          <h2 className={styles.strengthHeader}>Strength</h2>
         </Grid>
       </Grid>
+
       <Grid container className={styles.MainMainStrengthContainer}>
         <Grid container className={styles.MainStrengthContainer}>
-          <Grid container className={styles.SubStrengthContainer}>
+          <Grid
+            container
+            className={styles.SubStrengthContainer}
+            component="section"
+            aria-labelledby="strength-title"
+          >
             <Grid item sm={6} xs={12} className={styles.leftStrengthContainer}>
               <div>
-                <h1 className={styles.contentLeftContainer}>
+                <h3 className={styles.contentLeftContainer} id="strength-title">
                   Innovative Solutions
-                </h1>
+                </h3>
                 <p className={styles.contentRightContainer}>
                   We deliver creative and forward-thinking solutions that meet
                   the unique needs of our clients.
@@ -34,8 +42,9 @@ const Strength = () => {
                 src={getPublicImageUrl(
                   "/images/WhoWeAreDiscover/strenghtImage.png"
                 )}
-                alt=""
+                alt="Team delivering innovative solutions"
                 className={styles.rightStrengthContainerPhoto}
+                loading="lazy"
               />
             </Grid>
           </Grid>
