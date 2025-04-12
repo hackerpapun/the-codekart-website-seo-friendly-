@@ -34,7 +34,6 @@ export default function WhatWeDoServicesGlobalComp({
   relatedReadingData,
   constantData,
 }) {
-  
   const Router = useRouter();
 
   return (
@@ -47,24 +46,24 @@ export default function WhatWeDoServicesGlobalComp({
             : styles.wwdServicesGlobal1MainContainerVideo
         }
       >
-        {
-          constantData?.bgVideo ? (
-            <video
-              src={constantData?.bgVideo}
-              autoPlay
-              muted
-              loop
-              preload="none"
-              className={styles.wwdServicesGlobal1ContainerVideo}
-            />
-          ) : null
-          
-        }
-        { constantData?.healthBg && <img
-             src={constantData?.healthBg}
-             alt="Bg Image"
-             className={styles.wwdServicesGlobal1ContainerImage}
-           />}
+        {constantData?.bgVideo && (
+          <video
+            src={constantData?.bgVideo}
+            autoPlay
+            muted
+            loop
+            preload="none"
+            className={styles.wwdServicesGlobal1ContainerVideo}
+            aria-label="Background video"
+          />
+        )}
+        {constantData?.healthBg && (
+          <img
+            src={constantData?.healthBg}
+            alt="Bg Image"
+            className={styles.wwdServicesGlobal1ContainerImage}
+          />
+        )}
         <Grid
           container
           className={
@@ -126,6 +125,7 @@ export default function WhatWeDoServicesGlobalComp({
           <img
             src={constantData?.part2Img}
             className={styles.wwdServicesGlobal7}
+            alt="Image related to part 2"
           />
         </Grid>
         <Grid item xs={12} lg={0.5}></Grid>
@@ -138,14 +138,14 @@ export default function WhatWeDoServicesGlobalComp({
           <div className={styles.wwdServicesGlobal9}>
             Most Desired Outcomes from the Resource Outsourcing
           </div>
-          {/* dont put carousel inside Grid */}
+          {/* Carousel */}
           <Carousel
             responsive={responsive}
             infinite
             autoPlay
             autoPlaySpeed={3000}
             partialVisible
-            // removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+            aria-label="Resource outsourcing carousel"
           >
             {cardData?.map((item, i) => (
               <div
@@ -159,6 +159,7 @@ export default function WhatWeDoServicesGlobalComp({
                 <img
                   src={item?.img}
                   className={styles.wwdServicesGlobal10Img}
+                  alt={item?.text1 || "Card Image"}
                 />
                 <div className={styles.wwdServicesGlobal10Text1}>
                   {item?.text1}

@@ -3,6 +3,7 @@ import React from "react";
 import styles from "../styles/HomeStyles/homebuttoncomp.module.css";
 import Image from "next/image";
 import { IMAGES } from "@/constants/images";
+import Link from "next/link";
 
 export default function HomeButtonComp({
   title,
@@ -11,19 +12,22 @@ export default function HomeButtonComp({
   buttonStyles,
 }) {
   return (
-    <Button
-      variant="contained"
-      className={`${styles.homebuttonComp} ${buttonStyles}`}
-      onClick={onClick}
-    >
-      <a href={onClickLink} style={{ textDecoration: "none", color: "#000" }}>
+    <Link href={onClickLink} passHref>
+      <Button
+        variant="contained"
+        className={`${styles.homebuttonComp} ${buttonStyles}`}
+        onClick={onClick}
+        aria-label={title} // Improves accessibility
+      >
         {title}
-        <img
+        <Image
           src={IMAGES.home.uilArrowIcon}
-          alt=""
+          alt="Arrow icon indicating button action"
           className={styles.homebuttonCompImg}
+          width={20}
+          height={20}
         />
-      </a>
-    </Button>
+      </Button>
+    </Link>
   );
 }

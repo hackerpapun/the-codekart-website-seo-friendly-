@@ -12,6 +12,8 @@ export default function ButtonCustom(props) {
       className={`${styles.buttonCustom} ${buttonStyles}`}
       onClick={onClick}
       href={onClickLink}
+      aria-label={title} 
+      style={{ width: "100%", maxWidth: "300px", boxSizing: "border-box" }} // Responsive styling for the button
     >
       {title}
       {icon && (

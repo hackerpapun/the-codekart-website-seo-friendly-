@@ -9,6 +9,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { navconstants } from "@/constants/navconstants";
 import { useRouter } from "next/router";
+import Head from "next/head"; // For SEO Head component
 
 const responsive = {
   superLargeDesktop: {
@@ -38,6 +39,24 @@ export default function WhatWeDoServicesGlobalComp({
 
   return (
     <Box className={`${notosans.variable} ${montserrat.variable}`}>
+      {/* SEO HEAD Section */}
+      <Head>
+        <title>{constantData?.name || "What We Do - CodeKart"}</title>
+        <meta
+          name="description"
+          content={
+            constantData?.part1Text1 ||
+            "Learn about the services offered by CodeKart."
+          }
+        />
+        <meta
+          name="keywords"
+          content="web development, services, CodeKart, outsourcing, creativity"
+        />
+        <meta name="robots" content="index, follow" />
+        {/* Add other relevant meta tags here */}
+      </Head>
+
       {/* image bg part 1 */}
       <div
         className={
@@ -46,24 +65,23 @@ export default function WhatWeDoServicesGlobalComp({
             : styles.wwdServicesGlobal1MainContainerVideo
         }
       >
-        {
-          constantData?.bgVideo ? (
-            <video
-              src={constantData?.bgVideo}
-              autoPlay
-              muted
-              loop
-              preload="none"
-              className={styles.wwdServicesGlobal1ContainerVideo}
-            />
-          ) : null
-          
-        }
-        { constantData?.healthBg && <img
-             src={constantData?.healthBg}
-             alt="Bg Image"
-             className={styles.wwdServicesGlobal1ContainerImage}
-           />}
+        {constantData?.bgVideo && (
+          <video
+            src={constantData?.bgVideo}
+            autoPlay
+            muted
+            loop
+            preload="none"
+            className={styles.wwdServicesGlobal1ContainerVideo}
+          />
+        )}
+        {constantData?.healthBg && (
+          <img
+            src={constantData?.healthBg}
+            alt="Bg Image"
+            className={styles.wwdServicesGlobal1ContainerImage}
+          />
+        )}
         <Grid
           container
           className={
@@ -144,7 +162,6 @@ export default function WhatWeDoServicesGlobalComp({
             autoPlay
             autoPlaySpeed={3000}
             partialVisible
-            // removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
           >
             {cardData?.map((item, i) => (
               <div
@@ -158,6 +175,7 @@ export default function WhatWeDoServicesGlobalComp({
                 <img
                   src={item?.img}
                   className={styles.wwdServicesGlobal10Img}
+                  alt="Service Image"
                 />
                 <div className={styles.wwdServicesGlobal10Text1}>
                   {item?.text1}

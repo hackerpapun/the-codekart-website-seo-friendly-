@@ -10,7 +10,6 @@ const Carusal = () => {
       containt: (
         <>
           <p>
-            {" "}
             “I had a wonderful experience and I would <br />
             highly recommend this business to others.”
           </p>
@@ -58,51 +57,49 @@ const Carusal = () => {
       items: 1,
     },
   };
+
   return (
-    <>
-      <Grid container className={styles.carausalMainContainer}>
-        <Grid sm={6} xs={12} className={styles.carausalleftcontaint}>
-          <div>
-            <h1 className={styles.carausalLeftContainer}>
-              WHAT OTHERS <br />
-              <span className={styles.spanContaint}>SAY</span> ABOUT US
-            </h1>
-          </div>
-        </Grid>
-        <Grid sm={6} xs={12} className={styles.carausal}>
-          <Grid container>
-            <Grid sm={6} xs={12}>
-              <div
-                style={{
-                  width: "100%",
-                }}
+    <Grid container className={styles.carausalMainContainer}>
+      {/* Left Side Content */}
+      <Grid sm={6} xs={12} className={styles.carausalleftcontaint}>
+        <div>
+          <h1 className={styles.carausalLeftContainer}>
+            WHAT OTHERS <br />
+            <span className={styles.spanContaint}>SAY</span> ABOUT US
+          </h1>
+        </div>
+      </Grid>
+
+      {/* Right Side Carousel */}
+      <Grid sm={6} xs={12} className={styles.carausal}>
+        <Grid container>
+          <Grid sm={6} xs={12}>
+            <div style={{ width: "100%" }}>
+              <Carousel
+                responsive={responsive}
+                infinite={true}
+                autoPlay={true}
+                showDots={true}
+                arrows={false}
               >
-                <Carousel
-                  responsive={responsive}
-                  infinite={true}
-                  autoPlay={true}
-                  showDots={true}
-                  arrows={false}
-                >
-                  {carauSalaData.map((item, index) => (
-                    <div key={index} className={styles.carouselItem}>
-                      <div>
-                        <p className={styles.carausaltopContaint}>
-                          {item.containt}
-                        </p>
-                        <p className={styles.carausalbuttomContaint}>
-                          {item.buttom}
-                        </p>
-                      </div>
+                {carauSalaData.map((item, index) => (
+                  <div key={index} className={styles.carouselItem}>
+                    <div>
+                      <p className={styles.carausaltopContaint}>
+                        {item.containt}
+                      </p>
+                      <p className={styles.carausalbuttomContaint}>
+                        {item.buttom}
+                      </p>
                     </div>
-                  ))}
-                </Carousel>
-              </div>
-            </Grid>
+                  </div>
+                ))}
+              </Carousel>
+            </div>
           </Grid>
         </Grid>
       </Grid>
-    </>
+    </Grid>
   );
 };
 
