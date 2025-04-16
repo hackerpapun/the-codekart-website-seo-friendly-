@@ -70,7 +70,6 @@ const relatedReadingData = [
 ];
 
 const allConstantsData = {
-  // bgVideo: "/videos/ai_bg.mp4",
   bgImage: getPublicImageUrl("/images/whatwedo/cloud_bg.svg"),
   name: "Cloud & Data Solutions",
   part1Text1: "Your Data, Your Future ",
@@ -84,12 +83,15 @@ const allConstantsData = {
 
 export default function index() {
   return (
-    <DynamicMetadata title="Cloud & Data Solutions - Codekart Solutions Private Limited" description="Learn more about Codekart Solutions. ">
+    <DynamicMetadata
+      title="Cloud & Data Solutions - Codekart Solutions Private Limited"
+      description="Discover Codekart's Cloud & Data Services – from cloud infrastructure and integration to advanced data analytics and strategic insights."
+    >
       <WhatWeDoServicesGlobalComp
-      constantData={allConstantsData}
-      cardData={cardData}
-      relatedReadingData={relatedReadingData}
-    />
+        constantData={allConstantsData}
+        cardData={cardData}
+        relatedReadingData={relatedReadingData}
+      />
     </DynamicMetadata>
   );
 }

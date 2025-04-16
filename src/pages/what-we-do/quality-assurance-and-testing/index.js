@@ -1,28 +1,10 @@
-import WhatWeDoServicesGlobalComp from "@/components/WhatWeDoComponents/WhatWeDoServicesGlobalComp";
 import React from "react";
-
+import WhatWeDoServicesGlobalComp from "@/components/WhatWeDoComponents/WhatWeDoServicesGlobalComp";
 import { getPublicImageUrl } from "@/constants/images";
 import DynamicMetadata from "@/constants/DynamicMetadata";
 
+// Card section data
 const cardData = [
-  {
-    img: getPublicImageUrl("/images/whatwedo/qa2.svg"),
-    text1: "Comprehensive QA Testing",
-    text2:
-      "End-to-end testing services to verify functionality, performance, and security.",
-  },
-  {
-    img: getPublicImageUrl("/images/whatwedo/qa3.svg"),
-    text1: "Automated Testing Solutions",
-    text2:
-      "Implement automated tests to increase efficiency and coverage while reducing time and cost.",
-  },
-  {
-    img: getPublicImageUrl("/images/whatwedo/qa4.svg"),
-    text1: "Manual Testing Services",
-    text2:
-      "Expert manual testing to detect issues that automated tests might miss.",
-  },
   {
     img: getPublicImageUrl("/images/whatwedo/qa2.svg"),
     text1: "Comprehensive QA Testing",
@@ -43,6 +25,7 @@ const cardData = [
   },
 ];
 
+// Related reading data
 const relatedReadingData = [
   {
     type: "Resource",
@@ -70,8 +53,8 @@ const relatedReadingData = [
   },
 ];
 
+// Page constants
 const allConstantsData = {
-  // bgVideo: getPublicImageUrl("/videos/web_bg.mp4"),
   bgImage: getPublicImageUrl("/images/whatwedo/qa_bg.svg"),
   name: "Quality Assurance & Testing",
   part1Text1: "Comprehensive QA & Testing",
@@ -83,14 +66,18 @@ const allConstantsData = {
     "Our rigorous QA and testing processes ensure your software meets the highest standards of quality, reliability, and user satisfaction.",
 };
 
-export default function index() {
+// Exported Page Component
+export default function QualityAssurancePage() {
   return (
-    <DynamicMetadata title="Quality Assurance & Testing - Codekart Solutions Private Limited" description="Learn more about Codekart Solutions. ">
+    <DynamicMetadata
+      title="Quality Assurance & Testing - Codekart Solutions Private Limited"
+      description="Learn more about Codekart Solutions."
+    >
       <WhatWeDoServicesGlobalComp
-      constantData={allConstantsData}
-      cardData={cardData}
-      relatedReadingData={relatedReadingData}
-    />
+        constantData={allConstantsData}
+        cardData={cardData}
+        relatedReadingData={relatedReadingData}
+      />
     </DynamicMetadata>
   );
 }

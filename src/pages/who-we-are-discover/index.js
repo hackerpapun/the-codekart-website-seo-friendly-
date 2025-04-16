@@ -13,18 +13,21 @@ import DynamicMetadata from "@/constants/DynamicMetadata";
 
 const WhoWeAreDiscoverPage = () => {
   return (
-    <DynamicMetadata title="Who We Are Discover - Codekart Solutions Private Limited" description="Learn more about Codekart Solutions. ">
+    <DynamicMetadata
+      title="Who We Are Discover | Codekart Solutions Pvt. Ltd."
+      description="Discover our vision and values at Codekart Solutions. We're committed to innovation, client satisfaction, and shaping a tech-driven future together."
+    >
       <Grid container className={styles.topcontainer}>
         <Grid item sm={12} xs={12}>
           <div className={styles.AboutUsContainer}>
-            <h1 className={styles.AboutUsContaint}>About us</h1>
+            <h1 className={styles.AboutUsContaint}>About Us</h1>
           </div>
         </Grid>
         <Grid item sm={12} xs={12}>
           <div>
             <p className={styles.AboutContent}>
-              we are dedicated to crafting the future of technology. We have a
-              message called <br /> <b> “Let’s craft the future.”</b> It is a
+              We are dedicated to crafting the future of technology. We have a
+              message called <br /> <b>“Let’s craft the future.”</b> It is a
               value we uphold to inspire people and deliver successful products.
             </p>
           </div>
@@ -33,7 +36,7 @@ const WhoWeAreDiscoverPage = () => {
 
       <Grid container id="ourvision">
         <Grid item sm={12} xs={12} className={styles.secondContainer}>
-          <p className={styles.ptag}>our vision</p>
+          <p className={styles.ptag}>Our Vision</p>
         </Grid>
         <Grid item sm={12} xs={12} className={styles.secondVision}>
           <h1 className={styles.htag}>Vision</h1>
@@ -43,9 +46,11 @@ const WhoWeAreDiscoverPage = () => {
       <CardContainer />
       <Carusal />
       <Strength />
+
       <div id="contactus">
         <ContactUs />
       </div>
+
       <Faq />
     </DynamicMetadata>
   );

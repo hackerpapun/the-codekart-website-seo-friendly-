@@ -9,12 +9,14 @@ import Strength from "@/components/OurStrength/Strength";
 import Faq from "@/components/Faq&Contactus/Faq";
 import ContactUs from "@/components/Faq&Contactus/ContactUs";
 import { getPublicImageUrl } from "@/constants/images";
-import Head from 'next/head';
 import DynamicMetadata from "@/constants/DynamicMetadata";
+
 const WhoWeAreDiscoverPage = () => {
   return (
-    <DynamicMetadata title="Who We Are - Codekart Solutions Private Limited" description="Learn more about Codekart Solutions.">
-
+    <DynamicMetadata
+      title="Who We Are | Innovative Tech Company - Codekart Solutions"
+      description="Discover Codekart Solutions – a visionary tech company focused on innovation, digital empowerment, and client-centric solutions to shape the future."
+    >
       <Grid container className={styles.topcontainer}>
         <Grid item sm={12} xs={12}>
           <div className={styles.AboutUsContainer}>
@@ -24,8 +26,8 @@ const WhoWeAreDiscoverPage = () => {
         <Grid item sm={12} xs={12}>
           <div>
             <p className={styles.AboutContent}>
-              we are dedicated to crafting the future of technology. We have a
-              message called <br /> <b> “Let’s craft the future.”</b> It is a
+              We are dedicated to crafting the future of technology. We have a
+              message called <br /> <b>“Let’s craft the future.”</b> It is a
               value we uphold to inspire people and deliver successful products.
             </p>
           </div>
@@ -50,14 +52,14 @@ const WhoWeAreDiscoverPage = () => {
               )}
               header={"Innovation at the Core:"}
               content={
-                "We aim to consistently deliver cutting-edge digital solutions that simplify technology, driving business growth and empowering  individuals to achieve their full potential in an ever-evolving  digital landscape"
+                "We aim to consistently deliver cutting-edge digital solutions that simplify technology, driving business growth and empowering individuals to achieve their full potential in an ever-evolving digital landscape."
               }
             />
           </Grid>
           <Grid item sm={4} xs={12}>
             <Card
               image={getPublicImageUrl("/images/WhoWeAreDiscover/Empowerd.png")}
-              header={"Client-Centered Excellence: "}
+              header={"Client-Centered Excellence:"}
               content={
                 "Our commitment is to exceed client expectations by delivering reliable, high-quality products and services that are tailored to meet unique needs, fostering long-term partnerships based on trust and mutual success."
               }
@@ -68,7 +70,7 @@ const WhoWeAreDiscoverPage = () => {
               image={getPublicImageUrl(
                 "/images/WhoWeAreDiscover/ClientCenterd.png"
               )}
-              header={"Empowering Through Technology: "}
+              header={"Empowering Through Technology:"}
               content={
                 "We strive to make technology accessible and intuitive, enabling businesses and individuals to harness the power of digital tools for transformative outcomes, ensuring they remain competitive in a dynamic market."
               }

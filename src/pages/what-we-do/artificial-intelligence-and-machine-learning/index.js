@@ -81,12 +81,15 @@ const allConstantsData = {
 
 export default function index() {
   return (
-    <DynamicMetadata title="Artificial Intelligence & Machine Learning - Codekart Solutions Private Limited" description="Learn more about Codekart Solutions. ">
+    <DynamicMetadata
+      title="Artificial Intelligence & Machine Learning - Codekart Solutions Private Limited"
+      description="Explore Codekart's cutting-edge AI and ML services to automate operations, build predictive models, and stay competitive in the digital age."
+    >
       <WhatWeDoServicesGlobalComp
-      constantData={allConstantsData}
-      cardData={cardData}
-      relatedReadingData={relatedReadingData}
-    />
+        constantData={allConstantsData}
+        cardData={cardData}
+        relatedReadingData={relatedReadingData}
+      />
     </DynamicMetadata>
   );
 }

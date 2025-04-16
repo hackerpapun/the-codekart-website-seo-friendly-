@@ -12,6 +12,7 @@ import {
   Avatar,
   IconButton,
 } from "@mui/material";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import PersonIcon from "@mui/icons-material/Person";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
@@ -19,10 +20,10 @@ import styles from "../../../../styles/WhatWeDoStyles/articleStyle.module.css";
 
 import { notosans } from "@/assets/fonts/fonts";
 import ButtonCustom from "@/components/ButtonCustom";
-import HomeComp4 from "@/components/HomeComponents/HomeComp4";
 import RelatedReadingComp from "@/components/RelatedReadingComp/RelatedReadingComp";
 import { getPublicImageUrl } from "@/constants/images";
 
+// Mock related readings
 const relatedReadingData = [
   {
     type: "Resource",
@@ -53,22 +54,37 @@ const relatedReadingData = [
 export default function Home() {
   return (
     <>
-      <Container maxWidth="md" className={` ${notosans.variable}`}>
-        {/* Category */}
+      {/* SEO Meta Tags */}
+      <Head>
+        <title>How Generative AI is Transforming Tech | CodeKart</title>
+        <meta
+          name="description"
+          content="Discover how Generative AI is reshaping industries by automating content creation, enhancing creativity, and driving tech innovation at CodeKart."
+        />
+        <meta
+          name="keywords"
+          content="Generative AI, Artificial Intelligence, AI in Tech, AI Innovation, AI Content Creation, CodeKart"
+        />
+      </Head>
+
+      <Container maxWidth="md" className={notosans.variable}>
+        {/* Category Tag */}
         <Box mt={4} mb={2}>
           <Chip
-            label="AI & MI"
+            label="AI & ML"
             color="primary"
             style={{ fontWeight: "bold" }}
           />
         </Box>
-        {/* Title Section */}
+
+        {/* Title */}
         <Box mb={2}>
           <Typography variant="h4" fontWeight="bold">
             How Generative AI is Transforming Tech
           </Typography>
         </Box>
-        {/* Author and Date */}
+
+        {/* Author Info */}
         <Box display="flex" alignItems="center" mb={4}>
           <Avatar sx={{ bgcolor: "#696A75" }}>
             <PersonIcon />
@@ -91,82 +107,39 @@ export default function Home() {
             August 20, 2022
           </Typography>
         </Box>
-        {/* Main Image */}
+
+        {/* Cover Image */}
         <Card>
           <CardMedia
             component="img"
             image={getPublicImageUrl("/images/whatwedo/article.png")}
-            alt="Enigma Machine"
+            alt="Generative AI illustration"
             style={{ borderRadius: "8px" }}
           />
         </Card>
-        {/* Article Content */}
+
+        {/* Blog Body */}
         <Box mt={4}>
-          <Typography
-            variant="body1"
-            paragraph
-            className={styles.articleDescription}
-          >
-            Generative AI is a game-changing advancement in artificial
-            intelligence, capable of creating new content like text, images, and
-            even videos autonomously. It’s revolutionizing industries across the
-            board by enhancing creativity and efficiency...
-          </Typography>
-          <Typography
-            variant="body1"
-            paragraph
-            className={styles.articleDescription}
-          >
-            Generative AI is a game-changing advancement in artificial
-            intelligence, capable of creating new content like text, images, and
-            even music based on patterns learned from data. Unlike traditional
-            AI, which analyzes and responds to existing information, generative
-            AI can produce original content, making it a powerful tool across
-            industries.
-          </Typography>
-          <Typography
-            variant="body1"
-            paragraph
-            className={styles.articleDescription}
-          >
-            Key applications of generative AI include content creation, where it
-            automates writing and designing social media posts, ads, and
-            articles. In software development, it helps generate and debug code,
-            speeding up development cycles. The gaming and entertainment
-            industries also benefit, using generative AI to create dynamic
-            environments, realistic simulations, and personalized narratives.
-          </Typography>
-          <Typography
-            variant="body1"
-            paragraph
-            className={styles.articleDescription}
-          >
-            Businesses leverage generative AI for increased efficiency and cost
-            savings by automating tasks that traditionally require manual labor.
-            Its scalability allows for personalized content generation at
-            massive scales, while its innovative potential opens new doors for
-            product design and creative solutions.
-          </Typography>
-          <Typography
-            variant="body1"
-            paragraph
-            className={styles.articleDescription}
-          >
-            At Codekart, we harness generative AI to drive innovation in web and
-            app development. Our custom solutions empower businesses to
-            automate, scale, and innovate with AI-powered technology, ensuring
-            they stay competitive in the rapidly evolving tech landscape.
-          </Typography>
-          <Typography
-            variant="body1"
-            paragraph
-            className={styles.articleDescription}
-            mb={5}
-          >
-            Generative AI is here to stay, offering limitless possibilities for
-            the future of business and creativity.
-          </Typography>
+          {[
+            "Generative AI is a game-changing advancement in artificial intelligence, capable of creating new content like text, images, and even videos autonomously. It’s revolutionizing industries across the board by enhancing creativity and efficiency.",
+            "Unlike traditional AI, which analyzes and responds to existing data, generative AI can produce original outputs—be it music, writing, designs, or even functional code—opening doors to innovation and automation on an entirely new level.",
+            "Its applications include automated content creation for social media, intelligent ad copywriting, image generation, and even code debugging in software development.",
+            "Industries such as gaming, entertainment, and education are increasingly relying on generative AI for immersive environments, simulations, and personalized storytelling.",
+            "At CodeKart, we implement generative AI to help businesses automate redundant tasks, create scalable digital solutions, and unlock new creative possibilities across web and app development.",
+            "The future of business and tech lies in adaptive, AI-powered systems—and generative AI is paving that road to innovation and transformation.",
+          ].map((para, i) => (
+            <Typography
+              key={i}
+              variant="body1"
+              paragraph
+              className={styles.articleDescription}
+            >
+              {para}
+            </Typography>
+          ))}
         </Box>
+
+        {/* Newsletter Signup */}
         <Box className={styles.container}>
           <div>
             <Typography
@@ -181,11 +154,11 @@ export default function Home() {
               Join Our Newsletter
             </Typography>
 
-            {/* Input and Button Section */}
+            {/* Email Input */}
             <Box className={styles.inputContainer}>
               <TextField
                 variant="outlined"
-                placeholder="Enter your email.."
+                placeholder="Enter your email..."
                 className={styles.inputField}
               />
               <Button variant="contained" className={styles.submitButton}>
@@ -196,6 +169,7 @@ export default function Home() {
         </Box>
       </Container>
 
+      {/* Related Readings */}
       <Box mx={4}>
         <RelatedReadingComp relatedReadingData={relatedReadingData} />
       </Box>

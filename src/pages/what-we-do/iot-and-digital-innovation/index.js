@@ -1,27 +1,10 @@
+import React from "react";
 import { getPublicImageUrl } from "@/constants/images";
 import WhatWeDoServicesGlobalComp from "@/components/WhatWeDoComponents/WhatWeDoServicesGlobalComp";
-import React from "react";
 import DynamicMetadata from "@/constants/DynamicMetadata";
 
+// Card section data
 const cardData = [
-  {
-    img: getPublicImageUrl("/images/whatwedo/iot2.svg"),
-    text1: "IoT Device Integration",
-    text2:
-      "Connect and manage IoT devices to enhance functionality and data collection.",
-  },
-  {
-    img: getPublicImageUrl("/images/whatwedo/iot3.svg"),
-    text1: "Smart Solutions Development",
-    text2:
-      "Create intelligent systems that improve efficiency and provide valuable insights.",
-  },
-  {
-    img: getPublicImageUrl("/images/whatwedo/iot4.svg"),
-    text1: "Embedded Systems Design",
-    text2:
-      "Develop embedded systems for a range of applications, from consumer electronics to industrial equipment.",
-  },
   {
     img: getPublicImageUrl("/images/whatwedo/iot2.svg"),
     text1: "IoT Device Integration",
@@ -42,6 +25,7 @@ const cardData = [
   },
 ];
 
+// Related reading data
 const relatedReadingData = [
   {
     type: "Resource",
@@ -69,9 +53,9 @@ const relatedReadingData = [
   },
 ];
 
+// Page constants
 const allConstantsData = {
   bgVideo: getPublicImageUrl("/videos/iot_bg.mp4"),
-  // bgImage: getPublicImageUrl("/images/whatwedo/AI_bg.svg"),
   name: "IoT & Digital Innovation",
   part1Text1: "Pioneering IoT & Digital",
   part1Text2: "Innovation Solutions",
@@ -82,14 +66,18 @@ const allConstantsData = {
     "Our cybersecurity and risk management services help you stay secure and resilient in a constantly evolving threat landscape.",
 };
 
-export default function index() {
+// Exported Page Component
+export default function IoTDigitalInnovationPage() {
   return (
-    <DynamicMetadata title="IoT & Digital Innovation - Codekart Solutions Private Limited" description="Learn more about Codekart Solutions. ">
+    <DynamicMetadata
+      title="IoT & Digital Innovation - Codekart Solutions Private Limited"
+      description="Learn more about Codekart Solutions."
+    >
       <WhatWeDoServicesGlobalComp
-      constantData={allConstantsData}
-      cardData={cardData}
-      relatedReadingData={relatedReadingData}
-    />
+        constantData={allConstantsData}
+        cardData={cardData}
+        relatedReadingData={relatedReadingData}
+      />
     </DynamicMetadata>
   );
 }

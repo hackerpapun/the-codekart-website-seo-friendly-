@@ -3,6 +3,27 @@ import React from "react";
 import { getPublicImageUrl } from "@/constants/images";
 import DynamicMetadata from "@/constants/DynamicMetadata";
 
+// SEO Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Resource Outsourcing",
+  description:
+    "Codekart Solutions provides expert-level resource outsourcing services, including dedicated development teams, remote IT staffing, and project-based outsourcing.",
+  provider: {
+    "@type": "Organization",
+    name: "Codekart Solutions Private Limited",
+    url: "https://www.codekart.tech",
+    logo: getPublicImageUrl("/images/codekart_logo.svg"),
+  },
+  serviceType: ["IT Staffing", "Dedicated Developers", "Project Outsourcing"],
+  areaServed: {
+    "@type": "Place",
+    name: "Global",
+  },
+  url: "https://www.codekart.tech/what-we-do/resource-outsourcing",
+};
+
 const cardData = [
   {
     img: getPublicImageUrl("/images/whatwedo/resource2.svg"),
@@ -52,7 +73,6 @@ const relatedReadingData = [
 ];
 
 const allConstantsData = {
-  // bgVideo: "/videos/iot_bg.mp4",
   bgImage: getPublicImageUrl("/images/whatwedo/resource_bg.svg"),
   name: "Resource Outsourcing",
   part1Text1: "Expert Resource Outsourcing",
@@ -66,12 +86,46 @@ const allConstantsData = {
 
 export default function index() {
   return (
-    <DynamicMetadata title="Resource Outsourcing - Codekart Solutions Private Limited" description="Learn more about Codekart Solutions. ">
+    <>
+      <DynamicMetadata
+        title="Resource Outsourcing - Codekart Solutions Private Limited"
+        description="Codekart provides dedicated teams, remote IT staffing, and project-based outsourcing services to optimize your operations and scale efficiently."
+        canonical="https://www.codekart.tech/what-we-do/resource-outsourcing"
+        openGraph={{
+          title: "Resource Outsourcing Services | Codekart Solutions",
+          description:
+            "Access expert IT resources including dedicated developers, remote teams, and outsourcing solutions tailored to your business needs.",
+          url: "https://www.codekart.tech/what-we-do/resource-outsourcing",
+          type: "website",
+          images: [
+            {
+              url: getPublicImageUrl("/images/whatwedo/resource_bg.svg"),
+              width: 1200,
+              height: 630,
+              alt: "Resource Outsourcing by Codekart",
+            },
+          ],
+        }}
+        twitter={{
+          card: "summary_large_image",
+          title: "Resource Outsourcing Services | Codekart Solutions",
+          description:
+            "Hire top tech talent and optimize your operations with Codekart’s expert resource outsourcing services.",
+          image: getPublicImageUrl("/images/whatwedo/resource_bg.svg"),
+        }}
+      />
+
+      {/* JSON-LD for Schema.org SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <WhatWeDoServicesGlobalComp
-      constantData={allConstantsData}
-      cardData={cardData}
-      relatedReadingData={relatedReadingData}
-    />
-    </DynamicMetadata>
+        constantData={allConstantsData}
+        cardData={cardData}
+        relatedReadingData={relatedReadingData}
+      />
+    </>
   );
 }

@@ -6,7 +6,10 @@ import DynamicMetadata from "@/constants/DynamicMetadata";
 
 export default function JobsAndDetails() {
   return (
-    <DynamicMetadata title="Jobs & Details - Codekart Solutions Private Limited" description="Learn more about Codekart Solutions. ">
+    <DynamicMetadata
+      title="Jobs & Details - Codekart Solutions Private Limited"
+      description="Explore job opportunities and open positions at Codekart Solutions."
+    >
       <Grid
         container
         display="flex"

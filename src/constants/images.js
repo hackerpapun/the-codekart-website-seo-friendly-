@@ -1,8 +1,8 @@
 const CDN_PUBLIC_URL = "https://cdn.thecodekart.com/public";
 const CDN_ASSETS_URL = "https://cdn.thecodekart.com/assets";
 
-export const getPublicImageUrl = (path) => `${CDN_PUBLIC_URL}${path}`;
-export const getAssetsImageUrl = (path) => `${CDN_ASSETS_URL}${path}`;
+const getPublicImageUrl = (path) => `${CDN_PUBLIC_URL}${encodeURI(path)}`;
+const getAssetsImageUrl = (path) => `${CDN_ASSETS_URL}${encodeURI(path)}`;
 
 export const IMAGES = {
   logo: {
@@ -17,7 +17,7 @@ export const IMAGES = {
   health: {
     healthBg: getAssetsImageUrl("/images/home/health.png"),
   },
-  finance: { 
+  finance: {
     financeBg: getAssetsImageUrl("/images/home/finance.png"),
   },
   retail: {
@@ -27,18 +27,20 @@ export const IMAGES = {
     manufacturingBg: getAssetsImageUrl("/images/home/manufacturing.png"),
   },
   automotive: {
-    automotiveBg: getAssetsImageUrl("/images/home/manufacturing.png"),
+    automotiveBg: getAssetsImageUrl("/images/home/manufacturing.png"), // Same image as manufacturing
   },
   logistics: {
-    logisticsBg: getAssetsImageUrl("/images/home/manufacturing.png"),
+    logisticsBg: getAssetsImageUrl("/images/home/manufacturing.png"), // Same image as manufacturing
   },
   realestate: {
-    realestateBg: getAssetsImageUrl("/images/home/manufacturing.png"),
+    realestateBg: getAssetsImageUrl("/images/home/manufacturing.png"), // Same image as manufacturing
   },
   education: {
-    educationBg: getAssetsImageUrl("/images/home/manufacturing.png"),
+    educationBg: getAssetsImageUrl("/images/home/manufacturing.png"), // Same image as manufacturing
   },
   energy: {
-    energyBg: getAssetsImageUrl("/images/home/manufacturing.png"),
+    energyBg: getAssetsImageUrl("/images/home/manufacturing.png"), // Same image as manufacturing
   },
 };
+
+export { getPublicImageUrl, getAssetsImageUrl };

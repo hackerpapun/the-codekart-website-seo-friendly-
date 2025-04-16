@@ -1,7 +1,9 @@
-import WhatWeDoServicesGlobalComp1 from "@/components/WhatWeDoComponents/WhatWeDoServicesGlobalComp1";
+// Imports
 import React from "react";
+import WhatWeDoServicesGlobalComp1 from "@/components/WhatWeDoComponents/WhatWeDoServicesGlobalComp1";
 import { getAssetsImageUrl, getPublicImageUrl } from "@/constants/images";
 
+// Card Section Data
 const cardData = [
   {
     img: getPublicImageUrl("/images/whatwedo/resource2.svg"),
@@ -23,6 +25,7 @@ const cardData = [
   },
 ];
 
+// Related Reading Section
 const relatedReadingData = [
   {
     type: "Resource",
@@ -50,12 +53,14 @@ const relatedReadingData = [
   },
 ];
 
+// Constant Data for Hero & About Section
 const allConstantsData = {
-  // bgVideo: "/videos/iot_bg.mp4",
+  // bgVideo: "/videos/iot_bg.mp4", // uncomment if video background needed
   healthBg: getAssetsImageUrl("/images/home/health.png"),
   name: "Healthcare",
   part1Text1: "Patient at the center",
-  part1Text3: "We help you realize intelligent, connected,and patient-centric healthcare.",
+  part1Text3:
+    "We help you realize intelligent, connected, and patient-centric healthcare.",
   part2Img: getPublicImageUrl("/images/whatwedo/resource1.svg"),
   part2Description:
     "Optimize your operations with Codekart's resource outsourcing services. We provide skilled professionals and dedicated teams to support your projects and enhance your business capabilities.",
@@ -63,7 +68,8 @@ const allConstantsData = {
     "Our resource outsourcing solutions help you focus on core business activities while we handle the specialized tasks, providing flexibility and expertise.",
 };
 
-export default function index() {
+// Final Component Export
+export default function HealthcareWhatWeDoPage() {
   return (
     <WhatWeDoServicesGlobalComp1
       constantData={allConstantsData}

@@ -71,7 +71,6 @@ const relatedReadingData = [
 
 const allConstantsData = {
   bgVideo: getPublicImageUrl("/videos/generative_ai_bg.mp4"),
-  // bgImage: getPublicImageUrl("/images/whatwedo/AI_bg.svg"),
   name: "Generative AI",
   part1Text1: "Unlock Creativity with",
   part1Text2: "Generative AI Solutions",
@@ -82,14 +81,17 @@ const allConstantsData = {
     "Our AI-driven solutions are designed to help you stay ahead of the curve by transforming your digital products and services with next-gen intelligence.",
 };
 
-export default function index() {
+export default function Index() {
   return (
-    <DynamicMetadata title="Generative AI - Codekart Solutions Private Limited" description="Learn more about Codekart Solutions. ">
+    <DynamicMetadata
+      title="Generative AI - Codekart Solutions Private Limited"
+      description="Learn more about Codekart Solutions. "
+    >
       <WhatWeDoServicesGlobalComp
-      constantData={allConstantsData}
-      cardData={cardData}
-      relatedReadingData={relatedReadingData}
-    />
+        constantData={allConstantsData}
+        cardData={cardData}
+        relatedReadingData={relatedReadingData}
+      />
     </DynamicMetadata>
   );
 }
