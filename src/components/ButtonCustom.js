@@ -13,7 +13,7 @@ export default function ButtonCustom(props) {
       onClick={onClick}
       href={onClickLink}
       aria-label={title} 
-      style={{ width: "100%", maxWidth: "300px", boxSizing: "border-box" }} // Responsive styling for the button
+      style={{ width: "100%", maxWidth: "160px", boxSizing: "border-box" }} // Responsive styling for the button
     >
       {title}
       {icon && (
