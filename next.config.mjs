@@ -1,11 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", 
-  experimental: {
-    appDir: false,
-  },
+  output: "export",
   images: {
-    domains: ["cdn.thecodekart.com"],
+    domains: ["cdn.the-codekart.com"],
   },
 };
 
