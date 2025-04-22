@@ -106,6 +106,7 @@
 
 .sendButton {
     border: none !important;
+    min-width: max-content;
     background-color: #E2E2E2 !important;
 }
 .faqHeaderOrangeLine {

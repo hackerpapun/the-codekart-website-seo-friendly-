@@ -1,3 +1,5 @@
+import { getPublicImageUrl } from "@/constants/images";
+
 export const stayConnectedData = [
   {
     img: getPublicImageUrl("/images/insights/facebook.svg"),
