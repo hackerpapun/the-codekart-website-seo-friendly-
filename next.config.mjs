@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: false,
-  },
+  output: "export",
   images: {
-    domains: ["cdn.thecodekart.com"],
+    unoptimized: true,
+  },
+  experimental: {
+    serverActions: true,
   },
 };
 
