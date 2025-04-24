@@ -7,6 +7,7 @@ const getAssetsImageUrl = (path) => `${CDN_ASSETS_URL}${encodeURI(path)}`;
 export const IMAGES = {
   logo: {
     codekartlogo: getAssetsImageUrl("/images/navbar/codekartlogo.png"),
+    alt: "CodeKart Solutions Logo",
   },
   home: {
     uilArrowIcon: getAssetsImageUrl("/images/home/uil_arrow-up.png"),
